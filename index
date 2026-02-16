@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Nguyen | Sr. Global Lifecycle Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --accent: #007AFF; /* iOS Blue */
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Glass Card Style */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0; /* For scroll animation */
+            transform: translateY(30px);
+        }
+
+        .glass-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Header / Hero */
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        /* Skills/Badges */
+        .skill-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .badge {
+            background: rgba(0, 122, 255, 0.15);
+            border: 1px solid rgba(0, 122, 255, 0.3);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #8cc2ff;
+        }
+
+        /* Timeline Styles */
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .period {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .achievement {
+            color: #4ade80; /* Green accent for wins */
+            font-weight: 500;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .job-header {
+                flex-direction: column;
+            }
+            .period {
+                margin-top: 8px;
+            }
+            h1 { font-size: 2rem; }
+        }
+
+        /* Hover Effect for Desktop */
+        @media (min-width: 1024px) {
+            .glass-card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id="typewriter">Nguyen Nguyen</h1>
+            <p class="subtitle">Senior Global Lifecycle Manager</p>
+            <p style="margin-top:15px; color: var(--text-dim);">
+                <i data-lucide="map-pin" style="width:14px; vertical-align:middle"></i> Ho Chi Minh City, Vietnam [cite: 4, 6]
+            </p>
+        </header>
+
+        <section class="glass-card">
+            <h3 style="margin-bottom:15px;"><i data-lucide="zap" style="vertical-align:middle; margin-right:8px;"></i>AI-Driven Vision</h3>
+            <p style="color: var(--text-dim);">[cite: 34, 37] Dynamic Senior Global Lifecycle Manager with a decade of experience revolutionising CRM. Currently spearheading global lifecycle initiatives that optimise user experiences and drive substantial ROI through AI-driven lifecycle systems[cite: 44].</p>
+            <div class="skill-group">
+                <span class="badge">Activation [cite: 10]</span>
+                <span class="badge">Retention [cite: 11]</span>
+                <span class="badge">Churn Prevention [cite: 12]</span>
+                <span class="badge">LTV Optimization [cite: 14]</span>
+                <span class="badge">Salesforce [cite: 15]</span>
+                <span class="badge">SQL/BigQuery [cite: 22, 23]</span>
+                <span class="badge">Amplitude [cite: 25]</span>
+            </div>
+        </section>
+
+        <section class="glass-card">
+            <div class="job-header">
+                <div>
+                    <h3>Senior Global Lifecycle Manager</h3>
+                    <p style="color:var(--accent)">Binance [cite: 40]</p>
+                </div>
+                <span class="period">NOV 2021 - PRESENT [cite: 40, 41]</span>
+            </div>
+            <ul>
+                <li>Drives global lifecycle strategy across diverse products like Spot, Futures, and Earn[cite: 42].</li>
+                <li>Scales AI-driven lifecycle systems enabling adaptive user behavior and regional personalization[cite: 44].</li>
+                <li>Built proprietary CRM & Loyalty infrastructure integrating real-time campaign engines[cite: 46].</li>
+                <li class="achievement">Recognized with multiple Outstanding Performance Ratings for global innovation[cite: 49].</li>
+            </ul>
+        </section>
+
+        <section class="glass-card">
+            <div class="job-header">
+                <div>
+                    <h3>CRM & Loyalty Manager</h3>
+                    <p style="color:var(--accent)">BeGroup, Vietnam [cite: 51]</p>
+                </div>
+                <span class="period">SEPT 2019 - NOV 2021 [cite: 52]</span>
+            </div>
+            <ul>
+                <li>Led a 6-member CRM team managing retention across ride-hailing and fintech[cite: 53].</li>
+                <li>Implemented MarTech stack including Salesforce, Insider, and MoEngage[cite: 55].</li>
+                <li class="achievement">Scaled CRM automation workflows by 30x in 2 years[cite: 57].</li>
+                <li class="achievement">Won beNice Team Award & Be On Top Award (Top Performer 2020)[cite: 60].</li>
+            </ul>
+        </section>
+
+        <section class="glass-card">
+            <div class="job-header">
+                <div>
+                    <h3>Project Owner, Digital Goods</h3>
+                    <p style="color:var(--accent)">Sendo (Senpay) [cite: 63]</p>
+                </div>
+                <span class="period">JUN 2018 - SEPT 2019 [cite: 63]</span>
+            </div>
+            <ul>
+                <li>Owned end-to-end product development for e-wallet features and digital categories[cite: 64, 68].</li>
+                <li class="achievement">Digital Goods became the highest-performing category by GMV[cite: 71, 72].</li>
+            </ul>
+        </section>
+
+        <section class="glass-card">
+            <div class="job-header">
+                <div>
+                    <h3>Marketing Leader / Exec</h3>
+                    <p style="color:var(--accent)">4SV & ITL Corporation [cite: 73, 79]</p>
+                </div>
+                <span class="period">2016 - 2018</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-dim);">Led cross-functional digital teams and executed multi-channel growth strategies for logistics and student services[cite: 75, 77, 85].</p>
+        </section>
+
+        <section class="glass-card">
+            <h3 style="margin-bottom:15px;"><i data-lucide="graduation-cap" style="vertical-align:middle; margin-right:8px;"></i>Education</h3>
+            <div style="margin-bottom: 15px;">
+                <p><strong>The Wharton School, University of Pennsylvania</strong> [cite: 91]</p>
+                <p style="font-size:0.85rem; color:var(--text-dim);">Business Analytics: From Data to Insights (2025) [cite: 92]</p>
+            </div>
+            <div>
+                <p><strong>University of Finance and Marketing</strong> [cite: 94]</p>
+                <p style="font-size:0.85rem; color:var(--text-dim);">Bachelor of Finance and Banking (2012-2016) [cite: 95]</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px; padding-bottom: 60px;">
+            <p style="color:var(--text-dim); margin-bottom: 20px;">Let's build the future of CRM together.</p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="mailto:minhnguyen94.reve@gmail.com" style="color:var(--accent); text-decoration:none;"><i data-lucide="mail"></i></a>
+                <a href="#" style="color:var(--accent); text-decoration:none;"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Automation Effect: Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Simple Automation Title Effect
+        const text = "Nguyen Nguyen";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML = text.substring(0, i+1);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>
