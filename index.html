@@ -9,11 +9,11 @@
     <style>
         :root {
             --bg: #030712;
-            --glass: rgba(15, 23, 42, 0.6);
+            --glass: rgba(15, 23, 42, 0.7);
             --glass-border: rgba(255, 255, 255, 0.1);
-            --accent: #0ea5e9; /* Sky Blue */
-            --achievement: #10b981; /* Emerald Green */
-            --award: #f59e0b; /* Amber/Gold */
+            --accent: #0ea5e9; 
+            --achievement: #10b981; 
+            --award: #f59e0b; 
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
         }
@@ -22,6 +22,7 @@
         
         body { 
             background: radial-gradient(circle at top right, #1e293b, #030712);
+            background-attachment: fixed;
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
@@ -29,72 +30,81 @@
 
         .container { max-width: 850px; margin: 0 auto; padding: 40px 20px; }
 
-        /* Hiệu ứng kính cao cấp */
         .glass-card {
             background: var(--glass);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             border: 1px solid var(--glass-border);
             border-radius: 28px;
             padding: 35px;
             margin-bottom: 30px;
             position: relative;
-            transition: transform 0.4s ease;
         }
 
-        /* Header Layout */
-        header { text-align: left; margin-bottom: 50px; }
-        .hero-title { font-size: 3rem; font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 10px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        header { text-align: left; margin-bottom: 50px; padding-left: 10px; }
+        .hero-title { font-size: 3.2rem; font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 10px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero-subtitle { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
 
-        /* Skill Pills */
         .skill-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-        .skill-pill { background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); padding: 5px 12px; border-radius: 12px; font-size: 0.75rem; color: var(--accent); font-weight: 500; }
+        .skill-pill { background: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); padding: 5px 14px; border-radius: 12px; font-size: 0.8rem; color: #7dd3fc; font-weight: 500; }
 
-        /* Job Section */
-        .job-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
-        .company-name { font-size: 1.4rem; font-weight: 700; color: #fff; }
-        .role-title { color: var(--accent); font-weight: 600; font-size: 1rem; }
-        .time-period { background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; color: var(--text-dim); border: 1px solid var(--glass-border); }
+        .job-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .company-name { font-size: 1.5rem; font-weight: 700; color: #fff; }
+        .role-title { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
+        .time-period { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; color: var(--text-dim); border: 1px solid var(--glass-border); white-space: nowrap; }
 
-        /* Bullet Points */
         ul { list-style: none; }
-        li { margin-bottom: 12px; color: var(--text-dim); font-size: 0.95rem; padding-left: 24px; position: relative; }
-        li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+        li { margin-bottom: 10px; color: var(--text-dim); font-size: 0.95rem; padding-left: 24px; position: relative; }
+        li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
 
-        /* Highlight box for Achievements */
         .achievement-box {
             background: rgba(16, 185, 129, 0.08);
             border-left: 4px solid var(--achievement);
-            padding: 15px 20px;
+            padding: 18px 20px;
             border-radius: 0 16px 16px 0;
             margin: 20px 0;
         }
-        .achievement-title { color: var(--achievement); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+        .achievement-title { color: var(--achievement); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
         .achievement-content { color: #e2e8f0; font-size: 0.95rem; font-weight: 500; }
 
-        /* Award Badge */
         .award-badge {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             background: rgba(245, 158, 11, 0.1);
             color: var(--award);
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 700;
             margin-top: 10px;
+            margin-right: 10px;
             border: 1px solid rgba(245, 158, 11, 0.2);
         }
 
-        /* Education & Contact */
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .info-item h4 { margin-bottom: 5px; font-size: 1rem; }
+        .info-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 25px; }
+        .info-item h4 { margin-bottom: 5px; font-size: 1rem; color: #fff; }
         .info-item p { color: var(--text-dim); font-size: 0.85rem; }
 
+        .cta-button {
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 16px;
+            font-weight: 700;
+            width: 100%;
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
         @media (max-width: 650px) {
-            .hero-title { font-size: 2.2rem; }
+            .hero-title { font-size: 2.5rem; }
             .job-meta { flex-direction: column; gap: 8px; }
             .info-grid { grid-template-columns: 1fr; }
         }
@@ -106,42 +116,43 @@
     <header>
         <p class="hero-subtitle">Senior Global Lifecycle Manager</p>
         <h1 class="hero-title">Nguyen Nguyen</h1>
-        <div style="display: flex; gap: 15px; color: var(--text-dim); font-size: 0.9rem;">
-            <span><i data-lucide="mail" style="width:14px; vertical-align:middle;"></i> minhnguyen94.reve@gmail.com</span>
-            <span><i data-lucide="map-pin" style="width:14px; vertical-align:middle;"></i> Ho Chi Minh City, VN</span>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; color: var(--text-dim); font-size: 0.9rem; margin-top: 15px;">
+            <span><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-right:5px;"></i> minhnguyen94.reve@gmail.com</span>
+            <span><i data-lucide="map-pin" style="width:14px; vertical-align:middle; margin-right:5px;"></i> Ho Chi Minh City, VN</span>
+            <span><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-right:5px;"></i> (+84) 349404043</span>
         </div>
     </header>
 
     <section class="glass-card">
-        <h3 style="display:flex; align-items:center; gap:10px;"><i data-lucide="cpu" color="#0ea5e9"></i> AI-Driven Lifecycle Vision</h3>
+        <h3 style="display:flex; align-items:center; gap:12px; color: #fff;"><i data-lucide="cpu" color="#0ea5e9"></i> Professional Profile</h3>
         <p style="margin-top:15px; color: var(--text-dim);">
-            Dynamic manager with 10 years of experience revolutionising CRM across fintech & e-commerce. Expertise in MarTech integration and data-driven segmentation. [cite: 34, 36]
+            Dynamic Senior Global Lifecycle Manager with a decade of experience revolutionising CRM and lifecycle marketing across diverse sectors, including fintech and e-commerce. Proven track record in scaling lifecycle automation and enhancing user engagement through innovative AI-driven strategies and MarTech integration.
         </p>
         <div class="skill-container">
+            <span class="skill-pill">Activation</span><span class="skill-pill">Retention</span><span class="skill-pill">LTV Optimization</span>
             <span class="skill-pill">Salesforce</span><span class="skill-pill">Insider</span><span class="skill-pill">MoEngage</span>
             <span class="skill-pill">Airship</span><span class="skill-pill">SQL/BigQuery</span><span class="skill-pill">Amplitude</span>
-            <span class="skill-pill">LTV Optimization</span><span class="skill-pill">Churn Prevention</span>
+            <span class="skill-pill">Mixpanel</span>
         </div>
     </section>
 
     <section class="glass-card">
         <div class="job-meta">
             <div>
-                <p class="role-title">Senior Global Lifecycle & Platform Strategy</p>
+                <p class="role-title">Senior Global Lifecycle & Platform Strategy Manager</p>
                 <h3 class="company-name">Binance</h3>
             </div>
             <span class="time-period">NOV 2021 — PRESENT</span>
         </div>
         <ul>
-            <li>Drive global lifecycle strategy across user stages and diverse products (Spot, Futures, Earn, Fiat). [cite: 42]</li>
-            <li>Orchestrated execution through Always-On, Experiment, and Ad-hoc flows: Activation, Retention, and Winback. [cite: 43]</li>
-            <li>Scaled global, AI-driven systems enabling adaptive user behavior and regional personalization. [cite: 44]</li>
-            <li>Built proprietary CRM & Loyalty infrastructure integrating internal campaign engines. [cite: 46]</li>
-            <li>Partnered with cross-functional teams (Product, Data, Tech, Legal) for global rollouts. [cite: 48]</li>
+            <li>Drive global lifecycle strategy spanning user stages, diverse products (Spot, Futures, Earn, Fiat), and worldwide regions.</li>
+            <li>Orchestrated execution through Always-On and Experiment flows for Activation (KYC, first trade) and Retention.</li>
+            <li>Scaled AI-driven lifecycle systems enabling adaptive user behavior and regional personalization at scale.</li>
+            <li>Built proprietary CRM & Loyalty infrastructure integrating internal reward and campaign engines.</li>
         </ul>
         <div class="achievement-box">
-            <div class="achievement-title"><i data-lucide="trending-up" size="14"></i> Global Impact</div>
-            <p class="achievement-content">Recognized with multiple Outstanding Performance Ratings for leading global lifecycle innovation and delivering measurable retention uplift. [cite: 49, 98]</p>
+            <div class="achievement-title"><i data-lucide="trending-up" size="16"></i> Key Achievement</div>
+            <p class="achievement-content">Recognized with multiple Outstanding Performance Ratings for leading global lifecycle innovation and delivering measurable retention uplift.</p>
         </div>
     </section>
 
@@ -154,16 +165,16 @@
             <span class="time-period">SEPT 2019 — NOV 2021</span>
         </div>
         <ul>
-            <li>Led a 6-member CRM team, managing retention across ride-hailing and fintech. [cite: 53]</li>
-            <li>Designed lifecycle initiatives: uninstall prediction, segmentation, and gamification. [cite: 54]</li>
-            <li>Implemented full MarTech stack: Salesforce, Insider, MoEngage, Airship. [cite: 55]</li>
+            <li>Led a 6-member CRM team, managing retention across ride-hailing and fintech services.</li>
+            <li>Designed lifecycle initiatives: uninstall prediction, segmentation, and gamification.</li>
+            <li>Implemented full MarTech stack: Salesforce, Insider, MoEngage, Airship, Netcore.</li>
         </ul>
         <div class="achievement-box">
-            <div class="achievement-title"><i data-lucide="zap" size="14"></i> Growth & Efficiency</div>
-            <p class="achievement-content">Scaled CRM automation workflows by 30x. Released 67 surveys & 10 journeys in 2020. Achieved double-digit churn reduction. [cite: 57, 58, 59]</p>
+            <div class="achievement-title"><i data-lucide="zap" size="16"></i> Performance Impact</div>
+            <p class="achievement-content">Scaled CRM automation workflows by 30x in 2 years. Achieved double-digit churn reduction in early lifecycle stages.</p>
         </div>
         <div class="award-badge"><i data-lucide="trophy" size="14"></i> beNice Team Award</div>
-        <div class="award-badge"><i data-lucide="award" size="14"></i> Be On Top - Top Performer 2020 [cite: 60, 102]</div>
+        <div class="award-badge"><i data-lucide="award" size="14"></i> Be On Top - Top Performer 2020</div>
     </section>
 
     <section class="glass-card">
@@ -175,34 +186,51 @@
             <span class="time-period">JUN 2018 — SEPT 2019</span>
         </div>
         <ul>
-            <li>Owned end-to-end product development from ideation to rollout and operations. [cite: 64, 65]</li>
-            <li>Conducted SQL & BigQuery analysis; built dashboards with Google Data Studio. [cite: 69]</li>
+            <li>Owned end-to-end product development for e-wallet features and digital goods categories.</li>
+            <li>Optimized UI/UX through rigorous user behavior analysis and preference mapping.</li>
+            <li>Utilized SQL & BigQuery to build automated performance dashboards.</li>
         </ul>
         <div class="achievement-box" style="border-left-color: var(--accent); background: rgba(14, 165, 233, 0.08);">
-            <div class="achievement-title" style="color: var(--accent);"><i data-lucide="star" size="14"></i> Key Result</div>
-            <p class="achievement-content">Digital Goods became the highest-performing category by GMV. [cite: 71, 72]</p>
+            <div class="achievement-title" style="color: var(--accent);"><i data-lucide="star" size="16"></i> Result</div>
+            <p class="achievement-content">Propelled Digital Goods to become the highest-performing category by GMV on the platform.</p>
+        </div>
+    </section>
+
+    <section class="glass-card">
+        <h3 style="margin-bottom:20px; color: #fff;"><i data-lucide="history" size="20" style="vertical-align: middle; margin-right: 10px;"></i> Career Evolution</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <p style="font-weight: 700; color: var(--accent);">Marketing Leader</p>
+                <p style="font-size: 0.9rem;">4SV - Student Life Care</p>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">2017 - 2018 | Digital Strategy Focus</p>
+            </div>
+            <div>
+                <p style="font-weight: 700; color: var(--accent);">Digital Marketing Executive</p>
+                <p style="font-size: 0.9rem;">ITL Corporation</p>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">2016 - 2017 | Launch of Speedlink</p>
+            </div>
         </div>
     </section>
 
     <div class="info-grid">
         <section class="glass-card">
-            <h3 style="margin-bottom:15px;"><i data-lucide="graduation-cap" color="#0ea5e9"></i> Education</h3>
+            <h3 style="margin-bottom:20px; color: #fff;"><i data-lucide="graduation-cap" color="#0ea5e9"></i> Education</h3>
             <div class="info-item" style="margin-bottom:15px;">
-                <h4>Wharton School, UPenn</h4>
-                <p>Business Analytics (2025) [cite: 91, 92]</p>
+                <h4>The Wharton School, UPenn</h4>
+                <p>Business Analytics (2025)</p>
             </div>
             <div class="info-item">
-                <h4>Uni. of Finance & Marketing</h4>
-                <p>Bachelor of Finance & Banking [cite: 94]</p>
+                <h4>Uni. of Finance and Marketing</h4>
+                <p>Bachelor of Finance and Banking</p>
             </div>
         </section>
         
         <section class="glass-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-            <p style="color:var(--text-dim); margin-bottom:15px;">Ready for the next challenge?</p>
-            <a href="mailto:minhnguyen94.reve@gmail.com" style="background: var(--accent); color:#fff; text-decoration:none; padding: 12px 25px; border-radius: 16px; font-weight:700; width: 100%;">Contact Me</a>
-            <div style="margin-top:20px; display:flex; gap:20px;">
-                <i data-lucide="linkedin" color="#94a3b8"></i>
-                <i data-lucide="github" color="#94a3b8"></i>
+            <p style="color:var(--text-dim); margin-bottom:15px;">Open for global opportunities.</p>
+            <a href="mailto:minhnguyen94.reve@gmail.com" class="cta-button">Email Me</a>
+            <div style="margin-top:20px; display:flex; gap:25px;">
+                <a href="https://www.linkedin.com/in/nmn0204/" target="_blank" style="color: #fff; transition: color 0.3s;"><i data-lucide="linkedin"></i></a>
+                <a href="#" style="color: var(--text-dim);"><i data-lucide="github"></i></a>
             </div>
         </section>
     </div>
@@ -210,7 +238,6 @@
 
 <script>
     lucide.createIcons();
-    // Animation đơn giản khi scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -223,7 +250,7 @@
     document.querySelectorAll('.glass-card').forEach(card => {
         card.style.opacity = "0";
         card.style.transform = "translateY(30px)";
-        card.style.transition = "all 0.6s ease-out";
+        card.style.transition = "all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1)";
         observer.observe(card);
     });
 </script>
