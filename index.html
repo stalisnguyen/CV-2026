@@ -1,146 +1,237 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Nguyen | Senior Global Lifecycle Manager</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --glass: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --accent: #007AFF;
-            --text-main: #ffffff;
-            --text-dim: #b0b0b0;
-            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: var(--bg-gradient); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 30px;
-            margin-bottom: 24px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-
-        .glass-card.visible { opacity: 1; transform: translateY(0); }
-
-        header { text-align: center; padding: 60px 0 40px; }
-        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; }
-        .subtitle { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
-
-        .badge {
-            background: rgba(0, 122, 255, 0.15);
-            border: 1px solid rgba(0, 122, 255, 0.3);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            color: #8cc2ff;
-            display: inline-block;
-            margin: 4px;
-        }
-
-        .job-header { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; }
-        .period { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
-        ul { list-style: none; }
-        li { margin-bottom: 8px; padding-left: 20px; position: relative; color: var(--text-dim); }
-        li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
-
-        @media (max-width: 600px) {
-            .job-header { flex-direction: column; }
-            h1 { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Nguyen Nguyen — Senior Global Lifecycle Manager</title>
+  <meta name="description" content="Senior Global Lifecycle & Platform Strategy Manager. Global CRM, lifecycle automation, AI-driven systems, retention, churn prevention, winback." />
+  <meta property="og:title" content="Nguyen Nguyen — Senior Global Lifecycle Manager" />
+  <meta property="og:description" content="Global lifecycle strategy, AI-driven CRM systems, retention & winback. Binance • BeGroup • Sendo" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="grain"></div>
+  </div>
 
-    <div class="container">
-        <header>
-            <h1 id="name-header">Nguyen Nguyen</h1>
-            <p class="subtitle">Senior Global Lifecycle Manager</p>
-            <p style="margin-top:10px; color: var(--text-dim);"><i data-lucide="map-pin" style="width:14px;"></i> Ho Chi Minh City, Vietnam</p>
-        </header>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="dot"></span>
+        <span class="brand-text">Nguyen Nguyen</span>
+      </a>
 
-        <section class="glass-card">
-            <h3 style="margin-bottom:15px;"><i data-lucide="zap" style="margin-right:8px; vertical-align:middle;"></i>AI-Driven Vision</h3>
-            <p style="color: var(--text-dim); margin-bottom: 20px;">
-                Dynamic Senior Global Lifecycle Manager with a decade of experience revolutionising CRM. Currently spearheading global lifecycle initiatives that optimise user experiences and drive substantial ROI through AI-driven lifecycle systems.
-            </p>
-            <div>
-                <span class="badge">Activation</span>
-                <span class="badge">Retention</span>
-                <span class="badge">Churn Prevention</span>
-                <span class="badge">LTV Optimization</span>
-                <span class="badge">Salesforce</span>
-                <span class="badge">SQL/BigQuery</span>
-                <span class="badge">Amplitude</span>
-            </div>
-        </section>
+      <nav class="nav">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#recognition">Recognition</a>
+      </nav>
 
-        <section class="glass-card">
-            <div class="job-header">
-                <div>
-                    <h3>Senior Global Lifecycle Manager</h3>
-                    <p style="color:var(--accent)">Binance</p>
-                </div>
-                <span class="period">NOV 2021 - PRESENT</span>
-            </div>
-            <ul>
-                <li>Drives global lifecycle strategy across diverse products like Spot, Futures, and Earn.</li>
-                <li>Scales AI-driven lifecycle systems enabling adaptive user behavior and regional personalization.</li>
-                <li>Built proprietary CRM & Loyalty infrastructure integrating real-time campaign engines.</li>
-            </ul>
-        </section>
-
-        <section class="glass-card">
-            <div class="job-header">
-                <div>
-                    <h3>CRM & Loyalty Manager</h3>
-                    <p style="color:var(--accent)">BeGroup, Vietnam</p>
-                </div>
-                <span class="period">SEPT 2019 - NOV 2021</span>
-            </div>
-            <ul>
-                <li>Led a 6-member CRM team managing retention across ride-hailing and fintech.</li>
-                <li>Scaled CRM automation workflows by 30x in 2 years.</li>
-                <li>Won beNice Team Award & Be On Top Award (Top Performer 2020).</li>
-            </ul>
-        </section>
-
-        <section class="glass-card">
-            <h3 style="margin-bottom:15px;"><i data-lucide="graduation-cap" style="margin-right:8px; vertical-align:middle;"></i>Education</h3>
-            <p><strong>The Wharton School, University of Pennsylvania</strong></p>
-            <p style="font-size:0.85rem; color:var(--text-dim);">Business Analytics: From Data to Insights (2025)</p>
-            <br>
-            <p><strong>University of Finance and Marketing</strong></p>
-            <p style="font-size:0.85rem; color:var(--text-dim);">Bachelor of Finance and Banking (2012-2016)</p>
-        </section>
-
-        <footer style="text-align: center; padding: 40px 0;">
-            <p style="color: var(--text-dim);">minhnguyen94.reve@gmail.com</p>
-        </footer>
+      <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
     </div>
 
-    <script>
-        lucide.createIcons();
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, { threshold: 0.1 });
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
 
-        document.querySelectorAll('.glass-card').forEach(card => observer.observe(card));
-    </script>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-card glass reveal">
+        <div class="hero-top">
+          <div>
+            <h1 class="headline">
+              Senior Global Lifecycle<br/>
+              <span class="headline-accent">& Platform Strategy</span> Manager
+            </h1>
+            <p class="subhead">
+              I build <strong>scalable lifecycle systems</strong> across multi-product platforms —
+              from activation to winback — with <strong>AI-ready automation</strong>, measurable ROI,
+              and strong cross-functional execution.
+            </p>
+          </div>
+
+          <div class="hero-badges" role="list" aria-label="Highlights">
+            <span class="pill" role="listitem">10+ years</span>
+            <span class="pill" role="listitem">Global CRM & Lifecycle</span>
+            <span class="pill" role="listitem">AI-driven systems</span>
+            <span class="pill" role="listitem">Retention & churn</span>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="glass mini reveal" style="--d: 70ms">
+            <div class="k">Location</div>
+            <div class="v">Ho Chi Minh City, Vietnam</div>
+          </div>
+          <div class="glass mini reveal" style="--d: 120ms">
+            <div class="k">Email</div>
+            <div class="v"><a class="link" href="mailto:minhnguyen94.reve@gmail.com">minhnguyen94.reve@gmail.com</a></div>
+          </div>
+          <div class="glass mini reveal" style="--d: 170ms">
+            <div class="k">Phone</div>
+            <div class="v"><a class="link" href="tel:+84349404043">+84 349 404 043</a></div>
+          </div>
+          <div class="glass mini reveal" style="--d: 220ms">
+            <div class="k">LinkedIn</div>
+            <div class="v"><a class="link" href="#" id="linkedinLink" rel="noopener">LinkedIn (add your URL)</a></div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#experience">View experience</a>
+          <a class="btn" href="#contact">Quick contact</a>
+          <button class="btn ghost" id="copySummaryBtn" type="button">Copy 15-sec pitch</button>
+        </div>
+
+        <div class="pitch glass subtle" id="pitchBox" hidden>
+          <div class="pitch-title">15-second pitch</div>
+          <p id="pitchText">
+            Senior Global Lifecycle Manager with 10+ years leading CRM & lifecycle automation across fintech and e-commerce.
+            Built AI-driven lifecycle systems, scaled automation, reduced churn, and delivered measurable retention uplift
+            across multiple products and regions. Strong at MarTech integration, segmentation, and cross-functional execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="experience">
+      <div class="section-head">
+        <h2 class="h2">Experience</h2>
+        <p class="muted">From now → past. Expand each role to see impact, scope, and AI readiness.</p>
+      </div>
+
+      <div class="timeline" id="timeline" aria-label="Professional timeline">
+        <!-- Items injected by app.js -->
+      </div>
+    </section>
+
+    <section class="wrap section" id="skills">
+      <div class="section-head">
+        <h2 class="h2">Skills & Tools</h2>
+        <p class="muted">Lifecycle strategy, experimentation, platforms, and analytics — with an AI-adaptable mindset.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass card reveal">
+          <h3 class="h3">Core Competencies</h3>
+          <div class="chips" id="competencies"></div>
+          <div class="note">
+            <strong>How I use AI:</strong> design adaptive segments, learn from behavior loops, and scale personalization safely
+            across products/regions while keeping compliance and measurement tight.
+          </div>
+        </div>
+
+        <div class="glass card reveal" style="--d:120ms">
+          <h3 class="h3">MarTech & Analytics</h3>
+          <div class="chips" id="tools"></div>
+          <div class="note">
+            Comfortable translating new tools into <strong>adopted systems</strong>: instrumentation → data models → journeys → ROI.
+          </div>
+        </div>
+      </div>
+
+      <div class="glass card reveal" style="--d:170ms">
+        <h3 class="h3">Languages</h3>
+        <div class="chips" id="languages"></div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="education">
+      <div class="section-head">
+        <h2 class="h2">Education</h2>
+        <p class="muted">Business analytics + finance foundation.</p>
+      </div>
+
+      <div class="stack" id="educationCards">
+        <!-- injected -->
+      </div>
+    </section>
+
+    <section class="wrap section" id="recognition">
+      <div class="section-head">
+        <h2 class="h2">Recognition</h2>
+        <p class="muted">Awards and performance recognition.</p>
+      </div>
+
+      <div class="stack" id="recognitionCards">
+        <!-- injected -->
+      </div>
+    </section>
+
+    <section class="wrap section" id="contact">
+      <div class="section-head">
+        <h2 class="h2">Contact</h2>
+        <p class="muted">One tap on mobile. Fast and simple.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass card reveal">
+          <h3 class="h3">Reach me</h3>
+          <ul class="contact-list">
+            <li><span class="k">Email</span><a class="link" href="mailto:minhnguyen94.reve@gmail.com">minhnguyen94.reve@gmail.com</a></li>
+            <li><span class="k">Phone</span><a class="link" href="tel:+84349404043">+84 349 404 043</a></li>
+            <li><span class="k">Location</span><span class="v">Ho Chi Minh City, Vietnam</span></li>
+          </ul>
+
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:minhnguyen94.reve@gmail.com?subject=CV%20-%20Interview%20Request">Email me</a>
+            <a class="btn" href="tel:+84349404043">Call</a>
+          </div>
+        </div>
+
+        <div class="glass card reveal" style="--d:120ms">
+          <h3 class="h3">Employer-friendly summary</h3>
+          <p class="muted" style="margin-top:8px">
+            Copy a clean summary for ATS / recruiters (keeps keywords + AI angle).
+          </p>
+          <button class="btn ghost wide" id="copyAtsBtn" type="button">Copy ATS Summary</button>
+
+          <pre class="ats" id="atsBox" aria-label="ATS summary">Senior Global Lifecycle & Platform Strategy Manager with 10+ years of CRM/lifecycle experience across fintech and e-commerce. Expertise: Activation, Retention, Churn Prevention, Winback, LTV optimization, segmentation, and experimentation. Proven impact: scaled automation, improved retention, reduced churn, and delivered measurable ROI. Platforms/Tools: Salesforce, Insider, MoEngage, Airship, Netcore, CrowdTwist, SessionM, SQL, BigQuery, GA, Amplitude, Mixpanel. Strong cross-functional leadership with Product, Data, Tech, Finance, Legal, Compliance. AI-ready approach: adaptive user behavior systems, continuous learning loops, personalization at scale.</pre>
+
+          <div class="tiny muted">Tip: update the LinkedIn URL in <code>app.js</code> (search for <code>LINKEDIN_URL</code>).</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="wrap footer">
+      <div class="muted">© <span id="year"></span> Nguyen Nguyen • Built with a lightweight HTML/CSS/JS package for GitHub Pages.</div>
+    </footer>
+  </main>
+
+  <script src="app.js" defer></script>
+
+  <script type="application/ld+json" id="jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nguyen Nguyen",
+    "jobTitle": "Senior Global Lifecycle & Platform Strategy Manager",
+    "email": "mailto:minhnguyen94.reve@gmail.com",
+    "telephone": "+84 349 404 043",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    }
+  }
+  </script>
 </body>
 </html>
