@@ -1,208 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Nguyen | Senior Global Lifecycle Manager</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --bg: #020617;
-            --glass: rgba(15, 23, 42, 0.85);
-            --glass-border: rgba(251, 191, 36, 0.2);
-            --accent: #fbbf24; 
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --success: #10b981;
-            --glow: rgba(251, 191, 36, 0.3);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyen Nguyen | Senior Global Lifecycle Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: radial-gradient(circle at 50% 0%, #1e293b 0%, #020617 100%); background-attachment: fixed; color: var(--text-main); line-height: 1.6; overflow-x: hidden; perspective: 1200px; }
-        .container { max-width: 950px; margin: 0 auto; padding: 60px 20px; }
+<style>
+:root{
+--bg:#020617;
+--glass:rgba(15,23,42,.85);
+--glass-border:rgba(251,191,36,.2);
+--accent:#fbbf24;
+--text-main:#f8fafc;
+--text-dim:#94a3b8;
+--glow:rgba(251,191,36,.3);
+}
 
-        /* Header */
-        header { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; animation: fadeIn 1s ease; }
-        .avatar-box { position: relative; width: 160px; height: 160px; flex-shrink: 0; }
-        .avatar-img { width: 100%; height: 100%; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 0 30px var(--glow); }
-        .ai-badge { position: absolute; bottom: 0; right: 0; background: var(--accent); color: #000; font-size: 0.75rem; padding: 6px 14px; border-radius: 20px; font-weight: 800; box-shadow: 0 0 15px var(--accent); }
-        .hero-title { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; line-height: 1; color: #fff; }
-        .hero-subtitle { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 4px; font-size: 0.9rem; margin-top: 5px; }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{
+background:radial-gradient(circle at 50% 0%,#1e293b 0%,#020617 100%);
+background-attachment:fixed;
+color:var(--text-main);
+line-height:1.6;
+overflow-x:hidden;
+perspective:1200px;
+}
+.container{max-width:950px;margin:0 auto;padding:60px 20px;}
 
-        /* Cards */
-        .glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 40px; margin-bottom: 40px; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); position: relative; }
-        .glass-card:hover { transform: translateY(-15px) rotateX(2deg); box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 20px var(--glow); border-color: var(--accent); z-index: 10; }
+header{display:flex;align-items:center;gap:40px;margin-bottom:60px;animation:fadeIn 1s ease;}
+.avatar-box{position:relative;width:160px;height:160px;}
+.avatar-img{width:100%;height:100%;border-radius:50%;border:4px solid var(--accent);object-fit:cover;box-shadow:0 0 30px var(--glow);}
+.ai-badge{position:absolute;bottom:0;right:0;background:var(--accent);color:#000;font-size:.75rem;padding:6px 14px;border-radius:20px;font-weight:800;}
 
-        .section-title { display: flex; align-items: center; gap: 12px; color: var(--accent); font-size: 1.3rem; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Job Meta */
-        .job-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
-        .company { font-size: 1.8rem; font-weight: 800; color: #fff; }
-        .role { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
-        .time { font-size: 0.85rem; color: var(--text-dim); font-weight: 700; background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 8px; border: 1px solid var(--glass-border); }
+.hero-title{font-size:3.5rem;font-weight:800;letter-spacing:-2px;}
+.hero-subtitle{color:var(--accent);font-weight:600;letter-spacing:4px;text-transform:uppercase;font-size:.9rem;}
 
-        ul { list-style: none; }
-        li { margin-bottom: 12px; color: var(--text-dim); padding-left: 28px; position: relative; font-size: 1rem; }
-        li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+.glass-card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--glass-border);
+border-radius:30px;
+padding:40px;
+margin-bottom:40px;
+transition:.5s cubic-bezier(.165,.84,.44,1);
+}
+.glass-card:hover{
+transform:translateY(-15px) rotateX(2deg);
+box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 20px var(--glow);
+border-color:var(--accent);
+}
 
-        .pill-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
-        .pill { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); padding: 6px 16px; border-radius: 12px; font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+.section-title{
+display:flex;align-items:center;gap:12px;
+color:var(--accent);
+font-size:1.3rem;font-weight:700;
+margin-bottom:25px;text-transform:uppercase;
+}
 
-        .award-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(251, 191, 36, 0.15); color: var(--accent); padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin: 10px 10px 0 0; border: 1px solid var(--accent); }
+.job-meta{display:flex;justify-content:space-between;margin-bottom:20px;}
+.company{font-size:1.8rem;font-weight:800;}
+.role{color:var(--accent);font-weight:700;}
+.time{font-size:.85rem;color:var(--text-dim);font-weight:700;
+background:rgba(255,255,255,.05);padding:4px 12px;border-radius:8px;border:1px solid var(--glass-border);}
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @media (max-width: 768px) { header { flex-direction: column; text-align: center; } .job-meta { flex-direction: column; gap: 10px; } .hero-title { font-size: 2.8rem; } }
-    </style>
+ul{list-style:none;}
+li{margin-bottom:12px;color:var(--text-dim);padding-left:28px;position:relative;}
+li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:bold;}
+
+.pill-group{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px;}
+.pill{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);padding:6px 16px;border-radius:12px;color:var(--accent);font-size:.85rem;font-weight:600;}
+
+.award-tag{display:inline-flex;gap:8px;align-items:center;
+background:rgba(251,191,36,.15);color:var(--accent);
+padding:8px 18px;border-radius:50px;font-size:.8rem;font-weight:700;
+border:1px solid var(--accent);margin:10px 10px 0 0;}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+@media(max-width:768px){
+header{flex-direction:column;text-align:center}
+.job-meta{flex-direction:column;gap:10px}
+.hero-title{font-size:2.8rem}
+}
+</style>
 </head>
+
 <body>
-
 <div class="container">
-    <header>
-        <div class="avatar-box">
-            <img src="image.jpg" alt="Nguyen Nguyen" class="avatar-img">
-            <div class="ai-badge">AI ADAPTIVE</div>
-        </div>
-        <div>
-            <p class="hero-subtitle">Senior Global Lifecycle Manager</p>
-            <h1 class="hero-title">Nguyen Nguyen</h1>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; color: var(--text-dim); font-size: 0.95rem; margin-top: 15px;">
-                <span><i data-lucide="map-pin" size="16"></i> Ho Chi Minh City, Vietnam</span>
-                <span><i data-lucide="mail" size="16"></i> minhnguyen94.reve@gmail.com</span>
-                <span><i data-lucide="phone" size="16"></i> +84 349 404 043</span>
-                <span><i data-lucide="linkedin" size="16"></i> /in/nmn0204</span>
-            </div>
-        </div>
-    </header>
 
-    <section class="glass-card">
-        <div class="section-title"><i data-lucide="user-check"></i> Executive Profile</div>
-        <p style="font-size: 1.1rem; color: #e2e8f0;">
-            Strategic Lifecycle Leader with a decade of proven excellence in architecting complex CRM ecosystems. Recognized as a <strong>consistent high-performer for multiple consecutive years</strong>, specializing in resolving strategic complexity through AI learning loops and MarTech integration. Driven by operational resilience and a commitment to multi-million dollar ROI.
-        </p>
-        <div class="pill-group">
-            <span class="pill">Multi-Year High Achiever</span><span class="pill">Strategic Complexity</span><span class="pill">Operational Resilience</span>
-            <span class="pill">Salesforce Architecture</span><span class="pill">AI Learning Loops</span><span class="pill">Global Impact</span>
-            <span class="pill">SQL/BigQuery</span><span class="pill">LTV Optimization</span><span class="pill">ROI Focus</span>
-        </div>
-    </section>
+<header>
+<div class="avatar-box">
+<img src="image.jpg" class="avatar-img">
+<div class="ai-badge">AI ADAPTIVE</div>
+</div>
 
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">Binance</h3>
-                <p class="role">Senior Global Lifecycle & Platform Strategy Manager</p>
-            </div>
-            <span class="time">NOV 2021 — PRESENT</span>
-        </div>
-        <ul>
-            <li><strong>Sustained Excellence:</strong> Consistently earned <strong>Outstanding Performance Ratings across multiple years</strong> for lifecycle innovation and global retention uplift.</li>
-            <li><strong>Global Orchestration:</strong> Architected lifecycle strategy for 200M+ users across all major product lines (Spot, Futures, Earn, Pay) and global regions.</li>
-            <li><strong>Systemic Resilience:</strong> Standardized global execution models and internal CRM modules, ensuring stability through rapid organizational growth.</li>
-            <li><strong>AI-Driven Innovation:</strong> Scaled adaptive lifecycle systems enabling real-time behavior modeling and deep regional personalization.</li>
-        </ul>
-        <div class="award-tag"><i data-lucide="award"></i> Multi-Year Outstanding Performance Rating</div>
-        <div class="award-tag"><i data-lucide="zap"></i> Strategic Innovation Leader</div>
-    </section>
+<div>
+<p class="hero-subtitle">Senior Global Lifecycle Manager</p>
+<h1 class="hero-title">Nguyen Nguyen</h1>
+<div style="display:flex;flex-wrap:wrap;gap:20px;color:var(--text-dim);margin-top:15px;">
+<span><i data-lucide="map-pin" size="16"></i> Ho Chi Minh City</span>
+<span><i data-lucide="mail" size="16"></i> minhnguyen94.reve@gmail.com</span>
+<span><i data-lucide="phone" size="16"></i> +84 349 404 043</span>
+<span><i data-lucide="linkedin" size="16"></i> 
+<a href="https://www.linkedin.com/in/nmn0204/" target="_blank" style="color:var(--text-dim);text-decoration:none;">
+linkedin.com/in/nmn0204</a></span>
+</div>
+</div>
+</header>
 
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">BeGroup</h3>
-                <p class="role">CRM & Loyalty Manager</p>
-            </div>
-            <span class="time">SEPT 2019 — NOV 2021</span>
-        </div>
-        <ul>
-            <li><strong>Leadership & Performance:</strong> Recognized as <strong>Top Performer 2020</strong>; built and led a 6-member team managing high-frequency retention.</li>
-            <li><strong>Process Velocity:</strong> Scaled CRM automation workflows by 30x in 2 years, launching <strong>67+ complex automation journeys</strong>.</li>
-            <li><strong>MarTech Mastery:</strong> Integrated Salesforce, Insider, MoEngage, Airship, and Netcore stacks to optimize LTV and reduce churn.</li>
-        </ul>
-        <div class="award-tag"><i data-lucide="trophy"></i> Be On Top Performer 2020</div>
-        <div class="award-tag"><i data-lucide="users"></i> beNice Team Award (Effectiveness)</div>
-    </section>
+<section class="glass-card">
+<div class="section-title"><i data-lucide="user-check"></i> Executive Profile</div>
+<p style="font-size:1.1rem;color:#e2e8f0;">
+Senior Lifecycle & CRM leader with ~10 years across FinTech and consumer platforms, owning end-to-end lifecycle strategy from segmentation, experimentation, automation to measurement. Repeatedly recognized as a top performer, known for building scalable CRM operating systems and translating behavioral data into measurable retention and LTV growth.
+</p>
 
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">Sendo (Senpay)</h3>
-                <p class="role">Project Owner, Digital Goods & E-Wallet</p>
-            </div>
-            <span class="time">JUN 2018 — SEPT 2019</span>
-        </div>
-        <ul>
-            <li>Owned end-to-end product lifecycle for Digital Goods & Senpay wallet, driving it to become the platform's <strong>GMV leader</strong>.</li>
-            <li>Optimized UI/UX through SQL-driven behavior analysis and customer journey mapping.</li>
-            <li>Collaborated with Tech via Jira/Zeplin to build proprietary internal CRM and marketing tools.</li>
-        </ul>
-    </section>
+<div class="pill-group">
+<span class="pill">Global Lifecycle Strategy</span>
+<span class="pill">Retention & Churn</span>
+<span class="pill">LTV Optimization</span>
+<span class="pill">CRM Operating System</span>
+<span class="pill">Experimentation Engine</span>
+<span class="pill">Cross-Functional Leadership</span>
+<span class="pill">MarTech Integration</span>
+<span class="pill">SQL / BigQuery</span>
+<span class="pill">AI Automation</span>
+</div>
+</section>
 
-    <section class="glass-card">
-        <div class="section-title"><i data-lucide="history"></i> Earlier Career Evolution</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div>
-                <p style="font-weight: 700; color: #fff;">Marketing Leader @ 4SV</p>
-                <p style="font-size: 0.85rem; color: var(--accent);">2017 — 2018</p>
-                <li style="font-size: 0.9rem; margin-top: 10px;">Developed strategic marketing plans and automated data dashboards via GA/GTM.</li>
-                <div class="award-tag" style="font-size: 0.7rem;"><i data-lucide="star" size="12"></i> Employee of the Month (Apr 2018)</div>
-            </div>
-            <div>
-                <p style="font-weight: 700; color: #fff;">Digital Marketing @ ITL Corp</p>
-                <p style="font-size: 0.85rem; color: var(--accent);">2016 — 2017</p>
-                <li style="font-size: 0.9rem; margin-top: 10px;">Successfully launched Speedlink (last-mile delivery) and managed core digital teams.</li>
-            </div>
-        </div>
-    </section>
+<section class="glass-card">
+<div class="job-meta">
+<div>
+<h3 class="company">Binance</h3>
+<p class="role">Senior Global Lifecycle & Platform Strategy Manager</p>
+</div>
+<span class="time">2021 — Present</span>
+</div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-        <section class="glass-card">
-            <div class="section-title"><i data-lucide="graduation-cap"></i> Education</div>
-            <div style="margin-bottom: 20px;">
-                <p style="font-weight: 700; color: #fff;">The Wharton School, UPenn</p>
-                <p style="font-size: 0.9rem; color: var(--accent);">Business Analytics (2025)</p>
-            </div>
-            <div>
-                <p style="font-weight: 700; color: #fff;">Uni. of Finance & Marketing</p>
-                <p style="font-size: 0.9rem; color: var(--accent);">Bachelor of Finance & Banking</p>
-            </div>
-        </section>
-        
-        <section class="glass-card" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-            <p style="margin-bottom: 20px; color: var(--text-dim);">Peer Feedback: "A proactive leader with an exceptional analytical mindset."</p>
-            <a href="https://www.linkedin.com/in/nmn0204/" target="_blank" style="text-decoration: none; background: var(--accent); color: #000; padding: 15px; border-radius: 15px; font-weight: 800; transition: 0.3s;">CONNECT ON LINKEDIN</a>
-        </section>
-    </div>
+<ul>
+<li><strong>Performance:</strong> Repeated Outstanding performance ratings for lifecycle strategy excellence.</li>
+<li><strong>Scale:</strong> Owned lifecycle orchestration across core products supporting 200M+ user ecosystem.</li>
+<li><strong>Systems:</strong> Built standardized CRM playbooks and reusable automation frameworks globally.</li>
+<li><strong>Personalization:</strong> Led segmentation and experimentation models improving retention depth.</li>
+</ul>
+
+<div class="award-tag"><i data-lucide="award"></i> Repeated Outstanding Ratings</div>
+<div class="award-tag"><i data-lucide="zap"></i> Strategy Lead</div>
+</section>
+
+<section class="glass-card">
+<div class="job-meta">
+<div>
+<h3 class="company">BeGroup</h3>
+<p class="role">CRM & Loyalty Manager</p>
+</div>
+<span class="time">2019 — 2021</span>
+</div>
+
+<ul>
+<li><strong>Leadership:</strong> Built and led 6-person CRM & loyalty team.</li>
+<li><strong>Automation:</strong> Scaled workflows ~30x, launching 67+ lifecycle journeys.</li>
+<li><strong>MarTech:</strong> Integrated Salesforce with engagement stacks driving LTV growth.</li>
+</ul>
+
+<div class="award-tag"><i data-lucide="trophy"></i> Top Performer 2020</div>
+<div class="award-tag"><i data-lucide="users"></i> Team Effectiveness Award</div>
+</section>
+
+<section class="glass-card">
+<div class="job-meta">
+<div>
+<h3 class="company">Sendo (Senpay)</h3>
+<p class="role">Project Owner – Digital Goods & Wallet</p>
+</div>
+<span class="time">2018 — 2019</span>
+</div>
+
+<ul>
+<li>Owned product lifecycle across wallet and digital goods experiences.</li>
+<li>Used SQL behavioral analytics to optimize conversion funnels.</li>
+<li>Delivered internal CRM tooling with engineering teams.</li>
+</ul>
+</section>
+
+<section class="glass-card">
+<div class="section-title"><i data-lucide="history"></i> Earlier Career</div>
+
+<p style="color:var(--text-dim);padding-left:28px;position:relative;">
+<span style="position:absolute;left:0;color:var(--accent);">→</span>
+Marketing Leader @ 4SV — built automated dashboards & growth strategy
+</p>
+
+<p style="color:var(--text-dim);padding-left:28px;position:relative;">
+<span style="position:absolute;left:0;color:var(--accent);">→</span>
+Digital Marketing @ ITL Corp — launched Speedlink last-mile platform
+</p>
+</section>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+
+<section class="glass-card">
+<div class="section-title"><i data-lucide="graduation-cap"></i> Education</div>
+<p><strong>The Wharton School, UPenn</strong><br><span style="color:var(--accent)">Business Analytics</span></p><br>
+<p><strong>University of Finance & Marketing</strong><br><span style="color:var(--accent)">Finance & Banking</span></p>
+</section>
+
+<section class="glass-card" style="text-align:center;">
+<p style="color:var(--text-dim);margin-bottom:20px;">
+“A proactive leader with exceptional analytical depth.”
+</p>
+<a href="https://www.linkedin.com/in/nmn0204/" target="_blank"
+style="background:var(--accent);color:#000;padding:15px;border-radius:15px;font-weight:800;text-decoration:none;">
+CONNECT ON LINKEDIN
+</a>
+</section>
+
+</div>
 </div>
 
 <script>
-    lucide.createIcons();
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+lucide.createIcons();
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(40px)';
-        card.style.transition = 'all 0.8s ease-out';
-        observer.observe(card);
-    });
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+e.target.style.opacity=1;
+e.target.style.transform='translateY(0)';
+}
+});
+},{threshold:.1});
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            card.style.transform = `translateY(-15px) rotateX(${y * -10}deg) rotateY(${x * 10}deg) scale(1.02)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
-        });
-    });
+document.querySelectorAll('.glass-card').forEach(card=>{
+card.style.opacity=0;
+card.style.transform='translateY(40px)';
+card.style.transition='all .8s ease-out';
+observer.observe(card);
+
+card.addEventListener('mousemove',e=>{
+const r=card.getBoundingClientRect();
+const x=(e.clientX-r.left)/r.width-.5;
+const y=(e.clientY-r.top)/r.height-.5;
+card.style.transform=`translateY(-15px) rotateX(${y*-10}deg) rotateY(${x*10}deg) scale(1.02)`;
+});
+card.addEventListener('mouseleave',()=>{
+card.style.transform='translateY(0)';
+});
+});
 </script>
+
 </body>
 </html>
