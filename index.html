@@ -1,208 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Nguyen | Senior Global Lifecycle Manager</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --bg: #020617;
-            --glass: rgba(15, 23, 42, 0.85);
-            --glass-border: rgba(251, 191, 36, 0.2);
-            --accent: #fbbf24; 
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --success: #10b981;
-            --glow: rgba(251, 191, 36, 0.3);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyen Nguyen — CV 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,300;1,400;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background: radial-gradient(circle at 50% 0%, #1e293b 0%, #020617 100%); background-attachment: fixed; color: var(--text-main); line-height: 1.6; overflow-x: hidden; perspective: 1200px; }
-        .container { max-width: 950px; margin: 0 auto; padding: 60px 20px; }
+:root{
+  --forest:#1b3a2d;
+  --sage:#3d6b52;
+  --gold:#c8913a;
+  --gold-lt:#f5e4c3;
+  --gold-dk:#7a5510;
+  --gold-bd:#e0c080;
+  --cream:#faf6ef;
+  --ink:#181c18;
+  --body:#3a3f38;
+  --muted:#7a8077;
+  --rule:#ddd8ce;
+  --s-bg2:#243d30;
+  --s-bg3:#1f3d2c;
+  --s-text:#d4e8dc;
+  --s-muted:#7aad8f;
+  --s-rule:#2e5540;
+  --tag-grn:#e8f2ec;
+}
 
-        /* Header */
-        header { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; animation: fadeIn 1s ease; }
-        .avatar-box { position: relative; width: 160px; height: 160px; flex-shrink: 0; }
-        .avatar-img { width: 100%; height: 100%; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; box-shadow: 0 0 30px var(--glow); }
-        .ai-badge { position: absolute; bottom: 0; right: 0; background: var(--accent); color: #000; font-size: 0.75rem; padding: 6px 14px; border-radius: 20px; font-weight: 800; box-shadow: 0 0 15px var(--accent); }
-        .hero-title { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; line-height: 1; color: #fff; }
-        .hero-subtitle { color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 4px; font-size: 0.9rem; margin-top: 5px; }
+html{font-size:14px}
+body{
+  background:#c8c2b6;
+  font-family:'Poppins',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  padding:36px 16px 64px;
+  color:var(--ink);
+}
 
-        /* Cards */
-        .glass-card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 30px; padding: 40px; margin-bottom: 40px; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); position: relative; }
-        .glass-card:hover { transform: translateY(-15px) rotateX(2deg); box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 20px var(--glow); border-color: var(--accent); z-index: 10; }
+@media print{
+  body{background:#fff;padding:0}
+  .save-btn{display:none!important}
+  .page{box-shadow:none;margin:0;max-width:100%}
+  .page-break{page-break-before:always}
+}
 
-        .section-title { display: flex; align-items: center; gap: 12px; color: var(--accent); font-size: 1.3rem; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Job Meta */
-        .job-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
-        .company { font-size: 1.8rem; font-weight: 800; color: #fff; }
-        .role { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
-        .time { font-size: 0.85rem; color: var(--text-dim); font-weight: 700; background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 8px; border: 1px solid var(--glass-border); }
+/* ── PAGE ── */
+.page{
+  max-width:860px;
+  margin:0 auto 0;
+  background:var(--cream);
+  box-shadow:0 8px 60px rgba(0,0,0,.25);
+  display:grid;
+  grid-template-columns:1fr 200px;
+  grid-template-rows:auto auto 1fr auto;
+  position:relative;
+}
 
-        ul { list-style: none; }
-        li { margin-bottom: 12px; color: var(--text-dim); padding-left: 28px; position: relative; font-size: 1rem; }
-        li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+.page::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:4px;
+  background:var(--gold);
+}
 
-        .pill-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
-        .pill { background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); padding: 6px 16px; border-radius: 12px; font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+/* ── HEADER ── */
+.header{
+  grid-column:1/-1;
+  background:var(--forest);
+  padding:44px 44px 32px;
+  display:grid;
+  grid-template-columns:1fr 200px;
+  gap:0;
+  align-items:end;
+}
 
-        .award-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(251, 191, 36, 0.15); color: var(--accent); padding: 8px 18px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin: 10px 10px 0 0; border: 1px solid var(--accent); }
+.name-area .eyebrow{
+  font-size:9px;font-weight:600;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+}
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @media (max-width: 768px) { header { flex-direction: column; text-align: center; } .job-meta { flex-direction: column; gap: 10px; } .hero-title { font-size: 2.8rem; } }
-    </style>
+.name-area h1{
+  font-family:'Lora',serif;
+  font-size:52px;font-weight:700;
+  line-height:.88;letter-spacing:-.02em;
+  color:#fff;
+}
+.name-area h1 em{
+  display:block;font-style:italic;
+  font-weight:300;color:var(--gold);
+}
+
+.name-area .tagline{
+  margin-top:14px;
+  font-size:11px;font-weight:300;font-style:italic;
+  color:var(--s-text);
+  line-height:1.65;max-width:420px;
+}
+
+.contact-area{
+  display:flex;flex-direction:column;gap:9px;
+  padding-left:28px;
+  border-left:1px solid var(--s-rule);
+}
+.contact-area a,
+.contact-area span{
+  font-size:11px;font-weight:300;
+  color:var(--s-text);text-decoration:none;
+  transition:color .2s;display:block;
+}
+.contact-area a:hover{color:var(--gold)}
+
+/* ── METRICS ── */
+.metrics{
+  grid-column:1/-1;
+  background:var(--gold);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.metric{
+  padding:12px 18px;
+  border-right:1px solid rgba(255,255,255,.25);
+  display:flex;align-items:baseline;gap:7px;
+}
+.metric:last-child{border-right:none}
+.metric-num{
+  font-family:'Lora',serif;
+  font-size:22px;font-weight:700;
+  color:var(--forest);line-height:1;
+}
+.metric-label{
+  font-size:9px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;
+  color:rgba(27,58,45,.75);line-height:1.3;
+}
+
+/* ── MAIN ── */
+.main{
+  padding:30px 36px 40px 40px;
+  background:var(--cream);
+  border-right:1px solid var(--rule);
+  min-height:900px;
+}
+
+/* ── SIDEBAR ── */
+.sidebar{
+  background:var(--forest);
+  padding:30px 18px 40px;
+}
+
+/* ── SECTION LABELS ── */
+.sec{
+  font-size:8px;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:13px;
+  padding-bottom:5px;
+  border-bottom:1.5px solid var(--rule);
+}
+.sec-s{
+  font-size:7.5px;font-weight:700;
+  letter-spacing:.25em;text-transform:uppercase;
+  color:var(--s-muted);
+  margin-bottom:11px;
+  padding-bottom:4px;
+  border-bottom:1px solid var(--s-rule);
+}
+
+/* ── PROFILE ── */
+.profile{margin-bottom:18px}
+.profile p{
+  font-family:'Lora',serif;
+  font-style:italic;font-size:13px;font-weight:300;
+  line-height:1.78;color:var(--body);
+}
+.profile p strong{font-style:normal;font-weight:600;color:var(--ink)}
+.profile p em{font-style:normal;color:var(--sage);font-weight:500}
+
+/* ── TAGS ── */
+.tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:5px}
+.tag{
+  font-size:9px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;
+  padding:4px 10px;
+  border:1.5px solid var(--rule);
+  color:var(--muted);background:#fff;
+}
+.tag.hot{
+  border-color:var(--sage);
+  color:var(--sage);background:var(--tag-grn);
+}
+
+/* ── EXPERIENCE ── */
+.exp-section{margin-bottom:16px}
+.exp-item{
+  margin-bottom:18px;padding-bottom:18px;
+  border-bottom:1px solid var(--rule);
+}
+.exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+.exp-header{
+  display:flex;justify-content:space-between;
+  align-items:baseline;margin-bottom:1px;gap:8px;
+}
+.exp-co{font-size:12px;font-weight:700;color:var(--ink)}
+.exp-date{font-size:10px;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.exp-role{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:12.5px;font-weight:300;
+  color:var(--sage);margin-bottom:10px;
+}
+
+.exp-item ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.exp-item li{
+  font-size:11.5px;font-weight:300;
+  line-height:1.6;color:var(--body);
+  padding-left:14px;position:relative;
+}
+.exp-item li::before{
+  content:'▸';position:absolute;left:0;top:1px;
+  color:var(--gold);font-size:9px;
+}
+.exp-item li b{color:var(--ink);font-weight:600}
+.exp-item li .num{color:var(--sage);font-weight:600}
+
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.badge{
+  font-size:8.5px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;
+  padding:3px 9px;
+  background:var(--gold-lt);
+  border:1px solid var(--gold-bd);
+  color:var(--gold-dk);
+}
+
+/* ── EARLIER CAREER ── */
+.earlier-section{margin-bottom:0}
+.earlier-item{
+  margin-bottom:16px;padding-bottom:16px;
+  border-bottom:1px solid var(--rule);
+}
+.earlier-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+
+.earlier-header{
+  display:flex;justify-content:space-between;
+  align-items:baseline;gap:8px;margin-bottom:1px;
+}
+.earlier-co{font-size:11.5px;font-weight:700;color:var(--ink)}
+.earlier-date{font-size:10px;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.earlier-role{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:12px;font-weight:300;
+  color:var(--sage);margin-bottom:7px;
+}
+.earlier-body{
+  font-size:11.5px;font-weight:300;
+  line-height:1.65;color:var(--body);margin-bottom:4px;
+}
+.earlier-hl{
+  font-size:11.5px;font-weight:600;
+  line-height:1.55;color:var(--gold);
+}
+
+/* ── SIDEBAR CHIPS ── */
+.sb-section{margin-bottom:18px}
+.sg-lbl{
+  font-size:7px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--s-muted);margin-bottom:6px;
+}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.chip{
+  font-size:9.5px;font-weight:400;
+  padding:2px 7px;
+  background:var(--s-bg3);
+  border:1px solid var(--s-rule);
+  color:var(--s-text);
+}
+.chip.core{
+  background:var(--s-bg2);
+  border-color:rgba(200,145,58,.5);
+  color:var(--gold);font-weight:600;
+}
+
+/* ── EDU ── */
+.edu-item{margin-bottom:11px}
+.edu-school{font-size:11px;font-weight:700;color:#fff;line-height:1.3}
+.edu-deg{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:11px;font-weight:300;
+  color:var(--s-text);margin:2px 0;
+}
+.edu-year{font-size:9.5px;font-weight:600;color:var(--gold)}
+
+/* ── AWARDS ── */
+.award-item{
+  display:flex;gap:0;margin-bottom:7px;
+}
+.award-bar{width:3px;background:var(--gold);flex-shrink:0;border-radius:0}
+.award-body{
+  flex:1;background:var(--s-bg2);
+  padding:7px 9px;
+}
+.award-name{font-size:10.5px;font-weight:700;color:#fff;line-height:1.3}
+.award-org{font-size:9px;color:var(--s-muted);margin-top:1px}
+
+/* ── LANGUAGES ── */
+.lang-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:5px 0;border-bottom:1px solid var(--s-rule);
+}
+.lang-row:last-child{border-bottom:none}
+.lang-name{font-size:11px;font-weight:600;color:#fff}
+.lang-lvl{font-size:9.5px;color:var(--s-muted)}
+
+/* ── AI PROJECT CARD ── */
+.project-card{
+  border:1px solid var(--gold);
+  background:var(--s-bg2);
+  margin-bottom:10px;
+  display:flex;gap:0;overflow:hidden;
+}
+.project-accent{width:3px;background:var(--gold);flex-shrink:0}
+.project-body{padding:10px 10px 10px 9px;flex:1}
+.project-name{
+  font-size:11px;font-weight:700;color:var(--gold);
+  text-decoration:none;display:block;margin-bottom:2px;
+}
+.project-name:hover{text-decoration:underline}
+.project-tag{font-size:8.5px;color:var(--s-muted);margin-bottom:6px}
+.project-desc{font-size:9.5px;font-weight:300;color:var(--s-text);line-height:1.55}
+
+.ai-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px}
+.ai-chip{
+  font-size:9.5px;font-weight:600;
+  padding:2px 8px;
+  background:var(--s-bg2);
+  border:1px solid rgba(200,145,58,.5);
+  color:var(--gold);
+}
+
+/* ── QUOTE ── */
+.quote{
+  border:1px solid var(--s-rule);
+  background:var(--s-bg2);
+  padding:14px 13px 12px;
+  position:relative;margin-top:14px;
+}
+.quote::before{
+  content:'\201C';
+  font-family:'Lora',serif;font-size:40px;
+  color:var(--gold);opacity:.5;
+  position:absolute;top:2px;left:10px;line-height:1;
+}
+.quote p{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:11px;font-weight:300;
+  line-height:1.65;color:var(--s-text);
+  padding-top:16px;
+}
+.quote cite{
+  display:block;margin-top:6px;
+  font-size:9px;font-style:normal;
+  color:var(--s-muted);letter-spacing:.06em;text-transform:uppercase;
+}
+
+/* ── FOOTER ── */
+.footer{
+  grid-column:1/-1;
+  background:var(--forest);
+  padding:8px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.footer span,.footer a{
+  font-size:9px;color:var(--s-muted);
+  text-decoration:none;letter-spacing:.08em;
+}
+.footer a:hover{color:var(--gold)}
+
+/* ── PAGE 2 ── */
+.page2{margin-top:40px}
+.page2-header{
+  grid-column:1/-1;
+  background:var(--forest);
+  padding:16px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.page2-header-left h2{
+  font-family:'Lora',serif;font-size:18px;font-weight:600;color:#fff
+}
+.page2-header-left span{
+  font-size:10px;font-weight:300;color:var(--gold);
+  font-style:italic;display:block;margin-top:2px;
+}
+.page2-header-right{
+  font-size:9.5px;color:var(--s-muted);letter-spacing:.1em
+}
+
+/* Page2 sidebar */
+.p2-sidebar-section{margin-bottom:18px}
+.p2-philosophy-item{
+  font-family:'Lora',serif;font-style:italic;
+  font-size:10.5px;font-weight:300;
+  color:var(--s-text);line-height:1.6;
+  padding:5px 0;border-bottom:1px solid var(--s-rule);
+}
+.p2-philosophy-item:last-child{border-bottom:none}
+.p2-num-item{
+  display:flex;align-items:baseline;gap:6px;
+  padding:5px 0;border-bottom:1px solid var(--s-rule);
+}
+.p2-num-item:last-child{border-bottom:none}
+.p2-num{
+  font-family:'Lora',serif;font-size:16px;font-weight:700;
+  color:var(--gold);flex-shrink:0;min-width:46px;
+}
+.p2-num-lbl{font-size:9px;font-weight:300;color:var(--s-text);line-height:1.4}
+
+/* ── SAVE BTN ── */
+.save-btn{
+  position:fixed;bottom:24px;right:24px;
+  background:var(--gold);color:var(--forest);
+  border:none;padding:11px 24px;
+  font-family:'Poppins',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  cursor:pointer;
+  box-shadow:0 4px 20px rgba(200,145,58,.4);
+  transition:transform .2s,box-shadow .2s;
+  z-index:200;
+}
+.save-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,145,58,.55)}
+
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.page{animation:rise .5s ease both}
+.page2{animation:rise .5s .1s ease both}
+</style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="avatar-box">
-            <img src="image.jpg" alt="Nguyen Nguyen" class="avatar-img">
-            <div class="ai-badge">AI ADAPTIVE</div>
-        </div>
-        <div>
-            <p class="hero-subtitle">Senior Global Lifecycle Manager</p>
-            <h1 class="hero-title">Nguyen Nguyen</h1>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; color: var(--text-dim); font-size: 0.95rem; margin-top: 15px;">
-                <span><i data-lucide="map-pin" size="16"></i> Ho Chi Minh City, Vietnam</span>
-                <span><i data-lucide="mail" size="16"></i> minhnguyen94.reve@gmail.com</span>
-                <span><i data-lucide="phone" size="16"></i> +84 349 404 043</span>
-                <span><i data-lucide="linkedin" size="16"></i> /in/nmn0204</span>
-            </div>
-        </div>
-    </header>
+<button class="save-btn" onclick="window.print()">↓ Save as PDF</button>
 
-    <section class="glass-card">
-        <div class="section-title"><i data-lucide="user-check"></i> Executive Profile</div>
-        <p style="font-size: 1.1rem; color: #e2e8f0;">
-            Strategic Lifecycle Leader with a decade of experience owning end-to-end lifecycle strategy, proactively identifying growth gaps, and driving cross-functional execution at global scale. Recognized as a <strong>consistent high-performer for multiple consecutive years</strong>, specializing in resolving strategic complexity through AI learning loops and MarTech integration. Driven by operational resilience and a commitment to multi-million dollar ROI.
-        </p>
-        <div class="pill-group">
-            <span class="pill">Multi-Year High Achiever</span><span class="pill">Strategic Complexity</span><span class="pill">Operational Resilience</span>
-            <span class="pill">Salesforce Architecture</span><span class="pill">AI Learning Loops</span><span class="pill">Global Impact</span>
-            <span class="pill">SQL/BigQuery</span><span class="pill">LTV Optimization</span><span class="pill">ROI Focus</span>
-        </div>
-    </section>
+<!-- ═══════════════════ PAGE 1 ═══════════════════ -->
+<div class="page">
 
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">Binance</h3>
-                <p class="role">Senior Global Lifecycle & Platform Strategy Manager</p>
-            </div>
-            <span class="time">NOV 2021 — PRESENT</span>
-        </div>
-        <ul>
-            <li><strong>Sustained Excellence:</strong> Consistently earned <strong>Outstanding Performance Ratings across multiple years</strong> for lifecycle innovation and global retention uplift.</li>
-            <li><strong>Global Orchestration:</strong> Architected lifecycle strategy for 200M+ users across all major product lines (Spot, Futures, Earn, Pay) and global regions.</li>
-            <li><strong>Systemic Resilience:</strong> Standardized global lifecycle frameworks, reusable CRM modules, and governance models to enable scalable, long-term execution across regions, ensuring stability through rapid organizational growth.</li>
-            <li><strong>AI-Driven Innovation:</strong> Scaled adaptive lifecycle systems translating behavioral data into measurable retention uplift, operational efficiency, and sustainable growth across markets.</li>
-        </ul>
-        <div class="award-tag"><i data-lucide="award"></i> Multi-Year Outstanding Performance Rating</div>
-        <div class="award-tag"><i data-lucide="zap"></i> Strategic Innovation Leader</div>
-    </section>
-
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">BeGroup</h3>
-                <p class="role">CRM & Loyalty Manager</p>
-            </div>
-            <span class="time">SEPT 2019 — NOV 2021</span>
-        </div>
-        <ul>
-            <li><strong>Leadership & Performance:</strong> Recognized as <strong>Top Performer 2020</strong>; built and ed a 6-member CRM & loyalty team, mentoring high performers and scaling execution capability across lifecycle journeys.</li>
-            <li><strong>Process Velocity:</strong> Scaled CRM automation workflows by 30x in 2 years, launching <strong>67+ complex automation journeys</strong>.</li>
-            <li><strong>MarTech Mastery:</strong> Integrated Salesforce, Insider, MoEngage, Airship, and Netcore stacks to optimize LTV and reduce churn.</li>
-        </ul>
-        <div class="award-tag"><i data-lucide="trophy"></i> Be On Top Performer 2020</div>
-        <div class="award-tag"><i data-lucide="users"></i> beNice Team Award (Effectiveness)</div>
-    </section>
-
-    <section class="glass-card">
-        <div class="job-meta">
-            <div>
-                <h3 class="company">Sendo (Senpay)</h3>
-                <p class="role">Project Owner, Digital Goods & E-Wallet</p>
-            </div>
-            <span class="time">JUN 2018 — SEPT 2019</span>
-        </div>
-        <ul>
-            <li>Owned end-to-end product lifecycle for Digital Goods & Senpay wallet, driving it to become the platform's <strong>GMV leader</strong>.</li>
-            <li>Optimized UI/UX through SQL-driven behavior analysis and customer journey mapping.</li>
-            <li>Collaborated with Tech via Jira/Zeplin to build proprietary internal CRM and marketing tools.</li>
-        </ul>
-    </section>
-
-    <section class="glass-card">
-        <div class="section-title"><i data-lucide="history"></i> Earlier Career Evolution</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-            <div>
-                <p style="font-weight: 700; color: #fff;">Marketing Leader @ 4SV</p>
-                <p style="font-size: 0.85rem; color: var(--accent);">2017 — 2018</p>
-                <li style="font-size: 0.9rem; margin-top: 10px;">Developed strategic marketing plans and automated data dashboards via GA/GTM.</li>
-                <div class="award-tag" style="font-size: 0.7rem;"><i data-lucide="star" size="12"></i> Employee of the Month (Apr 2018)</div>
-            </div>
-            <div>
-                <p style="font-weight: 700; color: #fff;">Digital Marketing @ ITL Corp</p>
-                <p style="font-size: 0.85rem; color: var(--accent);">2016 — 2017</p>
-                <li style="font-size: 0.9rem; margin-top: 10px;">Successfully launched Speedlink (last-mile delivery) and managed core digital teams.</li>
-            </div>
-        </div>
-    </section>
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
-        <section class="glass-card">
-            <div class="section-title"><i data-lucide="graduation-cap"></i> Education</div>
-            <div style="margin-bottom: 20px;">
-                <p style="font-weight: 700; color: #fff;">The Wharton School, UPenn</p>
-                <p style="font-size: 0.9rem; color: var(--accent);">Business Analytics (2025)</p>
-            </div>
-            <div>
-                <p style="font-weight: 700; color: #fff;">Uni. of Finance & Marketing</p>
-                <p style="font-size: 0.9rem; color: var(--accent);">Bachelor of Finance & Banking</p>
-            </div>
-        </section>
-        
-        <section class="glass-card" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-            <p style="margin-bottom: 20px; color: var(--text-dim);">Peer Feedback: "A proactive leader with an exceptional analytical mindset."</p>
-            <a href="https://www.linkedin.com/in/nmn0204/" target="_blank" style="text-decoration: none; background: var(--accent); color: #000; padding: 15px; border-radius: 15px; font-weight: 800; transition: 0.3s;">CONNECT ON LINKEDIN</a>
-        </section>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="name-area">
+      <div class="eyebrow">Senior Global Lifecycle Manager · Fintech &amp; E-commerce · 10+ Years</div>
+      <h1>Nguyen<em>Nguyen</em></h1>
+      <p class="tagline">A decade building the lifecycle systems others inherit — AI-driven retention engines serving 200M+ users globally.</p>
     </div>
+    <div class="contact-area">
+      <a href="/cdn-cgi/l/email-protection#4a27232422242d3f332f24737e64382f3c2f0a2d272b232664292527"><span class="__cf_email__" data-cfemail="44292d2a2c2a23313d212a7d706a36213221042329252d286a272b29">[email&#160;protected]</span></a>
+      <a href="tel:+84349404043">+84 349 404 043</a>
+      <span>Ho Chi Minh City, Vietnam</span>
+      <a href="https://linkedin.com/in/nmn0204" target="_blank">linkedin.com/in/nmn0204</a>
+      <a href="https://stalisnguyen.github.io/CV-2026/" target="_blank">stalisnguyen.github.io/CV-2026</a>
+    </div>
+  </header>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="metric"><span class="metric-num">10+</span><span class="metric-label">Years in<br>Lifecycle &amp; CRM</span></div>
+    <div class="metric"><span class="metric-num">200M+</span><span class="metric-label">Users Under<br>Strategy</span></div>
+    <div class="metric"><span class="metric-num">125+</span><span class="metric-label">Active Campaigns<br>Managed</span></div>
+    <div class="metric"><span class="metric-num">100+</span><span class="metric-label">Always-On<br>Workflows</span></div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- PROFILE -->
+    <section class="profile" style="margin-bottom:16px">
+      <div class="sec">Profile</div>
+      <p>A lifecycle strategist who <strong>designs the operating system for growth</strong> — not just the campaigns inside it. Built CRM infrastructure from scratch at two companies, then scaled globally at Binance for <em>200M+ users</em> across every major product and region. <strong>Multi-year consecutive Outstanding Performance honoree</strong> — fluent across behavioral data, MarTech architecture, and AI systems. Now actively building with AI: shipping products with Claude, GPT, Replit, and GitHub, including a live personal project in psychological gaming.</p>
+    </section>
+
+    <div class="tag-row" style="margin-bottom:5px">
+      <span class="tag hot">AI Learning Loops</span>
+      <span class="tag hot">Global Lifecycle Strategy</span>
+      <span class="tag hot">LTV Optimization</span>
+      <span class="tag hot">MarTech Architecture</span>
+    </div>
+    <div class="tag-row" style="margin-bottom:16px">
+      <span class="tag">AI Builder</span>
+      <span class="tag">Replit · GitHub · Claude · GPT</span>
+      <span class="tag">Fintech · Crypto · E-commerce</span>
+      <span class="tag">Multi-Year High Achiever</span>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section class="exp-section">
+      <div class="sec">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-co">Binance</span>
+          <span class="exp-date">Nov 2021 — Present</span>
+        </div>
+        <div class="exp-role">Senior Global Lifecycle &amp; Platform Strategy Manager</div>
+        <ul>
+          <li><b>Global Lifecycle Ownership:</b> Sole strategic owner of the full user lifecycle for <span class="num">200M+</span> users — spanning Activation, Retention, Churn Prevention, and Winback across every major product vertical and region. Managed <span class="num">125+</span> active campaigns and <span class="num">100+</span> always-on automated workflows simultaneously, operating with high independence through continuous org change.</li>
+          <li><b>Churn &amp; Retention Systems:</b> Designed and scaled an always-on churn recovery engine that stabilized coverage to <span class="num">75%</span> of churned users — driving <span class="num">26.8k</span> incremental active users and <span class="num">157k</span> incremental visits per month. Doubled incremental login volume H1 to H2 through localization, segmentation, and campaign optimization.</li>
+          <li><b>Activation Funnel Transformation:</b> Rebuilt the New User Onboarding (NUO) journey end-to-end — restructuring content, sequencing, and personalization across regions. Delivered consistent QoQ funnel improvements: KYC Pass <span class="num">+1.93ppt</span>, First Transaction <span class="num">+1.35ppt</span>, First Trade <span class="num">+1ppt</span>.</li>
+          <li><b>CRM &amp; Loyalty Infrastructure:</b> Architected the proprietary loyalty and rewards platform from zero — doXgetY incentive frameworks, Rewards Hub, gamified engagement systems, and a cross-sell engine that converted passive users into active product adopters across Earn, Pay, and Spot.</li>
+          <li><b>Experimentation at Scale:</b> Ran a continuous program of behavioral experiments across channels and segments — testing cross-sell mechanics, reactivation triggers, and personalization logic. Translated winning signals into always-on journeys, sustaining <span class="num">100+</span> live automated workflows.</li>
+          <li><b>Cross-functional Leadership:</b> Served as the central lifecycle connector across Product, Data, Regional, CRM Ops, Paid Ads, and Content — synthesizing cross-regional insights into unified strategy, and representing lifecycle logic in AI and platform-level product decisions.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">⭑ Multi-Year Outstanding Performance</span>
+          <span class="badge">⭑ Strategic Innovation Leader</span>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-co">BeGroup, Vietnam</span>
+          <span class="exp-date">Sept 2019 — Nov 2021</span>
+        </div>
+        <div class="exp-role">CRM &amp; Loyalty Manager</div>
+        <ul>
+          <li><b>Team Builder:</b> Hired and led a <span class="num">6-person</span> CRM team from zero — ride-hailing, mobility &amp; fintech verticals.</li>
+          <li><b>Velocity:</b> Scaled CRM automation from 0 to <span class="num">67</span> active journeys in one year — a <span class="num">30×</span> increase in 2 years.</li>
+          <li><b>Churn Reduction:</b> Achieved <span class="num">double-digit</span> churn reduction in first 3 lifecycle stages YoY via segmentation &amp; gamification.</li>
+          <li><b>Predictive ML:</b> Designed ML-assisted uninstall prediction model; proactive interventions measurably reduced abandonment.</li>
+          <li><b>MarTech Stack:</b> Implemented Salesforce, Insider, MoEngage, Airship, Netcore + proprietary internal tooling.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">⭑ Be On Top — Top Performer 2020</span>
+          <span class="badge">⭑ beNice Award — Most Effective Team</span>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-co">Sendo · Senpay, Vietnam</span>
+          <span class="exp-date">Jun 2018 — Sept 2019</span>
+        </div>
+        <div class="exp-role">Project Owner — Digital Goods &amp; E-Wallet</div>
+        <ul>
+          <li>Owned full product lifecycle for Digital Goods &amp; Senpay wallet — drove it to the platform's <b>highest-GMV category</b>.</li>
+          <li>CRM strategy: journey mapping, retention programs, A/B frameworks; SQL &amp; BigQuery analysis; Data Studio dashboards.</li>
+          <li>Shipped internal CRM &amp; marketing tooling with Tech via Jira, Confluence &amp; Zeplin; authored comprehensive BRDs.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sb-section">
+      <div class="sec-s">Core Skills</div>
+      <div class="sg-lbl">Lifecycle Strategy</div>
+      <div class="chips">
+        <span class="chip core">Activation</span><span class="chip core">Retention</span>
+        <span class="chip core">Churn Prevention</span><span class="chip core">Winback</span>
+        <span class="chip core">LTV Optimization</span><span class="chip">Loyalty Programs</span>
+        <span class="chip">Gamification</span><span class="chip">Cross-sell/Up-sell</span>
+      </div>
+      <div class="sg-lbl">MarTech Platforms</div>
+      <div class="chips">
+        <span class="chip core">Salesforce</span><span class="chip core">Insider</span>
+        <span class="chip">MoEngage</span><span class="chip">Airship</span>
+        <span class="chip">Netcore</span><span class="chip">CrowdTwist</span><span class="chip">SessionM</span>
+      </div>
+      <div class="sg-lbl">Data &amp; Analytics</div>
+      <div class="chips">
+        <span class="chip core">SQL</span><span class="chip core">BigQuery</span>
+        <span class="chip">GA/GTM</span><span class="chip">Amplitude</span>
+        <span class="chip">Mixpanel</span><span class="chip">Data Studio</span>
+      </div>
+      <div class="sg-lbl">Leadership</div>
+      <div class="chips">
+        <span class="chip">Team Building</span><span class="chip">AI Systems</span>
+        <span class="chip">Process Design</span><span class="chip">Cross-functional</span>
+        <span class="chip">Mentoring</span>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sec-s">AI &amp; Building</div>
+      <div class="project-card">
+        <div class="project-accent"></div>
+        <div class="project-body">
+          <a class="project-name" href="https://inner-world.live" target="_blank">inner-world.live</a>
+          <div class="project-tag">Personal Project · Live</div>
+          <div class="project-desc">A psychological exploration game built with AI — blending behavioral psychology, narrative design, and interactive UX.</div>
+        </div>
+      </div>
+      <div class="sg-lbl" style="margin-top:4px">Tools I Build With</div>
+      <div class="ai-chips">
+        <span class="ai-chip">Claude</span>
+        <span class="ai-chip">ChatGPT</span>
+        <span class="ai-chip">Replit</span>
+        <span class="ai-chip">GitHub</span>
+        <span class="ai-chip">Opal</span>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sec-s">Education</div>
+      <div class="edu-item">
+        <div class="edu-school">The Wharton School, UPenn</div>
+        <div class="edu-deg">Business Analytics: Data to Insights</div>
+        <div class="edu-year">2025</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-school">Uni. of Finance &amp; Marketing, HCMC</div>
+        <div class="edu-deg">Bachelor of Finance &amp; Banking</div>
+        <div class="edu-year">2012 — 2016</div>
+      </div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sec-s">Recognition</div>
+      <div class="award-item"><div class="award-bar"></div><div class="award-body"><div class="award-name">Outstanding Performance</div><div class="award-org">Binance · Multiple Consecutive Years</div></div></div>
+      <div class="award-item"><div class="award-bar"></div><div class="award-body"><div class="award-name">Be On Top Award</div><div class="award-org">BeGroup · Top Performer 2020</div></div></div>
+      <div class="award-item"><div class="award-bar"></div><div class="award-body"><div class="award-name">beNice Team Award</div><div class="award-org">BeGroup · Most Effective &amp; Supportive</div></div></div>
+      <div class="award-item"><div class="award-bar"></div><div class="award-body"><div class="award-name">Employee of the Month</div><div class="award-org">4SV · April 2018</div></div></div>
+    </div>
+
+    <div class="sb-section">
+      <div class="sec-s">Languages</div>
+      <div class="lang-row"><span class="lang-name">Vietnamese</span><span class="lang-lvl">Native</span></div>
+      <div class="lang-row"><span class="lang-name">English</span><span class="lang-lvl">Fluent</span></div>
+      <div class="lang-row"><span class="lang-name">Chinese</span><span class="lang-lvl">Basic</span></div>
+    </div>
+
+    <div class="quote">
+      <p>"A proactive leader with an exceptional analytical mindset."</p>
+      <cite>— Peer Feedback, Binance</cite>
+    </div>
+
+  </aside>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Nguyen Nguyen · Senior Global Lifecycle Manager · 2026</span>
+    <a href="https://stalisnguyen.github.io/CV-2026/" target="_blank">stalisnguyen.github.io/CV-2026</a>
+  </footer>
+
 </div>
 
-<script>
-    lucide.createIcons();
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
+<!-- ═══════════════════ PAGE 2 ═══════════════════ -->
+<div class="page page2">
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(40px)';
-        card.style.transition = 'all 0.8s ease-out';
-        observer.observe(card);
-    });
+  <header class="page2-header">
+    <div class="page2-header-left">
+      <h2>Nguyen Nguyen</h2>
+      <span>Earlier Career — Continued</span>
+    </div>
+    <div class="page2-header-right">Page 2 of 2</div>
+  </header>
 
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = (e.clientX - rect.left) / rect.width - 0.5;
-            const y = (e.clientY - rect.top) / rect.height - 0.5;
-            card.style.transform = `translateY(-15px) rotateX(${y * -10}deg) rotateY(${x * 10}deg) scale(1.02)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
-        });
-    });
-</script>
-</body>
-</html>
+  <!-- METRICS repeat slim -->
+  <div class="metrics">
+    <div class="metric"><span class="metric-num">10+</span><span class="metric-label">Years in Lifecycle &amp; CRM</span></div>
+    <div class="metric"><span class="metric-num">200M+</span><span class="metric-label">Users Under Strategy</span></div>
+    <div class="metric"><span class="metric-num">125+</span><span class="metric-label">Active Campaigns Managed</span></div>
+    <div class="metric"><span class="metric-num">100+</span><span class="metric-label">Always-On Workflows</span></div>
+  </div>
+
+  <!-- MAIN PAGE 2 -->
+  <main class="main">
+
+    <section class="earlier-section">
+      <div class="sec">Earlier Career</div>
+
+      <div class="earlier-item">
+        <div class="earlier-header">
+          <span class="earlier-co">4SV – Student Life Care JSC, Vietnam</span>
+          <span class="earlier-date">Oct 2017 — Jun 2018</span>
+        </div>
+        <div class="earlier-role">Marketing Leader</div>
+        <p class="earlier-body">Led a cross-functional digital marketing team end-to-end — strategic planning, budget forecasting, risk management, and channel execution across SEO, social, and email. Built GA &amp; GTM dashboards that replaced gut-feel decisions with clean data. Ran multi-channel campaigns and developed growth forecasts that shaped the company's direction. Mentored and grew junior team members while maintaining delivery standards.</p>
+        <p class="earlier-hl">Awarded Employee of the Month, April 2018 — recognized for both results and team impact.</p>
+      </div>
+
+      <div class="earlier-item">
+        <div class="earlier-header">
+          <span class="earlier-co">ITL Corporation, Vietnam</span>
+          <span class="earlier-date">Jul 2016 — Oct 2017</span>
+        </div>
+        <div class="earlier-role">Digital Marketing Executive</div>
+        <p class="earlier-body">Owned SEO strategy end-to-end: keyword research, on-page optimization, satellite site architecture, and sitemap management. Ran email marketing campaigns across MailChimp, Vinamail, and Moosend — built templates, managed lists, and tracked performance. Executed paid media across Google Ads and Facebook Ads. Developed and optimized website content to drive organic traffic and SERP rankings. Built competitor analysis frameworks that directly informed quarterly KPI-setting.</p>
+        <p class="earlier-hl">Led the successful brand launch of Speedlink last-mile delivery company — built its marketing team from the ground up and managed day-to-day operations.</p>
+      </div>
+
+      <div class="earlier-item">
+        <div class="earlier-header">
+          <span class="earlier-co">Rève Marketing Agency, Vietnam</span>
+          <span class="earlier-date">Aug 2015 — Jul 2016</span>
+        </div>
+        <div class="earlier-role">Freelance Content Creator &amp; Brand Designer</div>
+        <p class="earlier-body">Created brand identities, content strategies, and integrated campaigns for agency clients across multiple industries. Developed creative briefs, directed visual style, and managed campaign execution from concept to delivery. This foundational chapter in brand thinking and storytelling still shapes how lifecycle communications are crafted today — every campaign journey starts with a human insight and a clear narrative.</p>
+        <p class="earlier-hl">Designed the complete brand identity for Utt Lounge: visual language, tone of voice, naming framework, and full launch materials.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SIDEBAR PAGE 2 -->
+  <aside class="sidebar">
+
+    <div class="p2-sidebar-section" style="margin-bottom:18px">
+      <div class="sec-s">Contact</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a href="/cdn-cgi/l/email-protection#1c71757274727b696579722528326e796a795c7b717d7570327f7371" style="font-size:10px;font-weight:300;color:var(--s-text);text-decoration:none"><span class="__cf_email__" data-cfemail="4924202721272e3c302c27707d673b2c3f2c092e24282025672a2624">[email&#160;protected]</span></a>
+        <a href="tel:+84349404043" style="font-size:10px;font-weight:300;color:var(--s-text);text-decoration:none">+84 349 404 043</a>
+        <span style="font-size:10px;font-weight:300;color:var(--s-text)">Ho Chi Minh City, Vietnam</span>
+        <a href="https://linkedin.com/in/nmn0204" target="_blank" style="font-size:10px;font-weight:300;color:var(--s-text);text-decoration:none">linkedin.com/in/nmn0204</a>
+      </div>
+    </div>
+
+    <div class="p2-sidebar-section" style="margin-bottom:18px">
+      <div class="sec-s">Core Philosophy</div>
+      <div class="p2-philosophy-item">"Build systems others inherit."</div>
+      <div class="p2-philosophy-item">"Zero-to-one is where I thrive."</div>
+      <div class="p2-philosophy-item">"Data without story is just noise."</div>
+      <div class="p2-philosophy-item">"Retention is the real growth lever."</div>
+    </div>
+
+    <div class="p2-sidebar-section">
+      <div class="sec-s">Key Numbers</div>
+      <div class="p2-num-item">
+        <span class="p2-num">200M+</span>
+        <span class="p2-num-lbl">Users under lifecycle strategy at Binance</span>
+      </div>
+      <div class="p2-num-item">
+        <span class="p2-num">125+</span>
+        <span class="p2-num-lbl">Active campaigns managed simultaneously at Binance</span>
+      </div>
+      <div class="p2-num-item">
+        <span class="p2-num">100+</span>
+        <span class="p2-num-lbl">Always-on automated workflows maintained</span>
+      </div>
+      <div class="p2-num-item">
+        <span class="p2-num">10+</span>
+        <span class="p2-num-lbl">Years in lifecycle &amp; CRM globally</s
