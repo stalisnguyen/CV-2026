@@ -355,6 +355,12 @@ body{
   line-height:1.45;
   color:var(--s-text);
 }
+.stack-note{
+  margin:-4px 0 8px;
+  font-size:10.2px;font-weight:400;
+  line-height:1.4;
+  color:var(--s-muted);
+}
 
 /* ── AWARDS ── */
 .award-item{
@@ -663,7 +669,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
   }
   .chips .chip:not(:last-child)::after{content:", "}
   .edu-school,.award-name,.lang-name,.project-name{color:#111!important;font-size:10.5pt!important}
-  .edu-deg,.award-org,.lang-lvl,.project-desc,.project-tag,.cert-id,.ai-note,.edu-year{
+  .edu-deg,.award-org,.lang-lvl,.project-desc,.project-tag,.cert-id,.ai-note,.stack-note,.edu-year{
     color:#222!important;font-size:9.5pt!important;
   }
   .cert-id{word-break:break-all}
@@ -678,9 +684,10 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
   }
   .footer span,.footer a{color:#333!important;font-size:8pt!important;letter-spacing:0!important}
   .page.page2{display:none!important}
-  .profile p,.exp-item li,.adv-body,.earlier-body,.earlier-hl,.chip,.edu-deg,.project-desc{
+  .profile p,.exp-item li,.adv-body,.earlier-body,.earlier-hl,.chip,.edu-deg,.project-desc,.stack-note{
     font-size:8.6pt!important;line-height:1.18!important;
   }
+  .stack-note{margin:0 0 2pt!important}
   .header{padding-bottom:4pt!important;margin-bottom:4pt!important}
   .sec{margin:3pt 0 1pt!important}
   .footer{margin-top:2pt!important;padding-top:2pt!important}
@@ -697,7 +704,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
   h1,h2,.headline,.exp-co,.earlier-co,.exp-role,.earlier-role,.profile p,.exp-item li,
   .adv-body,.earlier-body,.sec,.sec-s,.chip,.edu-school,.edu-deg,.award-name,.cert-id,
   .remote,.metrics-line,.contact-area a,.contact-area span,.footer span,.footer a,
-  .project-name,.project-desc,.lang-name,.lang-lvl,.sg-lbl,.ai-note,.award-org{
+  .project-name,.project-desc,.lang-name,.lang-lvl,.sg-lbl,.ai-note,.stack-note,.award-org{
     font-family:Arial,Arimo,"Liberation Sans",Helvetica,sans-serif!important;
     font-style:normal!important;
   }
@@ -907,6 +914,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
         <span class="chip">n8n</span><span class="chip">Airship</span>
         <span class="chip">Netcore</span><span class="chip">CrowdTwist</span><span class="chip">SessionM</span>
       </div>
+      <p class="stack-note" data-i18n="sg.stacknote">Platform-agnostic; ramps up fast on any new CRM/martech system.</p>
       <div class="sg-lbl" data-i18n="sg.data">Data &amp; Analytics</div>
       <div class="chips">
         <span class="chip core">SQL</span><span class="chip core">BigQuery</span>
@@ -1192,6 +1200,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "c.gami":"Gamification",
     "c.cross":"Cross-sell / Up-sell",
     "sg.martech":"Công cụ / Stack",
+    "sg.stacknote":"Không phụ thuộc nền tảng; bắt nhịp nhanh trên mọi hệ CRM/martech mới.",
     "sg.data":"Dữ liệu &amp; Phân tích",
     "sg.leader":"Lãnh đạo",
     "c.team":"Xây đội ngũ",
@@ -1327,6 +1336,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "c.gami":"游戏化",
     "c.cross":"交叉销售 / 增值销售",
     "sg.martech":"工具 / 技术栈",
+    "sg.stacknote":"平台无关；能快速上手任何新的 CRM/营销技术系统。",
     "sg.data":"数据与分析",
     "sg.leader":"领导力",
     "c.team":"团队搭建",
