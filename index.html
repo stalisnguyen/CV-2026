@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nguyen Nguyen — Senior Lifecycle &amp; CRM Manager</title>
-<meta name="description" content="Nguyen Nguyen — Senior Lifecycle and CRM manager. Retention, marketing automation and experimentation. Remote from Ho Chi Minh City (GMT+7). 10+ years, including Binance (300M+ users) and Echolis.">
-<meta property="og:title" content="Nguyen Nguyen — Senior Lifecycle &amp; CRM Manager">
-<meta property="og:description" content="Senior Lifecycle and CRM manager. Retention, marketing automation and experimentation. Remote from Ho Chi Minh City (GMT+7). 10+ years, including Binance (300M+ users) and Echolis.">
+<title>Nguyen Nguyen — Lifecycle, CRM &amp; Growth Lead</title>
+<meta name="description" content="Nguyen Nguyen — Lifecycle, CRM and growth lead. Retention, marketing automation and experimentation. Builder of AI products and automations. Remote from Ho Chi Minh City (GMT+7).">
+<meta property="og:title" content="Nguyen Nguyen — Lifecycle, CRM &amp; Growth Lead">
+<meta property="og:description" content="Lifecycle, CRM and growth lead. Retention, marketing automation and experimentation. Builder of AI products and automations. Remote from Ho Chi Minh City (GMT+7).">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://stalisnguyen.github.io/CV-2026/">
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,300;1,400;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@ body{
   color:var(--ink);
 }
 
-/* Print copy of Earlier Career is cloned into the first sheet so the PDF reads in one column. */
+/* Screen hides this; print uses it for the one-line metrics strip. */
 .print-only{display:none}
 
 /* ── PAGE ── */
@@ -471,6 +471,13 @@ body{
 .page2-header-right{
   font-size:10.7px;color:var(--s-muted);letter-spacing:.1em
 }
+.page2 .sidebar{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  padding:28px 40px 36px;
+}
 
 /* Page2 sidebar */
 .p2-sidebar-section{margin-bottom:18px}
@@ -738,7 +745,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     <div class="header-right">
       <div class="name-area">
         <h1>Nguyen <em>Nguyen</em></h1>
-        <p class="headline" data-i18n="hdr.headline">Senior Lifecycle &amp; CRM Manager | Retention · Marketing Automation · Experimentation | AI-native builder</p>
+        <p class="headline" data-i18n="hdr.headline">Lifecycle, CRM &amp; Growth Lead | Retention · Marketing Automation · Experimentation | Builder of AI products and automations</p>
         <p class="remote" data-i18n="hdr.remote">Remote from Ho Chi Minh City (GMT+7) · overlaps EMEA &amp; APAC · async, written-first</p>
       </div>
       <div class="contact-area">
@@ -767,7 +774,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     <!-- PROFILE -->
     <section class="profile" style="margin-bottom:16px">
       <div class="sec" data-i18n="sec.profile">Profile</div>
-      <p data-i18n="p.body">Lifecycle, CRM and product-operations manager with 10+ years across fintech, mobility and e-commerce. At <strong>Binance</strong> — a global fintech exchange with a <em>300M+ user base</em> — owned activation, retention, churn prevention and winback, and rebuilt churn recall in the 2022–2023 bear market (recall rate 8.92% to 12.66%; 4.3M to 5.9M users re-activated per month). Built CRM and loyalty infrastructure from zero twice. Hands-on with SQL, BigQuery, Amplitude and Mixpanel, and ships with Claude Code as founder of <strong>Echolis</strong>, a live AI reflection product. Anthropic AI Fluency certified (Sep 2026). Remote from Ho Chi Minh City (GMT+7); async, written-first.</p>
+      <p data-i18n="p.body">Lifecycle, CRM and growth leader with 10+ years across fintech, mobility and e-commerce. At <strong>Binance</strong> (<em>300M+ user base</em>) I owned activation, retention, churn prevention and winback, and rebuilt churn recall in the 2022–2023 bear market (recall rate 8.92% to 12.66%; 4.3M to 5.9M users re-activated per month). Built CRM and loyalty infrastructure from zero twice. Now founder of <strong>Echolis</strong>, an AI companion app live on the App Store, built with Claude Code and n8n, plus two AI learning web apps. Hands-on with SQL, BigQuery, Amplitude and Mixpanel. Remote from Ho Chi Minh City (GMT+7); async, written-first.</p>
     </section>
 
     <div class="tag-row" style="margin-bottom:5px">
@@ -777,8 +784,8 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
       <span class="tag hot" data-i18n="tag.4">MarTech Architecture</span>
     </div>
     <div class="tag-row" style="margin-bottom:16px">
-      <span class="tag" data-i18n="tag.5">AI-Native Builder</span>
-      <span class="tag">Claude Code · GitHub · Railway</span>
+      <span class="tag" data-i18n="tag.5">AI Products &amp; Automations</span>
+      <span class="tag">Claude Code · n8n · Vercel</span>
       <span class="tag" data-i18n="tag.7">Fintech · Crypto · E-commerce</span>
       <span class="tag">SQL · BigQuery · Amplitude</span>
     </div>
@@ -792,17 +799,30 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
           <span class="exp-co">Echolis <span style="font-weight:400;color:var(--muted);font-size:11.9px">· echolis.com</span></span>
           <span class="exp-date" data-i18n="e1.date">2026 — Present</span>
         </div>
-        <div class="exp-role" data-i18n="e1.role">Founder &amp; Solo AI Product Builder</div>
+        <div class="exp-role" data-i18n="e1.role">Founder &amp; Product Lead</div>
         <ul>
-          <li data-i18n="e1.b1">Built and shipped Echolis, an AI companion app, live on the App Store (v1.2).</li>
-          <li data-i18n="e1.b2">Built Stalong (<a href="https://hanyu-ecru.vercel.app" target="_blank">https://hanyu-ecru.vercel.app</a>), a Chinese-learning web app with AI and mini games.</li>
-          <li data-i18n="e1.b3">Built Catalis (<a href="https://catalis-alpha.vercel.app" target="_blank">https://catalis-alpha.vercel.app</a>), an IELTS prep web app.</li>
-          <li data-i18n="e1.b4">Own product scope, UX, AI features, build, deploy, and onboarding/retention flows end to end.</li>
+          <li data-i18n="e1.b1"><b>Shipped the product:</b> built and shipped Echolis, a trilingual (EN/VI/ZH) AI companion app, from spec to a live web app and PWA, then App Store releases 1.0 to 1.2 (Sep–Oct 2026).</li>
+          <li data-i18n="e1.b2"><b>Free-to-paid lifecycle:</b> designed the conversion flow from a no-signup guest trial, through welcome, 48-hour and day-3 nudge emails and daily reminders, into a 14-day free trial and a $4.99/month Premium plan, with usage caps by plan and promo codes tracked as campaigns.</li>
+          <li data-i18n="e1.b3"><b>Attribution and retention:</b> set up cookie-free first-party event tracking with first-touch UTM attribution, feeding a visit → trial → signup → first-use funnel, D1/D7 retention, MRR and AI cost per user.</li>
+          <li data-i18n="e1.b4"><b>Privacy and safety guardrails:</b> shipped with staging, end-to-end tests, health checks and daily backups, plus consent-gated data sharing and user-deletable memory.</li>
         </ul>
         <div class="badges">
           <span class="badge" data-i18n="e1.badge1">⭑ Founder</span>
-          <span class="badge" data-i18n="e1.badge2">⭑ AI-Native Product Build</span>
+          <span class="badge" data-i18n="e1.badge2">⭑ AI Companion App</span>
         </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-co" data-i18n="e1b.co">Independent AI Product Builder</span>
+          <span class="exp-date" data-i18n="e1b.date">2026</span>
+        </div>
+        <div class="exp-role" data-i18n="e1b.role">Side projects</div>
+        <ul>
+          <li data-i18n="e1b.b1"><b>Stalong</b> (<a href="https://hanyu-ecru.vercel.app" target="_blank">hanyu-ecru.vercel.app</a>): Chinese-learning web app with AI and mini games.</li>
+          <li data-i18n="e1b.b2"><b>Catalis</b> (<a href="https://catalis-alpha.vercel.app" target="_blank">catalis-alpha.vercel.app</a>): IELTS prep web app.</li>
+          <li data-i18n="e1b.b3">Owned scope, UX, AI features, build, deploy, and onboarding/retention flows end to end.</li>
+        </ul>
       </div>
 
       <div class="exp-item adv-item">
@@ -811,7 +831,11 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
           <span class="exp-date" data-i18n="adv.date">Aug 2026</span>
         </div>
         <div class="exp-role" data-i18n="adv.role">Advisor — Interim Head of Marketing</div>
-        <p class="adv-body" data-i18n="adv.body">Held the marketing function at a Vietnamese exchange while a permanent head was hired — led the marketing and BD team and owned the growth side of the launch: acquisition channels, early user funnel and partnership pipeline. Built the go-to-market plan and business model with the founding team, wrote a phased staffing plan for the marketing and BD org, and presented in board and management meetings. Worked with VPBank group marcom to align the launch narrative with the banking group's brand standards. Took the engagement in part to work close to Vietnam's crypto regulation, legal and compliance while the rules are still being written.</p>
+        <ul>
+          <li data-i18n="adv.b1">Led marketing and BD as interim head; owned acquisition channels, the early user funnel and the partnership pipeline.</li>
+          <li data-i18n="adv.b2">Built the go-to-market plan, business model and phased marketing and BD staffing plan with the founders; presented to the board and management.</li>
+          <li data-i18n="adv.b3">Aligned the launch narrative with VPBank group marcom.</li>
+        </ul>
       </div>
 
       <div class="exp-item">
@@ -823,10 +847,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
         <ul>
           <li data-i18n="e2.b1"><b>Churn recall, bear market (2022–2023):</b> Took over churn and recall in Feb 2022 and redesigned the campaign framework twice, localized across regions. Recall rate rose from <span class="num">8.92%</span> to <span class="num">12.66%</span>; re-activated users rose <span class="num">41.92%</span> (<span class="num">4.3M</span> to <span class="num">5.9M</span> per month); new-user churn coverage grew from <span class="num">2.77%</span> to <span class="num">26.5%</span>. Designed and managed <span class="num">47</span> always-on campaigns and co-built <span class="num">66</span> more with regional teams.</li>
           <li data-i18n="e2.b2"><b>Loyalty points with Product:</b> Co-designed expiry logic and edge cases with Product, and cut reward costs by about <span class="num">50–70%</span>. The points system was built from zero: do X, get Y incentives, Rewards Hub, gamified engagement, and cross-sell across trading, savings and payments.</li>
-          <li data-i18n="e2.b3"><b>Lifecycle through the 2022 and 2025 reorganizations:</b> In 2022, rebuilt the churn framework while the team changed. In 2025, standardized <span class="num">500+</span> lifecycle workflows, ran <span class="num">125+</span> campaigns, and redesigned global new-user onboarding — registration to KYC pass <span class="num">+1.93ppt</span>, to first transaction <span class="num">+1.35ppt</span>, to first trade within 7 days <span class="num">+1ppt</span> — and onboarded and trained new joiners.</li>
-          <li data-i18n="e2.b4"><b>Experimentation:</b> Ran a continuous behavioral testing program across channels and segments, with a standard path from test to readout to always-on promotion.</li>
-          <li data-i18n="e2.b6"><b>A/B framework:</b> Built a standard A/B testing framework across content, incentive and product levers, localized by region and country, trained stakeholders to run their own tests, and automated test data into self-serve results.</li>
-          <li data-i18n="e2.b5"><b>In-house CRM:</b> Built internal CRM and growth tooling — all lifecycle tooling ran in-house — including AI-assisted tools for CRM and lifecycle use cases.</li>
+          <li data-i18n="e2.b3"><b>Onboarding redesign (2025):</b> registration to KYC pass <span class="num">+1.93ppt</span>, to first transaction <span class="num">+1.35ppt</span>, to first trade within 7 days <span class="num">+1ppt</span>; standardized <span class="num">100+</span> workflows and ran <span class="num">125+</span> campaigns.</li>
+          <li data-i18n="e2.b4"><b>Experimentation:</b> built a standard A/B and holdout framework across content, incentive and product levers, localized by region, trained stakeholders to self-serve, and automated results reporting.</li>
+          <li data-i18n="e2.b5"><b>In-house CRM &amp; AI tooling:</b> helped build internal CRM and growth tooling (all lifecycle tooling ran in-house), including AI-assisted tools for segmentation and campaign workflows.</li>
         </ul>
         <div class="badges">
           <span class="badge" data-i18n="e2.badge1">⭑ Multi-Year Outstanding Performance</span>
@@ -843,7 +866,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
           <li data-i18n="e3.b1"><b>Team Builder:</b> Hired and led a <span class="num">6-person</span> CRM team from zero — ride-hailing, mobility &amp; fintech verticals.</li>
           <li data-i18n="e3.b2"><b>Velocity:</b> Scaled CRM automation from 0 to <span class="num">67</span> active journeys in one year.</li>
           <li data-i18n="e3.b3"><b>Churn Reduction:</b> Achieved <span class="num">double-digit</span> churn reduction in the first 3 lifecycle stages YoY via segmentation &amp; gamification.</li>
-          <li data-i18n="e3.b4"><b>Predictive ML:</b> Designed an ML-assisted uninstall prediction model; proactive interventions measurably reduced abandonment.</li>
+          <li data-i18n="e3.b4"><b>Predictive ML:</b> Designed an ML-assisted uninstall-prediction model used to trigger proactive retention interventions.</li>
           <li data-i18n="e3.b6"><b>Stack Selection:</b> Evaluated and selected CRM/martech stacks based on business needs.</li>
           <li data-i18n="e3.b5"><b>MarTech Stack:</b> Implemented Salesforce, Insider, MoEngage, Airship, Netcore + proprietary internal tooling.</li>
         </ul>
@@ -856,7 +879,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     </section>
 
     <!-- Print-only shorter earlier career, same facts as the on-screen page 2. -->
-    <section class="earlier-section print-only">
+    <section class="earlier-section">
       <div class="sec" data-i18n="sec.earlier">Earlier Career</div>
       <div class="earlier-item">
         <div class="earlier-header">
@@ -934,22 +957,24 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     </div>
 
     <div class="sb-section web-only">
-      <div class="sec-s" data-i18n="sec.ai">AI &amp; Building</div>
+      <div class="sec-s" data-i18n="sec.ai">AI &amp; Automation</div>
       <div class="project-card">
         <div class="project-accent"></div>
         <div class="project-body">
           <a class="project-name" href="https://echolis.com" target="_blank">echolis.com</a>
           <div class="project-tag" data-i18n="proj.tag">Founder · Live product</div>
-          <div class="project-desc" data-i18n="proj.desc">An AI reflection product for inner dialogue — built and operated with AI: FastAPI on Railway, PWA, first-party analytics, practitioner consent flows.</div>
+          <div class="project-desc" data-i18n="proj.desc">AI companion app, live on web and iOS.</div>
         </div>
       </div>
       <div class="sg-lbl web-only" style="margin-top:4px" data-i18n="sg.tools">Tools I Build With</div>
       <div class="ai-chips">
         <span class="ai-chip">Claude Code</span>
-        <span class="ai-chip">ChatGPT</span>
+        <span class="ai-chip">n8n</span>
+        <span class="ai-chip">LLM APIs</span>
         <span class="ai-chip">GitHub</span>
         <span class="ai-chip">Railway</span>
-        <span class="ai-chip">Replit</span>
+        <span class="ai-chip">Vercel</span>
+        <span class="ai-chip">ChatGPT</span>
       </div>
       <p class="ai-note" data-i18n="ai.cert">Anthropic AI Fluency certified, Sep 2026.</p>
     </div>
@@ -1015,7 +1040,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
 
   <!-- FOOTER -->
   <footer class="footer">
-    <span data-i18n="foot.left">Nguyen Nguyen · Senior Lifecycle &amp; CRM Manager · 2026</span>
+    <span data-i18n="foot.left">Nguyen Nguyen · Lifecycle, CRM &amp; Growth Lead · 2026</span>
     <a href="https://stalisnguyen.github.io/CV-2026/" target="_blank">stalisnguyen.github.io/CV-2026</a>
   </footer>
 
@@ -1027,7 +1052,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
   <header class="page2-header">
     <div class="page2-header-left">
       <h2>Nguyen Nguyen</h2>
-      <span data-i18n="p2.sub">Earlier Career — Continued</span>
+      <span data-i18n="p2.sub">Lifecycle, CRM &amp; Growth Lead</span>
     </div>
   </header>
 
@@ -1038,55 +1063,6 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     <div class="metric"><span class="metric-num">125+</span><span class="metric-label" data-i18n="m2.camps">Active Campaigns Managed</span></div>
     <div class="metric"><span class="metric-num">100+</span><span class="metric-label" data-i18n="m2.flows">Always-On Workflows</span></div>
   </div>
-
-  <!-- MAIN PAGE 2 -->
-  <main class="main">
-
-    <section class="earlier-section">
-      <div class="sec" data-i18n="sec.earlier">Earlier Career</div>
-
-      <div class="earlier-item">
-        <div class="earlier-header">
-          <span class="earlier-co">Sendo · Senpay, Vietnam</span>
-          <span class="earlier-date">Jun 2018 — Sep 2019</span>
-        </div>
-        <div class="earlier-role" data-i18n="ec0.role">Project Owner — Digital Goods &amp; E-Wallet</div>
-        <p class="earlier-body" data-i18n="ec0.body">Owned the full product lifecycle for Digital Goods and the Senpay e-wallet — roadmap, requirements and release coordination with Tech through Jira, Confluence and Zeplin, with comprehensive BRDs behind each build. Ran CRM strategy alongside it: journey mapping, retention programs and A/B frameworks, with SQL and BigQuery analysis feeding Looker Studio dashboards the business actually used.</p>
-        <p class="earlier-hl" data-i18n="ec0.hl">Grew Digital Goods into the platform's highest-GMV category.</p>
-      </div>
-
-      <div class="earlier-item">
-        <div class="earlier-header">
-          <span class="earlier-co">4SV – Student Life Care JSC, Vietnam</span>
-          <span class="earlier-date">Oct 2017 — Jun 2018</span>
-        </div>
-        <div class="earlier-role" data-i18n="ec1.role">Marketing Leader</div>
-        <p class="earlier-body" data-i18n="ec1.body">Led a cross-functional digital marketing team end-to-end — strategic planning, budget forecasting, risk management, and channel execution across SEO, social, and email. Built GA &amp; GTM dashboards that replaced gut-feel decisions with clean data. Ran multi-channel campaigns and developed growth forecasts that shaped the company's direction. Mentored and grew junior team members while maintaining delivery standards.</p>
-        <p class="earlier-hl" data-i18n="ec1.hl">Awarded Employee of the Month, April 2018 — recognized for both results and team impact.</p>
-      </div>
-
-      <div class="earlier-item">
-        <div class="earlier-header">
-          <span class="earlier-co">ITL Corporation, Vietnam</span>
-          <span class="earlier-date">Jul 2016 — Oct 2017</span>
-        </div>
-        <div class="earlier-role" data-i18n="ec2.role">Digital Marketing Executive</div>
-        <p class="earlier-body" data-i18n="ec2.body">Owned SEO strategy end-to-end: keyword research, on-page optimization, satellite site architecture, and sitemap management. Ran email marketing campaigns across MailChimp, Vinamail, and Moosend — built templates, managed lists, and tracked performance. Executed paid media across Google Ads and Facebook Ads. Developed and optimized website content to drive organic traffic and SERP rankings. Built competitor analysis frameworks that directly informed quarterly KPI-setting.</p>
-        <p class="earlier-hl" data-i18n="ec2.hl">Led the successful brand launch of Speedlink last-mile delivery company — built its marketing team from the ground up and managed day-to-day operations.</p>
-      </div>
-
-      <div class="earlier-item">
-        <div class="earlier-header">
-          <span class="earlier-co">Rève Marketing Agency, Vietnam</span>
-          <span class="earlier-date">Aug 2015 — Jul 2016</span>
-        </div>
-        <div class="earlier-role" data-i18n="ec3.role">Freelance Content Creator &amp; Brand Designer</div>
-        <p class="earlier-body" data-i18n="ec3.body">Created brand identities, content strategies, and integrated campaigns for agency clients across multiple industries. Developed creative briefs, directed visual style, and managed campaign execution from concept to delivery. This foundational chapter in brand thinking and storytelling still shapes how lifecycle communications are crafted today — every campaign journey starts with a human insight and a clear narrative.</p>
-        <p class="earlier-hl" data-i18n="ec3.hl">Designed the complete brand identity for Utt Lounge: visual language, tone of voice, naming framework, and full launch materials.</p>
-      </div>
-    </section>
-
-  </main>
 
   <!-- SIDEBAR PAGE 2 -->
   <aside class="sidebar">
@@ -1118,8 +1094,8 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
         <span class="p2-num-lbl" data-i18n="num.5">People hired and led in a CRM team built from zero</span>
       </div>
       <div class="p2-num-item">
-        <span class="p2-num">&lt;4mo</span>
-        <span class="p2-num-lbl" data-i18n="num.6">From first commit to a live product with real users at Echolis</span>
+        <span class="p2-num">3</span>
+        <span class="p2-num-lbl" data-i18n="num.6">AI products shipped solo in 2026 (Echolis, Stalong, Catalis)</span>
       </div>
     </div>
 
@@ -1127,7 +1103,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
 
   <!-- FOOTER -->
   <footer class="footer">
-    <span data-i18n="foot2.left">Nguyen Nguyen · Senior Lifecycle &amp; CRM Manager · 2026</span>
+    <span data-i18n="foot2.left">Nguyen Nguyen · Lifecycle, CRM &amp; Growth Lead · 2026</span>
     <a href="https://echolis.com" target="_blank">echolis.com</a>
   </footer>
 
@@ -1140,7 +1116,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "ui.save":"↓ Lưu thành PDF",
     "hdr.eyebrow":"Vận hành Sản phẩm · Hệ thống Lifecycle &amp; Tăng trưởng · 10+ Năm",
     "hdr.tagline":"Một thập kỷ xây những hệ thống lifecycle mà người sau kế thừa — từ 300M+ người dùng tại Binance đến dựng một sản phẩm AI từ đầu đến cuối.",
-    "hdr.headline":"Senior Lifecycle &amp; CRM Manager | Giữ chân · Tự động hoá marketing · Thử nghiệm | Xây sản phẩm cùng AI",
+    "hdr.headline":"Lifecycle, CRM &amp; Growth Lead | Giữ chân · Tự động hoá marketing · Thử nghiệm | Người xây sản phẩm AI và tự động hoá",
     "hdr.remote":"Làm việc từ xa tại TP. Hồ Chí Minh (GMT+7) · giao giờ với EMEA &amp; APAC · bất đồng bộ, ưu tiên văn bản",
     "hdr.loc":"TP. Hồ Chí Minh, Việt Nam",
     "m.line":"10+ năm Product &amp; Lifecycle Ops · 300M+ người dùng trong phạm vi · 125+ chiến dịch đang vận hành · 100+ luồng always-on",
@@ -1149,36 +1125,41 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "m.camps":"Chiến dịch<br>đang vận hành",
     "m.flows":"Luồng tự động<br>always-on",
     "sec.profile":"Hồ sơ",
-    "p.body":"Quản lý lifecycle, CRM và vận hành sản phẩm với hơn 10 năm trong fintech, di chuyển và thương mại điện tử. Tại <strong>Binance</strong> — sàn fintech toàn cầu với tệp <em>300M+ người dùng</em> — phụ trách kích hoạt, giữ chân, ngăn rời bỏ và kéo lại, và xây lại churn recall trong thị trường giảm 2022–2023 (tỷ lệ recall 8.92% lên 12.66%; 4.3M lên 5.9M người dùng được kích hoạt lại mỗi tháng). Xây hạ tầng CRM và loyalty từ con số 0 ở hai công ty. Thành thạo SQL, BigQuery, Amplitude và Mixpanel; ship sản phẩm với Claude Code, founder của <strong>Echolis</strong> — sản phẩm AI phản tư đang chạy. Có chứng chỉ Anthropic AI Fluency (Sep 2026). Làm việc từ xa tại TP. Hồ Chí Minh (GMT+7); bất đồng bộ, ưu tiên văn bản.",
+    "p.body":"Người dẫn dắt lifecycle, CRM và tăng trưởng với hơn 10 năm trong fintech, di chuyển và thương mại điện tử. Tại <strong>Binance</strong> (tệp <em>300M+ người dùng</em>) tôi phụ trách kích hoạt, giữ chân, ngăn rời bỏ và kéo lại, và xây lại churn recall trong thị trường giảm 2022–2023 (tỷ lệ recall 8.92% lên 12.66%; 4.3M lên 5.9M người dùng được kích hoạt lại mỗi tháng). Xây hạ tầng CRM và loyalty từ con số 0 hai lần. Hiện là founder của <strong>Echolis</strong>, ứng dụng bạn đồng hành AI đang có trên App Store, xây bằng Claude Code và n8n, cùng hai web app học ngôn ngữ bằng AI. Thành thạo SQL, BigQuery, Amplitude và Mixpanel. Làm việc từ xa tại TP. Hồ Chí Minh (GMT+7); bất đồng bộ, ưu tiên văn bản.",
     "tag.1":"Vận hành Sản phẩm",
     "tag.2":"Chiến lược Lifecycle &amp; Giữ chân",
     "tag.3":"Thử nghiệm &amp; Vận hành Funnel",
     "tag.4":"Kiến trúc MarTech",
-    "tag.5":"Xây sản phẩm cùng AI",
+    "tag.5":"Sản phẩm AI &amp; tự động hoá",
     "tag.7":"Fintech · Crypto · TMĐT",
     "sec.exp":"Kinh nghiệm",
     "e1.date":"2026 — Hiện tại",
-    "e1.role":"Founder &amp; Solo AI Product Builder",
-    "e1.b1":"Xây dựng và ra mắt Echolis, ứng dụng AI companion đang có trên App Store (v1.2).",
-    "e1.b2":"Xây dựng Stalong (<a href=\"https://hanyu-ecru.vercel.app\" target=\"_blank\">https://hanyu-ecru.vercel.app</a>), web app học tiếng Trung có AI và mini game.",
-    "e1.b3":"Xây dựng Catalis (<a href=\"https://catalis-alpha.vercel.app\" target=\"_blank\">https://catalis-alpha.vercel.app</a>), web app luyện thi IELTS.",
-    "e1.b4":"Phụ trách toàn bộ phạm vi sản phẩm, UX, tính năng AI, xây dựng, triển khai và các luồng onboarding/retention.",
+    "e1.role":"Founder &amp; Product Lead",
+    "e1.b1":"<b>Ship sản phẩm:</b> xây và đưa Echolis, ứng dụng bạn đồng hành AI tam ngữ (EN/VI/ZH), từ spec đến web app và PWA đang chạy, rồi phát hành các bản 1.0 đến 1.2 trên App Store (Sep–Oct 2026).",
+    "e1.b2":"<b>Lifecycle từ miễn phí đến trả phí:</b> thiết kế luồng chuyển đổi từ dùng thử khách không cần đăng ký, qua email chào mừng, email nhắc sau 48 giờ và ngày thứ 3 cùng nhắc hằng ngày, vào dùng thử miễn phí 14 ngày rồi gói Premium $4.99/tháng, với giới hạn mức dùng theo gói và mã khuyến mãi được theo dõi như chiến dịch.",
+    "e1.b3":"<b>Phân bổ và giữ chân:</b> dựng theo dõi sự kiện first-party không cookie, với phân bổ UTM first-touch, cho funnel truy cập → dùng thử → đăng ký → lần dùng đầu tiên, giữ chân D1/D7, MRR và chi phí AI trên mỗi người dùng.",
+    "e1.b4":"<b>Hàng rào quyền riêng tư và an toàn:</b> phát hành kèm staging, kiểm thử end-to-end, health check và sao lưu hằng ngày, cùng chia sẻ dữ liệu có kiểm soát đồng thuận và bộ nhớ người dùng xoá được.",
     "e1.badge1":"⭑ Founder",
-    "e1.badge2":"⭑ Sản phẩm xây cùng AI",
+    "e1.badge2":"⭑ Ứng dụng bạn đồng hành AI",
+    "e1b.co":"Independent AI Product Builder",
+    "e1b.date":"2026",
+    "e1b.role":"Dự án cá nhân",
+    "e1b.b1":"<b>Stalong</b> (<a href=\"https://hanyu-ecru.vercel.app\" target=\"_blank\">hanyu-ecru.vercel.app</a>): web app học tiếng Trung với AI và mini game.",
+    "e1b.b2":"<b>Catalis</b> (<a href=\"https://catalis-alpha.vercel.app\" target=\"_blank\">catalis-alpha.vercel.app</a>): web app luyện IELTS.",
+    "e1b.b3":"Tự phụ trách phạm vi, UX, tính năng AI, build, deploy, và luồng onboarding cùng giữ chân từ đầu đến cuối.",
     "e2.co":"Binance <span style=\"font-weight:400;color:var(--muted);font-size:11.9px\">· sàn fintech toàn cầu, 300M+ người dùng</span>",
     "e2.role":"Senior Global Lifecycle &amp; Platform Strategy Manager (Lifecycle / CRM Manager)",
     "e2.b1":"<b>Churn recall, thị trường giảm (2022–2023):</b> nhận phụ trách churn và recall từ tháng 2/2022, thiết kế lại khung chiến dịch churn hai lần và bản địa hoá theo khu vực. Tỷ lệ recall tăng từ <span class=\"num\">8.92%</span> lên <span class=\"num\">12.66%</span>; số người dùng được kích hoạt lại tăng <span class=\"num\">41.92%</span> (<span class=\"num\">4.3M</span> lên <span class=\"num\">5.9M</span> mỗi tháng); độ phủ churn người dùng mới tăng từ <span class=\"num\">2.77%</span> lên <span class=\"num\">26.5%</span>. Tự thiết kế và vận hành <span class=\"num\">47</span> chiến dịch always-on và cùng các đội regional xây thêm <span class=\"num\">66</span> chiến dịch.",
     "e2.b2":"<b>Điểm loyalty cùng Product:</b> cùng Product thiết kế logic hết hạn và các trường hợp biên, cắt chi phí thưởng khoảng <span class=\"num\">50–70%</span>. Hệ điểm xây từ con số 0: ưu đãi do X, get Y, Rewards Hub, gamification, và cross-sell trên giao dịch, tiết kiệm và thanh toán.",
-    "e2.b3":"<b>Giữ lifecycle qua tái cấu trúc 2022 và 2025:</b> năm 2022 xây lại khung churn trong lúc đội ngũ thay đổi. Năm 2025 chuẩn hoá <span class=\"num\">500+</span> luồng lifecycle, vận hành <span class=\"num\">125+</span> chiến dịch, thiết kế lại onboarding người dùng mới toàn cầu — từ đăng ký đến KYC pass <span class=\"num\">+1.93ppt</span>, đến giao dịch đầu tiên <span class=\"num\">+1.35ppt</span>, đến lệnh trade đầu tiên trong 7 ngày <span class=\"num\">+1ppt</span> — và đào tạo người mới gia nhập.",
-    "e2.b4":"<b>Thử nghiệm:</b> duy trì chương trình thử nghiệm hành vi liên tục trên nhiều kênh và phân khúc, với lộ trình chuẩn từ thử nghiệm đến đọc kết quả rồi đưa lên always-on.",
-    "e2.b6":"<b>Khung A/B:</b> xây khung kiểm thử A/B chuẩn trên các đòn bẩy nội dung, incentive và sản phẩm, bản địa hoá theo khu vực và quốc gia, đào tạo các bên liên quan tự chạy thử nghiệm, và tự động hoá dữ liệu test thành kết quả self-serve.",
-    "e2.b5":"<b>CRM nội bộ:</b> xây CRM và công cụ tăng trưởng nội bộ — toàn bộ công cụ lifecycle chạy in-house — gồm công cụ hỗ trợ AI cho use case CRM và lifecycle.",
+    "e2.b3":"<b>Thiết kế lại onboarding (2025):</b> từ đăng ký đến KYC pass <span class=\"num\">+1.93ppt</span>, đến giao dịch đầu tiên <span class=\"num\">+1.35ppt</span>, đến lệnh trade đầu tiên trong 7 ngày <span class=\"num\">+1ppt</span>; chuẩn hoá <span class=\"num\">100+</span> workflows và vận hành <span class=\"num\">125+</span> chiến dịch.",
+    "e2.b4":"<b>Thử nghiệm:</b> xây khung A/B và holdout chuẩn trên các đòn bẩy nội dung, incentive và sản phẩm, bản địa hoá theo khu vực, đào tạo các bên tự phục vụ, và tự động hoá báo cáo kết quả.",
+    "e2.b5":"<b>CRM nội bộ và công cụ AI:</b> cùng xây CRM và công cụ tăng trưởng nội bộ (toàn bộ công cụ lifecycle chạy in-house), gồm công cụ hỗ trợ AI cho phân khúc và luồng chiến dịch.",
     "e2.badge1":"⭑ Outstanding Performance nhiều năm",
     "e3.role":"CRM &amp; Loyalty Manager",
     "e3.b1":"<b>Xây đội ngũ:</b> tuyển và dẫn dắt đội CRM <span class=\"num\">6 người</span> từ con số 0 — mảng gọi xe, di chuyển &amp; fintech.",
     "e3.b2":"<b>Tốc độ:</b> mở rộng tự động hoá CRM từ 0 lên <span class=\"num\">67</span> journey đang chạy trong một năm.",
     "e3.b3":"<b>Giảm churn:</b> giảm churn <span class=\"num\">hai chữ số</span> ở 3 giai đoạn lifecycle đầu tiên theo năm nhờ phân khúc &amp; gamification.",
-    "e3.b4":"<b>ML dự đoán:</b> thiết kế mô hình dự đoán gỡ ứng dụng có hỗ trợ ML; can thiệp chủ động giúp giảm rõ rệt tỉ lệ bỏ đi.",
+    "e3.b4":"<b>ML dự đoán:</b> thiết kế mô hình dự đoán gỡ ứng dụng có hỗ trợ ML, dùng để kích hoạt can thiệp giữ chân chủ động.",
     "e3.b6":"<b>Chọn stack:</b> đánh giá và lựa chọn hệ CRM/martech theo nhu cầu kinh doanh.",
     "e3.b5":"<b>Hệ MarTech:</b> triển khai Salesforce, Insider, MoEngage, Airship, Netcore cùng công cụ nội bộ tự phát triển.",
     "e3.badge1":"⭑ Be On Top — Top Performer 2020",
@@ -1186,7 +1167,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "sec.advisory":"Tư vấn",
     "adv.date":"Th8 2026",
     "adv.role":"Cố vấn — Interim Head of Marketing",
-    "adv.body":"Giữ mảng marketing cho một sàn giao dịch Việt Nam trong lúc họ tuyển người phụ trách chính thức — dẫn dắt đội Marketing và BD, phụ trách phần tăng trưởng cho giai đoạn ra mắt: kênh thu hút người dùng, phễu người dùng đầu tiên và pipeline đối tác. Cùng đội sáng lập xây kế hoạch go-to-market và mô hình kinh doanh, viết kế hoạch nhân sự theo từng giai đoạn cho đội Marketing và BD, trình bày trực tiếp trong các cuộc họp ban điều hành. Làm việc với marcom tập đoàn VPBank để thống nhất thông điệp ra mắt với chuẩn thương hiệu tập đoàn. Nhận việc này một phần để tiếp cận sát pháp lý, tuân thủ và quy định crypto tại Việt Nam khi khung luật vẫn đang hình thành.",
+    "adv.b1":"Dẫn dắt marketing và BD với vai trò interim head; phụ trách kênh thu hút, phễu người dùng đầu và pipeline đối tác.",
+    "adv.b2":"Cùng các founder xây kế hoạch go-to-market, mô hình kinh doanh và kế hoạch nhân sự marketing cùng BD theo giai đoạn; trình bày với hội đồng quản trị và ban điều hành.",
+    "adv.b3":"Thống nhất thông điệp ra mắt với marcom tập đoàn VPBank.",
     "sec.core":"Kỹ năng cốt lõi",
     "sg.prodops":"Vận hành sản phẩm",
     "c.process":"Thiết kế quy trình",
@@ -1211,9 +1194,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "c.ai":"Hệ thống AI",
     "c.crossfn":"Liên phòng ban",
     "c.mentor":"Kèm cặp",
-    "sec.ai":"AI &amp; Xây dựng",
+    "sec.ai":"AI &amp; Tự động hoá",
     "proj.tag":"Founder · Sản phẩm đang chạy",
-    "proj.desc":"Sản phẩm AI cho đối thoại nội tâm — xây và vận hành cùng AI: FastAPI trên Railway, PWA, analytics first-party, luồng đồng thuận cho chuyên gia trị liệu.",
+    "proj.desc":"Ứng dụng bạn đồng hành AI, đang chạy trên web và iOS.",
     "sg.tools":"Công cụ tôi dùng để xây",
     "ai.cert":"Chứng chỉ Anthropic AI Fluency, Sep 2026.",
     "sec.certs":"Chứng chỉ",
@@ -1233,9 +1216,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "l.zh":"Tiếng Trung","l.zh.lvl":"Cơ bản",
     "quote.p":"\"Một người dẫn dắt chủ động với tư duy phân tích xuất sắc.\"",
     "quote.cite":"— Nhận xét đồng nghiệp, Binance",
-    "foot.left":"Nguyen Nguyen · Senior Lifecycle &amp; CRM Manager · 2026",
-    "foot2.left":"Nguyen Nguyen · Senior Lifecycle &amp; CRM Manager · 2026",
-    "p2.sub":"Chặng đường trước đó — tiếp theo",
+    "foot.left":"Nguyen Nguyen · Lifecycle, CRM &amp; Growth Lead · 2026",
+    "foot2.left":"Nguyen Nguyen · Lifecycle, CRM &amp; Growth Lead · 2026",
+    "p2.sub":"Lifecycle, CRM &amp; Growth Lead",
     "p2.page":"Trang 2 / 2",
     "m2.years":"Năm làm Product &amp; Lifecycle Ops",
     "m2.users":"Người dùng trong chiến lược",
@@ -1268,14 +1251,14 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "num.2":"Chiến dịch vận hành đồng thời tại Binance",
     "num.3":"Luồng tự động always-on được duy trì",
     "num.5":"Người được tuyển và dẫn dắt trong đội CRM xây từ số 0",
-    "num.6":"Từ commit đầu tiên đến sản phẩm chạy thật có người dùng tại Echolis"
+    "num.6":"Sản phẩm AI tự ship một mình trong năm 2026 (Echolis, Stalong, Catalis)"
   };
 
   var ZH = {
     "ui.save":"↓ 保存为 PDF",
     "hdr.eyebrow":"产品运营 · 用户生命周期与增长体系 · 10 年以上",
     "hdr.tagline":"十年打造可被他人接手的生命周期体系 —— 从币安 3 亿以上用户，到从零做出一款 AI 产品。",
-    "hdr.headline":"高级生命周期与 CRM 经理 | 留存 · 营销自动化 · 实验 | AI 原生构建者",
+    "hdr.headline":"生命周期、CRM 与增长负责人 | 留存 · 营销自动化 · 实验 | AI 产品与自动化构建者",
     "hdr.remote":"从胡志明市远程工作（GMT+7）· 与 EMEA 及 APAC 时区重叠 · 异步、书面优先",
     "hdr.loc":"越南 胡志明市",
     "m.line":"10 年以上产品与生命周期运营 · 策略覆盖 3 亿以上用户 · 同时运营 125+ 个活动 · 100+ 条常态化自动流程",
@@ -1284,36 +1267,41 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "m.camps":"同时运营<br>的活动",
     "m.flows":"常态化<br>自动化流程",
     "sec.profile":"简介",
-    "p.body":"生命周期、CRM 与产品运营经理，在金融科技、出行与电商领域有 10 年以上经验。在 <strong>Binance</strong>（全球金融科技交易所，<em>3 亿以上用户</em>）负责激活、留存、防流失与召回，并在 2022–2023 熊市重建流失召回（召回率从 8.92% 升至 12.66%；每月重新激活用户从 4.3M 增至 5.9M）。两次从零搭建 CRM 与会员体系。能直接使用 SQL、BigQuery、Amplitude 与 Mixpanel，并用 Claude Code 交付产品；<strong>Echolis</strong> 创始人，一款正在运行的 AI 自我觉察产品。持有 Anthropic AI Fluency 认证（2026年9月）。从胡志明市远程工作（GMT+7）；异步、书面优先。",
+    "p.body":"生命周期、CRM 与增长负责人，在金融科技、出行与电商领域有 10 年以上经验。在 <strong>Binance</strong>（<em>3 亿以上用户</em>）我负责激活、留存、防流失与召回，并在 2022–2023 熊市重建流失召回（召回率从 8.92% 升至 12.66%；每月重新激活用户从 4.3M 增至 5.9M）。两次从零搭建 CRM 与会员体系。现为 <strong>Echolis</strong> 创始人，这是一款已上架 App Store 的 AI 陪伴应用，使用 Claude Code 与 n8n 构建，另有两款 AI 语言学习网页应用。能直接使用 SQL、BigQuery、Amplitude 与 Mixpanel。从胡志明市远程工作（GMT+7）；异步、书面优先。",
     "tag.1":"产品运营",
     "tag.2":"生命周期与留存策略",
     "tag.3":"实验与漏斗运营",
     "tag.4":"营销技术架构",
-    "tag.5":"AI 原生构建者",
+    "tag.5":"AI 产品与自动化",
     "tag.7":"金融科技 · 加密货币 · 电商",
     "sec.exp":"工作经历",
     "e1.date":"2026 — 至今",
-    "e1.role":"Founder &amp; Solo AI Product Builder",
-    "e1.b1":"构建并上线 Echolis，一款 AI companion 应用，已在 App Store 上线（v1.2）。",
-    "e1.b2":"构建 Stalong（<a href=\"https://hanyu-ecru.vercel.app\" target=\"_blank\">https://hanyu-ecru.vercel.app</a>），一款带 AI 与小游戏的中文学习 Web 应用。",
-    "e1.b3":"构建 Catalis（<a href=\"https://catalis-alpha.vercel.app\" target=\"_blank\">https://catalis-alpha.vercel.app</a>），一款雅思备考 Web 应用。",
-    "e1.b4":"端到端负责产品范围、UX、AI 功能、构建、部署以及 onboarding/retention 流程。",
+    "e1.role":"创始人兼产品负责人",
+    "e1.b1":"<b>交付产品：</b>从需求到上线，构建并发布三语（EN/VI/ZH）AI 陪伴应用 Echolis，先做成线上 Web 应用和 PWA，再于 2026年9月至10月在 App Store 发布 1.0 至 1.2。",
+    "e1.b2":"<b>从免费到付费的生命周期：</b>设计转化流程：免注册访客试用，欢迎邮件、48 小时与第 3 天提醒邮件和每日提醒，再进入 14 天免费试用和 $4.99/月的 Premium 方案，按方案设置用量上限，优惠码按活动跟踪。",
+    "e1.b3":"<b>归因与留存：</b>建立无 cookie 的第一方事件追踪，配合首次触点 UTM 归因，覆盖访问 → 试用 → 注册 → 首次使用漏斗、D1/D7 留存、MRR 与单用户 AI 成本。",
+    "e1.b4":"<b>隐私与安全护栏：</b>发布带有 staging、端到端测试、健康检查和每日备份，以及需授权的数据共享和用户可删除的记忆。",
     "e1.badge1":"⭑ 创始人",
-    "e1.badge2":"⭑ AI 原生产品开发",
+    "e1.badge2":"⭑ AI 陪伴应用",
+    "e1b.co":"独立 AI 产品构建者",
+    "e1b.date":"2026",
+    "e1b.role":"个人项目",
+    "e1b.b1":"<b>Stalong</b>（<a href=\"https://hanyu-ecru.vercel.app\" target=\"_blank\">hanyu-ecru.vercel.app</a>）：中文学习网页应用，含 AI 与小游戏。",
+    "e1b.b2":"<b>Catalis</b>（<a href=\"https://catalis-alpha.vercel.app\" target=\"_blank\">catalis-alpha.vercel.app</a>）：雅思备考网页应用。",
+    "e1b.b3":"端到端负责范围、体验、AI 功能、构建、部署，以及引导与留存流程。",
     "e2.co":"Binance <span style=\"font-weight:400;color:var(--muted);font-size:11.9px\">· 全球金融科技交易所，3 亿以上用户</span>",
     "e2.role":"高级全球生命周期与平台策略经理（生命周期 / CRM 经理）",
     "e2.b1":"<b>熊市流失召回（2022–2023）：</b>2022 年 2 月接手流失与召回，两次重构流失活动框架，并按地区本地化。召回率从 <span class=\"num\">8.92%</span> 升至 <span class=\"num\">12.66%</span>；重新激活用户增加 <span class=\"num\">41.92%</span>（每月 <span class=\"num\">4.3M</span> 至 <span class=\"num\">5.9M</span>）；新用户流失覆盖率从 <span class=\"num\">2.77%</span> 升至 <span class=\"num\">26.5%</span>。独立设计并运营 <span class=\"num\">47</span> 条常态化活动，并与区域团队共同搭建另外 <span class=\"num\">66</span> 条。",
     "e2.b2":"<b>与产品共建积分体系：</b>与产品共同设计过期逻辑与边界情况，将奖励成本降低约 <span class=\"num\">50–70%</span>。积分体系从零搭建：做 X 得 Y、奖励中心、游戏化，以及贯穿交易、储蓄与支付的交叉销售。",
-    "e2.b3":"<b>2022 与 2025 两次重组中维持生命周期：</b>2022 年在团队变动中重建流失框架。2025 年标准化 <span class=\"num\">500+</span> 条生命周期流程，运营 <span class=\"num\">125+</span> 个活动，重构全球新用户引导 —— 从注册到 KYC 通过 <span class=\"num\">+1.93ppt</span>、到首次交易 <span class=\"num\">+1.35ppt</span>、到 7 日内首次下单 <span class=\"num\">+1ppt</span> —— 并培训新加入的同事。",
-    "e2.b4":"<b>实验：</b>在多渠道、多分层持续开展行为实验，路径为从测试到结论再到常态化上线。",
-    "e2.b6":"<b>A/B 框架：</b>搭建覆盖内容、激励与产品杠杆的标准化 A/B 测试框架，并按地区与国家本地化，培训相关方自行开展测试，并将测试数据自动化为可自助查看的结果。",
-    "e2.b5":"<b>内部 CRM：</b>搭建内部 CRM 与增长工具 —— 生命周期工具全部在内部运行 —— 包括面向 CRM 与生命周期场景的 AI 辅助工具。",
+    "e2.b3":"<b>新手引导改版（2025）：</b>从注册到 KYC 通过 <span class=\"num\">+1.93ppt</span>、到首次交易 <span class=\"num\">+1.35ppt</span>、到 7 日内首次下单 <span class=\"num\">+1ppt</span>；标准化 <span class=\"num\">100+</span> workflows，并运营 <span class=\"num\">125+</span> 个活动。",
+    "e2.b4":"<b>实验：</b>搭建覆盖内容、激励与产品杠杆的标准化 A/B 与 holdout 框架，按地区本地化，培训相关方自助使用，并自动化结果报告。",
+    "e2.b5":"<b>内部 CRM 与 AI 工具：</b>参与搭建内部 CRM 与增长工具（生命周期工具全部在内部运行），包括用于分层和活动流程的 AI 辅助工具。",
     "e2.badge1":"⭑ 连续多年 Outstanding Performance",
     "e3.role":"CRM 与会员运营经理",
     "e3.b1":"<b>组建团队：</b>从零招聘并带领 <span class=\"num\">6 人</span> CRM 团队 —— 覆盖网约车、出行与金融科技业务线。",
     "e3.b2":"<b>推进速度：</b>在一年内把 CRM 自动化从 0 扩展到 <span class=\"num\">67</span> 条运行中的旅程。",
     "e3.b3":"<b>降低流失：</b>通过分层与游戏化，使生命周期前三个阶段的流失率同比实现<span class=\"num\">两位数</span>下降。",
-    "e3.b4":"<b>预测模型：</b>设计基于机器学习的卸载预测模型；主动干预显著降低了用户流失。",
+    "e3.b4":"<b>预测模型：</b>设计基于机器学习的卸载预测模型，用于触发主动留存干预。",
     "e3.b6":"<b>技术栈选型：</b>根据业务需求评估并选定 CRM 与营销技术栈。",
     "e3.b5":"<b>营销技术栈：</b>落地 Salesforce、Insider、MoEngage、Airship、Netcore 及自研内部工具。",
     "e3.badge1":"⭑ Be On Top — 2020 年度优秀员工",
@@ -1321,7 +1309,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "sec.advisory":"顾问",
     "adv.date":"2026年8月",
     "adv.role":"顾问 — 临时市场负责人",
-    "adv.body":"在一家越南交易所招聘正式负责人期间接手市场职能 —— 带领市场与 BD 团队，并负责上线阶段的增长：获客渠道、早期用户漏斗与合作伙伴管道。与创始团队共同制定 go-to-market 方案与商业模式，为市场与 BD 团队撰写分阶段的人员编制规划，并直接在董事会与管理层会议上汇报。与 VPBank 集团市场传播团队对接，使上线叙事符合该银行集团的品牌规范。接下这份工作也有意为之：在越南加密监管规则仍在成形之际，近距离接触监管、法律与合规议题。",
+    "adv.b1":"以临时负责人身份带领市场与 BD；负责获客渠道、早期用户漏斗与合作伙伴管道。",
+    "adv.b2":"与创始人共同制定 go-to-market 方案、商业模式，以及市场与 BD 的分阶段编制规划；向董事会和管理层汇报。",
+    "adv.b3":"使上线叙事与 VPBank 集团市场传播保持一致。",
     "sec.core":"核心能力",
     "sg.prodops":"产品运营",
     "c.process":"流程设计",
@@ -1346,9 +1336,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "c.ai":"AI 系统",
     "c.crossfn":"跨部门协作",
     "c.mentor":"辅导培养",
-    "sec.ai":"AI 与构建",
+    "sec.ai":"AI 与自动化",
     "proj.tag":"创始人 · 线上运行中",
-    "proj.desc":"一款用于内在对话的 AI 产品 —— 与 AI 协作开发并运营：FastAPI 部署于 Railway、PWA、第一方分析、需授权的从业者协作流程。",
+    "proj.desc":"AI 陪伴应用，已在 Web 与 iOS 上线。",
     "sg.tools":"常用构建工具",
     "ai.cert":"Anthropic AI Fluency 认证，2026年9月。",
     "sec.certs":"证书与认证",
@@ -1368,9 +1358,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "l.zh":"中文","l.zh.lvl":"基础",
     "quote.p":"“一位积极主动、分析能力出众的领导者。”",
     "quote.cite":"— 同事评价，币安",
-    "foot.left":"Nguyen Nguyen · 高级生命周期与 CRM 经理 · 2026",
-    "foot2.left":"Nguyen Nguyen · 高级生命周期与 CRM 经理 · 2026",
-    "p2.sub":"早期职业经历 — 续",
+    "foot.left":"Nguyen Nguyen · 生命周期、CRM 与增长负责人 · 2026",
+    "foot2.left":"Nguyen Nguyen · 生命周期、CRM 与增长负责人 · 2026",
+    "p2.sub":"生命周期、CRM 与增长负责人",
     "p2.page":"第 2 页 / 共 2 页",
     "m2.years":"年产品与生命周期运营",
     "m2.users":"策略覆盖用户数",
@@ -1403,7 +1393,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "num.2":"在币安同时运营的活动数量",
     "num.3":"持续维护的常态化自动流程",
     "num.5":"从零组建的 CRM 团队中招聘并带领的人数",
-    "num.6":"从第一次提交到 Echolis 上线并有真实用户"
+    "num.6":"2026 年独立交付的 AI 产品（Echolis、Stalong、Catalis）"
   };
 
   var DICTS = {vi:VI, zh:ZH};
@@ -1415,9 +1405,9 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
   });
 
   var TITLES = {
-    en:"Nguyen Nguyen — Senior Lifecycle & CRM Manager",
-    vi:"Nguyen Nguyen — Senior Lifecycle & CRM Manager",
-    zh:"Nguyen Nguyen — 高级生命周期与 CRM 经理"
+    en:"Nguyen Nguyen — Lifecycle, CRM & Growth Lead",
+    vi:"Nguyen Nguyen — Lifecycle, CRM & Growth Lead",
+    zh:"Nguyen Nguyen — 生命周期、CRM 与增长负责人"
   };
 
   function apply(lang){
