@@ -1,0 +1,25 @@
+name: Publish public site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    # This file moves with the renamed source repository. It must not run
+    # while that repository is still the public site, or it could replace
+    # the source history with the built page.
+    if: github.repository == 'stalisnguyen/CV-2026-source'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the public site
+        run: python3 scripts/build_public_site.py dist
+      - name: Push the built site
+        env:
+          DEPLOY_KEY: ${{ secrets.CV_PAGES_DEPLOY_KEY }}
+        run: bash scripts/publish_public_repo.sh dist
