@@ -1,0 +1,4 @@
+dist/
+.playwright-mcp/
+/mobile-*.png
+/desktop-*.png
