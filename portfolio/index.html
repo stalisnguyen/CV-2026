@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nguyen Nguyen · Products I've built</title>
+<meta name="description" content="Nguyen Nguyen: lifecycle and growth leader who builds AI products. Five personal builder projects: Echolis, Stalong, Catalis, Calculis and Neuralis.">
+<meta property="og:title" content="Nguyen Nguyen · Products I've built">
+<meta property="og:description" content="Lifecycle and growth leader who builds AI products. Five personal builder projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07080c;--bg2:#0d0f16;--card:#11131b;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --text:#eceef3;--muted:#9097a6;--dim:#646b7a;--accent:#a78bfa;--accent2:#60a5fa;--ok:#34d399;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);background:rgba(7,8,12,.66);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:-.01em}
+.logo i{width:26px;height:26px;border-radius:8px;background:conic-gradient(from 200deg,#a78bfa,#60a5fa,#34d399,#fbbf24,#a78bfa);display:block;box-shadow:0 0 22px rgba(167,139,250,.45)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+.navcta{font-size:13.5px;font-weight:500;padding:8px 14px;border-radius:999px;border:1px solid var(--line2);transition:.2s}
+.navcta:hover{background:#fff;color:#000}
+
+/* hero */
+.hero{position:relative;padding:120px 0 96px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-30% -10% auto -10%;height:900px;background:
+  radial-gradient(40% 50% at 22% 30%,rgba(167,139,250,.30),transparent 70%),
+  radial-gradient(35% 45% at 78% 20%,rgba(96,165,250,.24),transparent 70%),
+  radial-gradient(30% 40% at 60% 75%,rgba(52,211,153,.12),transparent 70%);filter:blur(10px);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 30%,#000 30%,transparent 75%);opacity:.5;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding:6px 14px 6px 8px;border:1px solid var(--line2);border-radius:999px;background:rgba(255,255,255,.03)}
+.pill b{font-weight:600;color:#0b0c10;background:var(--ok);border-radius:999px;padding:2px 8px;font-size:11.5px}
+h1{font-size:clamp(44px,7.4vw,92px);line-height:1.0;letter-spacing:-.035em;font-weight:600;margin:26px 0 22px}
+h1 .serif{font-style:italic;letter-spacing:-.01em;background:linear-gradient(100deg,#c4b5fd 10%,#93c5fd 55%,#6ee7b7 95%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:640px}
+.lede strong{color:var(--text);font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:12px;font-size:15px;font-weight:500;border:1px solid var(--line2);background:rgba(255,255,255,.03);transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.07)}
+.btn.primary{background:#fff;color:#07080c;border-color:#fff}
+.btn.primary:hover{background:#e8e8ee}
+.btn svg{width:17px;height:17px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:72px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--line)}
+.stat{background:rgba(13,15,22,.85);padding:22px 24px}
+.stat .k{font-size:28px;font-weight:600;letter-spacing:-.02em}
+.stat .v{font-size:13.5px;color:var(--muted)}
+
+/* sections */
+section{padding:96px 0}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+h2{font-size:clamp(32px,4.4vw,50px);letter-spacing:-.03em;line-height:1.08;font-weight:600;margin:14px 0 18px}
+h2 .serif{font-style:italic;color:#c4b5fd}
+.sub{color:var(--muted);max-width:660px;font-size:17px}
+
+/* why */
+.why{border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.whygrid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+.why p.body{color:#c9cdd6;font-size:17.5px;margin-bottom:16px}
+.loops{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.loop{border:1px solid var(--line);border-radius:14px;padding:20px;background:rgba(255,255,255,.02);transition:.25s}
+.loop:hover{border-color:var(--line2);background:rgba(255,255,255,.04)}
+.loop .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:17px;margin-bottom:12px;background:rgba(167,139,250,.14)}
+.loop h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.loop p{font-size:14px;color:var(--muted);line-height:1.5}
+
+/* products */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
+.card{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s}
+.card:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(140deg,var(--c1),transparent 40%,transparent 60%,var(--c2));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s;pointer-events:none}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 80px -30px var(--glow)}
+.card:hover:before{opacity:1}
+.card.wide{grid-column:1/-1;flex-direction:row}
+.shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(120% 90% at 0% 0%,var(--c1),transparent 60%),radial-gradient(120% 90% at 100% 100%,var(--c2),transparent 60%),#151826}
+.shot .fb{position:absolute;inset:0;display:grid;place-items:center;font-size:64px;opacity:.9}
+.shot .fb span{font-family:"Instrument Serif",serif;font-size:42px;font-style:italic;color:rgba(255,255,255,.85)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover .shot img{transform:scale(1.035)}
+.shot:after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(17,19,27,.85));pointer-events:none}
+.frame{position:absolute;inset:18px 18px 0 18px;border-radius:12px 12px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-bottom:0;box-shadow:0 20px 50px -10px rgba(0,0,0,.6);background:#0f1118}
+.frame .bar{position:absolute;top:0;left:0;right:0;height:24px;background:rgba(20,22,32,.96);display:flex;align-items:center;gap:6px;padding:0 10px;z-index:2;border-bottom:1px solid rgba(255,255,255,.06)}
+.frame .bar i{width:8px;height:8px;border-radius:50%;background:#3a3f4f}
+.frame .bar em{font-style:normal;font-size:10.5px;color:var(--dim);margin-left:8px;font-family:"JetBrains Mono",monospace}
+.frame img{top:24px;height:calc(100% - 24px)}
+.card.wide .shot{flex:1.25;aspect-ratio:auto;min-height:380px}
+.card.wide .shot img{object-position:left center}
+.info{padding:26px 28px 28px;display:flex;flex-direction:column;flex:1}
+.card.wide .info{flex:1;padding:40px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.name{display:flex;align-items:center;gap:12px}
+.mascot{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:21px;background:linear-gradient(140deg,var(--c1),var(--c2))}
+.name h3{font-size:23px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.name small{display:block;font-size:12.5px;color:var(--dim);font-weight:500;margin-top:2px}
+.status{font-size:11.5px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.status.live{color:#6ee7b7;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25)}
+.status.live:before{content:"";width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.2);animation:pulse 2s infinite}
+.status.dev{color:#fcd34d;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25)}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(52,211,153,0)}}
+.desc{color:#c9cdd6;font-size:15.5px;margin:14px 0 16px}
+.feats{list-style:none;display:grid;gap:9px;margin-bottom:20px}
+.feats li{position:relative;padding-left:24px;font-size:14.5px;color:var(--muted);line-height:1.5}
+.feats li:before{content:"";position:absolute;left:2px;top:7px;width:12px;height:8px;border-left:2px solid var(--c1s);border-bottom:2px solid var(--c1s);transform:rotate(-45deg)}
+.feats li b{color:var(--text);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:4px}
+.chip{font-size:12px;font-family:"JetBrains Mono",monospace;color:#b8bdc9;padding:4px 10px;border-radius:7px;border:1px solid var(--line2);background:rgba(255,255,255,.025)}
+.visit{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:14.5px;font-weight:500;color:var(--text);align-self:flex-start;border-bottom:1px solid var(--line2);padding-bottom:2px;transition:.2s}
+.visit svg{width:15px;height:15px;transition:transform .25s}
+.visit:hover{border-color:var(--c1s)}
+.visit:hover svg{transform:translate(3px,-3px)}
+
+
+/* featured Echolis */
+.feature{position:relative;margin-top:52px;display:grid;grid-template-columns:1.12fr .88fr;border:1px solid rgba(167,139,250,.22);border-radius:26px;overflow:hidden;background:
+  radial-gradient(70% 90% at 100% 0%,rgba(167,139,250,.20),transparent 60%),
+  radial-gradient(60% 70% at 85% 100%,rgba(232,196,120,.12),transparent 60%),
+  linear-gradient(180deg,#121224,#0d0d18);box-shadow:0 40px 120px -50px rgba(167,139,250,.55)}
+.f-copy{padding:44px 44px 44px;position:relative;z-index:1}
+.f-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.f-top .status{margin-left:auto}
+.f-icon{width:58px;height:58px;border-radius:15px;box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08)}
+.f-kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#d8c08a;font-weight:600}
+.feature h3{font-size:34px;letter-spacing:-.025em;font-weight:600;line-height:1.1;margin-top:3px}
+.feature h3 span{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:#c4b5fd}
+.f-lede{color:#cfd2db;font-size:16.5px;margin:22px 0 26px}
+.f-lede .serif{font-size:21px;font-style:italic;color:#ead9b0;display:block;margin-bottom:8px}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fi{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:14px;padding:15px 16px;transition:.25s}
+.fi:hover{border-color:rgba(167,139,250,.35);background:rgba(167,139,250,.06)}
+.fi b{display:block;font-size:14.5px;font-weight:600;margin-bottom:4px}
+.fi p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.f-chips{margin-top:22px}
+.f-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.f-visual{position:relative;min-height:560px;overflow:hidden}
+.f-visual .glow{position:absolute;left:50%;top:50%;width:420px;height:420px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(232,196,120,.28),rgba(167,139,250,.18) 45%,transparent 70%);filter:blur(20px)}
+.phone{position:absolute;width:210px;aspect-ratio:598/1300;border-radius:30px;overflow:hidden;border:5px solid #1d1d2b;box-shadow:0 30px 70px -10px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.1);background:linear-gradient(160deg,#2a2550,#120f22);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.p1{left:6%;top:15%;transform:rotate(-9deg)}
+.p3{right:6%;top:15%;transform:rotate(9deg)}
+.p2{left:50%;top:7%;transform:translateX(-50%);z-index:2;width:230px}
+.feature:hover .p1{transform:rotate(-12deg) translate(-10px,6px)}
+.feature:hover .p3{transform:rotate(12deg) translate(10px,6px)}
+.feature:hover .p2{transform:translateX(-50%) translateY(-8px)}
+@media (max-width:980px){
+  .feature{grid-template-columns:1fr}
+  .f-visual{min-height:470px;order:-1}
+  .phone{width:170px}.p2{width:190px}
+}
+@media (max-width:560px){
+  .f-copy{padding:26px 22px}
+  .f-grid{grid-template-columns:1fr}
+  .f-top .status{margin-left:0}
+  .feature h3{font-size:28px}
+  .f-visual{min-height:380px}
+  .phone{width:132px;border-width:4px;border-radius:22px}.p2{width:152px}
+  .p1{left:2%}.p3{right:2%}
+}
+
+/* placeholder card */
+.ph .shot{background:#0e1017}
+.ph .orb{position:absolute;left:50%;top:50%;width:260px;height:260px;transform:translate(-50%,-50%);border-radius:50%;background:conic-gradient(from 0deg,#f472b6,#a78bfa,#60a5fa,#f472b6);filter:blur(46px);opacity:.45;animation:spin 14s linear infinite}
+.ph .net{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 1px,transparent 1.4px);background-size:22px 22px;mask-image:radial-gradient(circle at 50% 50%,#000 10%,transparent 65%);-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 10%,transparent 65%)}
+.ph .label{position:absolute;inset:0;display:grid;place-items:center;text-align:center;z-index:1}
+.ph .label div{font-family:"Instrument Serif",serif;font-size:46px;font-style:italic;letter-spacing:-.01em}
+.ph .label span{display:block;font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-top:6px;font-style:normal}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+/* contact */
+.contact{text-align:center;border-top:1px solid var(--line);position:relative;overflow:hidden}
+.contact:before{content:"";position:absolute;left:50%;top:0;width:900px;height:500px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 0%,rgba(167,139,250,.18),transparent 70%);pointer-events:none}
+.contact .wrap{position:relative}
+.contact .sub{margin:0 auto}
+.contact .ctas{justify-content:center}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--dim);font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a:hover{color:var(--text)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+
+@media (max-width:900px){
+  .whygrid{grid-template-columns:1fr;gap:36px}
+  .grid{grid-template-columns:1fr}
+  .card.wide{flex-direction:column}
+  .card.wide .shot{min-height:0;aspect-ratio:16/10}
+  .card.wide .info{padding:26px 28px 28px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  nav ul{display:none}
+}
+@media (max-width:520px){
+  .wrap{padding:0 20px}
+  .hero{padding:84px 0 70px}
+  .loops{grid-template-columns:1fr}
+  section{padding:72px 0}
+  .info{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><i></i>Nguyen Nguyen</a>
+    <ul>
+      <li><a href="#why">Why I build</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="navcta" href="mailto:minhnguyen94.reve@gmail.com">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="pill rv"><b>Open to work</b> Remote · Ho Chi Minh City (ICT)</span>
+    <h1 class="rv">Lifecycle &amp; growth leader<br>who <span class="serif">builds AI products.</span></h1>
+    <p class="lede rv">I'm <strong>Nguyen Nguyen</strong>: 10+ years in product and lifecycle operations, ex-Binance. Outside work I'm a founder and solo AI product builder. These are the products I've designed, built and shipped myself.</p>
+    <div class="ctas rv">
+      <a class="btn primary" href="#products">See the products
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
+      <a class="btn" href="https://stalisnguyen.github.io/CV-2026/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/nmn0204" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/stalisnguyen" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
+      <a class="btn" href="mailto:minhnguyen94.reve@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><div class="k">10+ yrs</div><div class="v">Product &amp; lifecycle ops</div></div>
+      <div class="stat"><div class="k">Ex-Binance</div><div class="v">CRM, lifecycle &amp; retention</div></div>
+      <div class="stat"><div class="k">5</div><div class="v">Products built solo</div></div>
+      <div class="stat"><div class="k">Web + iOS</div><div class="v">Echolis on the App Store</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="why" id="why">
+  <div class="wrap whygrid">
+    <div class="rv">
+      <div class="eyebrow">Why I build</div>
+      <h2>Retention is a product decision. <span class="serif">So I build products.</span></h2>
+      <p class="body">I'm self-taught as a builder. I learn fast by shipping something real, using it every day and fixing what doesn't work. Each of these products started as a problem I or the people around me actually had, like studying for an exam, learning a language or making sense of my own thoughts.</p>
+      <p class="body">Building them end to end, from the idea and the copy to the AI features and the habit loop, gives me a hands-on feel for what AI startups are building and a better instinct for the lifecycle work I do every day.</p>
+    </div>
+    <div class="loops rv">
+      <div class="loop"><div class="ic">🗓️</div><h4>Daily plans</h4><p>Each learning app opens on a short "today" session, so there's always one clear next step.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">⚡</div><h4>XP &amp; progression</h4><p>XP and themed level ladders turn studying into visible progress.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(52,211,153,.14)">👥</div><h4>Group accountability</h4><p>Built for groups studying together, with progress synced across devices.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🔁</div><h4>Smart review</h4><p>Spaced repetition and error logs bring back exactly what you got wrong.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Products</div>
+      <h2>Five products, <span class="serif">one builder.</span></h2>
+      <p class="sub">Personal builder projects I designed and shipped on my own, using AI-assisted development. Every one is a working product, not a mockup.</p>
+    </div>
+
+
+    <article class="feature rv" id="echolis">
+      <div class="f-copy">
+        <div class="f-top">
+          <img class="f-icon" src="img/echolis-icon.jpg" alt="Echolis app icon" onerror="this.style.display='none'">
+          <div>
+            <div class="f-kicker">Featured · personal learning &amp; reflection project</div>
+            <h3>Echolis <span>· Inner Voices</span></h3>
+          </div>
+          <span class="status live">LIVE ON WEB + iOS</span>
+        </div>
+        <p class="f-lede"><span class="serif">"You are not one voice. You are a conversation."</span> Echolis is a quiet AI reflection space inspired by parts work (IFS). You write what's really going on, and the parts of you that are present answer, each in its own voice: the Protector, the Wounded Child, the Analyst and the Hidden Part. An Observer holds the whole picture.</p>
+        <div class="f-grid">
+          <div class="fi"><b>💬 A chat you can talk back to</b><p>Parts reply in a group-chat thread, and you can talk to any one of them directly.</p></div>
+          <div class="fi"><b>🚪 Three doors in</b><p>Free or guided Reflection, a step-by-step Emotional Debugger for reactions that felt too big, and a Decision Council for choices you keep circling.</p></div>
+          <div class="fi"><b>🧠 Memory that deepens</b><p>Parts remember earlier sessions, and you can see and delete exactly what Echolis remembers about you.</p></div>
+          <div class="fi"><b>🗺️ Patterns over time</b><p>Triggers and protective cycles surface over weeks as an inner map, alongside a dated history of your sessions.</p></div>
+          <div class="fi"><b>🤝 Consent-first sharing</b><p>You can share a brief with a therapist: summaries only, never your raw writing, and revocable in one tap.</p></div>
+          <div class="fi"><b>🛡️ Private &amp; safe by design</b><p>Private by default, with a no-account guest mode, export and real deletion. Crisis messages surface hotlines for the user's country.</p></div>
+        </div>
+        <div class="chips f-chips">
+          <span class="chip">Web app + PWA</span><span class="chip">iPhone (App Store)</span><span class="chip">Capacitor</span><span class="chip">Sign in with Apple</span><span class="chip">Claude API</span><span class="chip">EN · VI · 中文</span>
+        </div>
+        <div class="f-ctas">
+          <a class="btn primary" href="https://echolis.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Open echolis.com</a>
+          <a class="btn" href="https://apps.apple.com/app/id6811829568" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>Download on the App Store</a>
+        </div>
+      </div>
+      <div class="f-visual" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="phone p1"><img src="img/echolis-dialogue.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+        <div class="phone p2"><img src="img/echolis-parts.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+        <div class="phone p3"><img src="img/echolis-observer.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </div>
+    </article>
+
+    <div class="grid">
+
+      <!-- Stalong -->
+      <article class="card rv" style="--c1:rgba(16,185,129,.55);--c2:rgba(251,191,36,.35);--c1s:#34d399;--glow:rgba(16,185,129,.45)">
+        <div class="shot">
+          <div class="fb">🐉</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>hanyu-ecru.vercel.app</em></div><img src="img/stalong.png" alt="Stalong daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🐉</div><div><h3>Stalong <span style="font-weight:500;color:var(--muted)">思龙</span></h3><small>Mandarin Chinese for Vietnamese speakers</small></div></div>
+            <span class="status live">LIVE</span>
+          </div>
+          <p class="desc">A Mandarin study app for Vietnamese learners (HSK 1–9), built for a group learning together and guided by Tiểu Long, a little dragon mascot. It runs on a 30-minute daily plan.</p>
+          <ul class="feats">
+            <li><b>Daily session:</b> spaced-repetition flashcards, listening and dictation, speaking with tone scoring, a graded reading and a culture story</li>
+            <li><b>Progression:</b> XP levels named after imperial Chinese exam ranks, plus a word of the day</li>
+            <li><b>Onboarding:</b> a 10-minute placement test, and progress synced across devices for the group</li>
+          </ul>
+          <div class="chips"><span class="chip">AI assistant</span><span class="chip">Neural TTS</span><span class="chip">Hanzi Writer</span><span class="chip">PWA</span><span class="chip">Vercel</span></div>
+          <a class="visit" href="https://hanyu-ecru.vercel.app/" target="_blank" rel="noopener">Try Stalong <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Catalis -->
+      <article class="card rv" style="--c1:rgba(59,91,219,.6);--c2:rgba(249,115,22,.38);--c1s:#7c9cff;--glow:rgba(59,91,219,.5)">
+        <div class="shot">
+          <div class="fb">🐱</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>catalis-alpha.vercel.app</em></div><img src="img/catalis.png" alt="Catalis daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🐱</div><div><h3>Catalis</h3><small>IELTS prep for Vietnamese learners</small></div></div>
+            <span class="status live">LIVE</span>
+          </div>
+          <p class="desc">An IELTS Academic and General Training prep app for Vietnamese learners studying as a group, coached by Jack, an orange cat mascot. Every day is one short, balanced session.</p>
+          <ul class="feats">
+            <li><b>Daily session:</b> vocab flashcards, one Listening part, one Reading passage, three Speaking answers and a daily tip</li>
+            <li><b>AI grading:</b> Writing and Speaking scored by AI, rolled into an estimated band against your target</li>
+            <li><b>Motivation:</b> a placement test, XP levels from Freshman up, and a shared study-group board</li>
+          </ul>
+          <div class="chips"><span class="chip">AI grading</span><span class="chip">Spaced repetition</span><span class="chip">PWA</span><span class="chip">Vercel</span></div>
+          <a class="visit" href="https://catalis-alpha.vercel.app/" target="_blank" rel="noopener">Try Catalis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Calculis -->
+      <article class="card rv" style="--c1:rgba(157,40,130,.6);--c2:rgba(249,115,22,.4);--c1s:#f472b6;--glow:rgba(157,40,130,.5)">
+        <div class="shot">
+          <div class="fb">🦊</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>calculis.vercel.app</em></div><img src="img/calculis.png" alt="Calculis daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🦊</div><div><h3>Calculis</h3><small>GMAT Focus Edition prep</small></div></div>
+            <span class="status live">LIVE</span>
+          </div>
+          <p class="desc">A GMAT Focus Edition prep app for a study group, with Max the fox as guide. It covers Quant, Verbal and Data Insights in a 45-minute daily plan, from the basics up.</p>
+          <ul class="feats">
+            <li><b>Guided path:</b> an 81-step beginner path, topic sets, flashcards, lessons and a 2-minute mental-math sprint</li>
+            <li><b>Exam realism:</b> adaptive mock exams, a section score estimate and a 15-question diagnostic</li>
+            <li><b>Learning loop:</b> an error log for tagging mistakes, an AI tutor, and career-style XP levels from Intern to Analyst</li>
+          </ul>
+          <div class="chips"><span class="chip">AI tutor</span><span class="chip">Adaptive mocks</span><span class="chip">PWA</span><span class="chip">Vercel</span></div>
+          <a class="visit" href="https://calculis.vercel.app/" target="_blank" rel="noopener">Try Calculis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Neuralis -->
+      <article class="card ph rv" style="--c1:rgba(244,114,182,.45);--c2:rgba(96,165,250,.4);--c1s:#f472b6;--glow:rgba(244,114,182,.35)">
+        <div class="shot">
+          <div class="orb"></div><div class="net"></div>
+          <div class="label"><div>Neuralis<span>Coming soon</span></div></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">✦</div><div><h3>Neuralis</h3><small>Next product</small></div></div>
+            <span class="status dev">IN DEVELOPMENT</span>
+          </div>
+          <p class="desc">My next product, currently being built. Details are coming soon.</p>
+          <div class="chips"><span class="chip">In development</span></div>
+          <a class="visit" href="mailto:minhnguyen94.reve@gmail.com?subject=Neuralis">Ask me about it <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <div class="eyebrow">Let's talk</div>
+    <h2>Lifecycle experience, <span class="serif">builder instincts.</span></h2>
+    <p class="sub">I'm looking for remote lifecycle, CRM and growth roles at AI-first teams. I can start 1 November 2026.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:minhnguyen94.reve@gmail.com">minhnguyen94.reve@gmail.com</a>
+      <a class="btn" href="https://stalisnguyen.github.io/CV-2026/" target="_blank" rel="noopener">View CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/nmn0204" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Nguyen Nguyen · Founder &amp; Solo AI Product Builder</span>
+    <span><a href="https://github.com/stalisnguyen" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/nmn0204" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://stalisnguyen.github.io/CV-2026/" target="_blank" rel="noopener">CV</a></span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
+if(!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));
+</script>
+</body>
+</html>
