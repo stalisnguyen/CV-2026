@@ -320,6 +320,7 @@ footer a:hover{color:var(--text)}
 .demo-slot video{position:absolute;inset:0;object-fit:cover;background:#0b0c10}
 .demo-fig figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
 @media (max-width:560px){.demo-fig .demo-slot{border-radius:16px}}
+.ech-demo .demo-slot{box-shadow:0 30px 90px -45px rgba(167,139,250,.5)}
 
 /* layered / collapsible */
 .safe-line{margin:-6px 0 18px;padding:10px 14px;border:1px solid rgba(232,196,120,.28);background:rgba(232,196,120,.06);border-radius:12px;font-size:14px;color:#ead9b0;line-height:1.5}
@@ -483,6 +484,15 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
         <div class="phone p3"><img src="img/echolis-observer.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
       </div>
     </article>
+
+    <figure class="demo-fig ech-demo rv">
+      <div id="echolis-demo" class="demo-slot">
+        <video controls playsinline preload="metadata" poster="video/echolis.jpg" aria-label="Video walkthrough of Echolis">
+          <source src="video/echolis.mp4" type="video/mp4">
+        </video>
+      </div>
+      <figcaption>Echolis in under a minute</figcaption>
+    </figure>
 
     <div class="more-stack rv">
       <details class="more">
