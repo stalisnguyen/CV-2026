@@ -260,12 +260,14 @@ body{
 }
 .exp-item li b{color:var(--ink);font-weight:600}
 .exp-item li .num{color:var(--gold-dk);font-weight:600}
-.exp-item li a{
+.exp-item li a,
+.exp-co a{
   color:var(--gold-dk);font-weight:500;
   text-decoration:underline;text-underline-offset:2px;
   overflow-wrap:anywhere;
 }
-.exp-item li a:hover{color:var(--ink)}
+.exp-item li a:hover,
+.exp-co a:hover{color:var(--ink)}
 
 .adv-body{
   font-size:13px;font-weight:300;
@@ -727,7 +729,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     break-inside:avoid;page-break-inside:avoid;
   }
   .exp-item li::before{content:none!important}
-  .exp-item li b,.exp-item li .num,.exp-item li a{color:#111!important}
+  .exp-item li b,.exp-item li .num,.exp-item li a,.exp-co a{color:#111!important}
   .adv-body,.earlier-body{font-size:10pt!important;line-height:1.35!important;color:#1a1a1a!important}
   .earlier-hl{font-size:10pt!important;color:#111!important}
   .earlier-item{margin:0 0 6pt!important;padding:0 0 5pt!important;break-inside:avoid;page-break-inside:avoid}
@@ -820,6 +822,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
         <a href="https://t.me/nmn0204" target="_blank">Telegram @nmn0204</a>
         <span data-i18n="hdr.loc">Ho Chi Minh City, Vietnam</span>
         <a href="https://linkedin.com/in/nmn0204" target="_blank">linkedin.com/in/nmn0204</a>
+        <a href="https://stalisnguyen.github.io/CV-2026/portfolio/" target="_blank" data-i18n="hdr.portfolio">Portfolio</a>
         <a href="https://stalisnguyen.github.io/CV-2026/" target="_blank">stalisnguyen.github.io/CV-2026</a>
       </div>
     </div>
@@ -880,7 +883,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
 
       <div class="exp-item">
         <div class="exp-header">
-          <span class="exp-co" data-i18n="e1b.co">Independent AI Product Builder</span>
+          <span class="exp-co"><span data-i18n="e1b.co">Independent AI Product Builder</span> · <a href="https://stalisnguyen.github.io/CV-2026/portfolio/" target="_blank" data-i18n="e1b.see">See portfolio</a></span>
           <span class="exp-date" data-i18n="e1b.date">2026</span>
         </div>
         <div class="exp-role" data-i18n="e1b.role">5 AI products, designed, built and shipped solo with AI tools</div>
@@ -1184,6 +1187,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "hdr.tagline":"Một thập kỷ xây những hệ thống lifecycle mà người sau kế thừa — từ 300M+ người dùng tại Binance đến dựng một sản phẩm AI từ đầu đến cuối.",
     "hdr.headline":"Quản lý Lifecycle &amp; CRM cấp cao toàn cầu | Giữ chân · Tự động hoá marketing · Thử nghiệm | Người xây sản phẩm AI và tự động hoá",
     "hdr.loc":"TP. Hồ Chí Minh, Việt Nam",
+    "hdr.portfolio":"Portfolio",
     "m.line":"10+ năm Chiến lược Lifecycle &amp; Nền tảng · 300M+ người dùng trong phạm vi · 125+ chiến dịch đang vận hành · 100+ luồng always-on",
     "m.years":"Năm làm Chiến lược Lifecycle<br>&amp; Nền tảng",
     "m.users":"Quy mô<br>người dùng",
@@ -1207,6 +1211,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "e1.badge1":"⭑ Founder",
     "e1.badge2":"⭑ Ứng dụng bạn đồng hành AI",
     "e1b.co":"Independent AI Product Builder",
+    "e1b.see":"Xem portfolio",
     "e1b.date":"2026",
     "e1b.role":"5 sản phẩm AI, tự thiết kế, xây và ship một mình bằng công cụ AI",
     "e1b.b1":"<b>Echolis</b> (<a href=\"https://echolis.com\" target=\"_blank\">echolis.com</a>): ứng dụng AI đồng hành để tự chiêm nghiệm, lấy cảm hứng từ IFS, trên web và iOS; một dự án học tập cá nhân (xem ở trên).",
@@ -1328,6 +1333,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "hdr.tagline":"十年打造可被他人接手的生命周期体系 —— 从币安 3 亿以上用户，到从零做出一款 AI 产品。",
     "hdr.headline":"高级全球生命周期与 CRM 经理 | 留存 · 营销自动化 · 实验 | AI 产品与自动化构建者",
     "hdr.loc":"越南 胡志明市",
+    "hdr.portfolio":"作品集",
     "m.line":"10 年以上生命周期与平台策略 · 策略覆盖 3 亿以上用户 · 同时运营 125+ 个活动 · 100+ 条常态化自动流程",
     "m.years":"年生命周期与<br>平台策略",
     "m.users":"策略覆盖<br>用户数",
@@ -1351,6 +1357,7 @@ html[lang="vi"] .earlier-body{font-size:12.8px}
     "e1.badge1":"⭑ 创始人",
     "e1.badge2":"⭑ AI 陪伴应用",
     "e1b.co":"独立 AI 产品构建者",
+    "e1b.see":"查看作品集",
     "e1b.date":"2026",
     "e1b.role":"5 款 AI 产品，用 AI 工具独立设计、构建并上线",
     "e1b.b1":"<b>Echolis</b>（<a href=\"https://echolis.com\" target=\"_blank\">echolis.com</a>）：受 IFS 启发的 AI 自我反思陪伴应用，网页版与 iOS；个人学习项目（见上文）。",
