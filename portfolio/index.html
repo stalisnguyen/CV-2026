@@ -320,6 +320,43 @@ footer a:hover{color:var(--text)}
 .demo-slot video{position:absolute;inset:0;object-fit:cover;background:#0b0c10}
 .demo-fig figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
 @media (max-width:560px){.demo-fig .demo-slot{border-radius:16px}}
+
+/* layered / collapsible */
+.safe-line{margin:-6px 0 18px;padding:10px 14px;border:1px solid rgba(232,196,120,.28);background:rgba(232,196,120,.06);border-radius:12px;font-size:14px;color:#ead9b0;line-height:1.5}
+.prs{display:grid;gap:10px;margin:0 0 4px}
+.prs>div{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline}
+.prs dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;font-weight:600}
+.prs dd{margin:0;font-size:15px;color:#c9cdd6;line-height:1.55}
+.prs .hl{list-style:none;display:grid;gap:5px}
+.prs .hl li{position:relative;padding-left:16px}
+.prs .hl li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:#a78bfa}
+.prs-wide{margin-top:34px;max-width:860px}
+.app-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.app-mini{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:rgba(255,255,255,.02);transition:.25s}
+.app-mini:hover{border-color:var(--c1s);background:rgba(255,255,255,.04)}
+.app-mini .am-ic{font-size:22px}
+.app-mini .am-t{flex:1;min-width:0}
+.app-mini b{display:block;font-size:15px}
+.app-mini small{display:block;font-size:12.5px;color:var(--muted);line-height:1.4}
+.app-mini svg{width:15px;height:15px;flex:none;color:var(--c1s)}
+.more-stack{margin-top:22px;display:grid;gap:12px}
+.more-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+details.more{border:1px solid var(--line2);border-radius:16px;background:rgba(255,255,255,.02);transition:border-color .25s}
+details.more[open]{border-color:rgba(167,139,250,.35);background:rgba(167,139,250,.03)}
+details.more>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 20px;font-size:15px;font-weight:600;border-radius:16px}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary small{font-size:12.5px;font-weight:400;color:var(--dim);margin-left:auto;text-align:right}
+details.more>summary:after{content:"";flex:none;width:8px;height:8px;border-right:2px solid #c4b5fd;border-bottom:2px solid #c4b5fd;transform:rotate(45deg);margin:-4px 2px 0 4px;transition:transform .25s}
+details.more[open]>summary:after{transform:rotate(-135deg);margin-top:4px}
+details.more>summary:hover{background:rgba(255,255,255,.025)}
+details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
+.more-body{padding:4px 20px 20px}
+.more-body .more-grid{margin-bottom:12px}
+.more-body .grid.more-cards{margin-top:6px}
+.more-body .aud-c.flat,.more-body .engine.flat{border:0;padding:0;background:none;margin:0}
+.more-body .safety.flat{margin:0;border:0;background:none;padding:0}
+@media (max-width:980px){.app-row{grid-template-columns:1fr 1fr}.more-2{grid-template-columns:1fr}}
+@media (max-width:560px){.app-row{grid-template-columns:1fr}.prs>div{grid-template-columns:1fr;gap:2px}details.more>summary small{display:none}.more-body{padding:2px 14px 16px}}
 </style>
 </head>
 <body>
@@ -345,7 +382,7 @@ footer a:hover{color:var(--text)}
     <div class="byline rv"><img class="hav" src="img/nguyen-avatar.jpg" alt="Nguyen Nguyen" width="64" height="64"><div><b>Nguyen Nguyen</b><span>Lifecycle &amp; Platform Strategy · AI Product Builder</span></div></div>
     <span class="pill rv"><b>Builder</b> Lifecycle &amp; Platform Strategy · AI Products</span>
     <h1 class="rv">Solo AI product builder.<br><span class="serif">Products people<br>come back to.</span></h1>
-    <p class="lede rv">I'm <strong>Nguyen Nguyen</strong>. I bring 10+ years in Lifecycle &amp; Platform Strategy, ex-Binance, from strategy through execution. I build learning and consumer products end to end, from idea and content to a shipped app. I also help teams design products that people come back to.</p>
+    <p class="lede rv">I'm <strong>Nguyen Nguyen</strong>. 10+ years in Lifecycle &amp; Platform Strategy, ex-Binance, from strategy through execution. I build learning and consumer products end to end, and help teams design products people come back to.</p>
     <div class="ctas rv">
       <a class="btn primary" href="#echolis">See my products
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
@@ -375,26 +412,26 @@ footer a:hover{color:var(--text)}
     <div class="rv">
       <div class="eyebrow">Why I build</div>
       <h2>Retention is a product decision. <span class="serif">So I build products.</span></h2>
-      <p class="body">People rarely drop a product for lack of features. They drop it because the next step isn't clear, progress feels invisible, and nothing brings them back. Self-learners end up stitching together a flashcard app, a question bank and a video course. People trying to understand themselves get one agreeable chatbot. I wanted products that show people what to do next, remember what they did, and make it easy to keep going.</p>
-      <p class="body">So I built five: <strong>Echolis</strong>, an IFS-inspired reflection app on the web and iPhone, and four AI learning web apps, <strong>Stalong, Catalis, Calculis and Neuralis</strong>. I own the product definition, the content and the build for each. Each has its own user, its own way to measure progress and its own model: the learning apps are built to run at close to zero cost on free tiers, and Echolis is freemium with a Premium subscription. It's lifecycle thinking applied to product, and it's the same approach I bring to teams I work with.</p>
+      <p class="body">People rarely drop a product for lack of features. They drop it when the next step is unclear, progress feels invisible and nothing brings them back.</p>
+      <p class="body">So I build products that show the next step, remember what users did and make it easy to keep going. Five so far: <strong>Echolis</strong>, an IFS-inspired reflection app, and four AI learning web apps. It's Lifecycle &amp; Platform Strategy applied to product.</p>
     </div>
     <div class="loops rv">
       <div class="loops-h" style="grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;margin-bottom:2px">Built into all five products</div>
-      <div class="loop"><div class="ic">🧭</div><h4>A clear next step</h4><p>Every session points somewhere: today's plan in the learning apps, one open question from the Observer in Echolis.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🧠</div><h4>Progress that builds up</h4><p>What users do is remembered and fed back: spaced review and mistake logs in the learning apps, memory and patterns in Echolis.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">🔔</div><h4>Reasons to come back</h4><p>Streaks, titles and a weekly leaderboard in the learning apps, and a daily reminder users set themselves in Echolis.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(52,211,153,.14)">🔐</div><h4>Users stay in control</h4><p>A light personal name and PIN in the learning apps. In Echolis users can see and delete their memories, export everything or delete their account.</p></div>
+      <div class="loop"><div class="ic">🧭</div><h4>A clear next step</h4><p>Today's plan in the learning apps. One open question from the Observer in Echolis.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🧠</div><h4>Progress that builds up</h4><p>Spaced review and mistake logs. Memory and patterns in Echolis.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">🔔</div><h4>Reasons to come back</h4><p>Streaks, titles and a weekly leaderboard. A daily reminder in Echolis.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(52,211,153,.14)">🔐</div><h4>Users stay in control</h4><p>A light name and PIN. In Echolis, memories users can see and delete.</p></div>
     </div>
   </div>
   <div class="wrap">
     <div class="how rv">
-      <div class="how-h"><div class="eyebrow">How I build</div><p>The same process for all five products, from a web app to an App Store release. I own every step and work with AI agents on content, code and tests.</p></div>
+      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all five products. I own every step and work with AI agents on content, code and tests.</p></div>
       <ol class="steps">
-        <li><b>Define the user</b><span>Who they are, their level and language, what they need, and how progress is measured.</span></li>
-        <li><b>Spec content &amp; behaviour</b><span>A written spec with guardrails, such as answer validators in the learning apps and safety rules in Echolis. Nothing ships until it passes the checks.</span></li>
-        <li><b>Build lean</b><span>One shared engine for the four learning apps, and one web app that also runs as the iPhone app for Echolis.</span></li>
-        <li><b>Test at phone &amp; desktop widths</b><span>Every screen at both widths, key flows tested end to end, and answers and safety cases re-checked automatically.</span></li>
-        <li><b>Ship &amp; iterate</b><span>Deploy, read the logs and fix what real use reveals, from sync conflicts and inflated placement bands to App Store review notes.</span></li>
+        <li><b>Define the user</b><span>Who they are, what they need and how progress is measured.</span></li>
+        <li><b>Spec with guardrails</b><span>Answer validators and safety rules. Nothing ships until it passes.</span></li>
+        <li><b>Build lean</b><span>One shared engine for the learning apps. One web app that also runs on iPhone.</span></li>
+        <li><b>Test on phone &amp; desktop</b><span>Key flows end to end. Answers and safety cases re-checked automatically.</span></li>
+        <li><b>Ship &amp; iterate</b><span>Read the logs and fix what real use reveals.</span></li>
       </ol>
     </div>
   </div>
@@ -405,7 +442,7 @@ footer a:hover{color:var(--text)}
     <div class="rv">
       <div class="eyebrow">Echolis · web + iOS app</div>
       <h2>A reflection app, <span class="serif">built end to end.</span></h2>
-      <p class="sub">An IFS-inspired reflection space I designed, wrote and shipped myself, working with AI agents: live on the web and the App Store, with a freemium subscription and a practice workspace for practitioners.</p>
+      <p class="sub">An IFS-inspired reflection app, designed, written and shipped solo with AI agents. Live on the web and the App Store.</p>
     </div>
 
     <article class="feature rv" id="echolis-feature">
@@ -419,21 +456,16 @@ footer a:hover{color:var(--text)}
           <span class="status live">LIVE · WEB + APP STORE</span>
         </div>
         <p class="f-lede"><span class="serif">"You are not one voice. You are a conversation."</span> An IFS-inspired reflection space built for two groups.<span class="lede-aud"><b>For individuals:</b> users write about a real moment, their parts answer in their own voices (the Protector, the Wounded Child, the Analyst and the Hidden Part), and an Observer leaves them one question.</span><span class="lede-aud"><b>For practitioners:</b> a dashboard for coaches and practitioners who work with parts. Clients connect with their own invite code and choose what to share, and the practitioner sees summaries only, so each session starts from what came up in between.</span></p>
-        <div class="f-grid">
-          <div class="fi"><b>💬 Inner conflict, not a cheerleader</b><p>Most AI companions offer one agreeable bot. Echolis splits what users write across their inner parts, which reply to each other, so they see the conflict instead of just being soothed.</p></div>
-          <div class="fi"><b>❓ Asks, doesn't advise</b><p>The Observer ends each reflection with one question, not a fix or a verdict, so the insight work stays with the user instead of depending on the app.</p></div>
-          <div class="fi"><b>🧠 Memory users control</b><p>Parts remember earlier sessions and patterns surface over time. Users can see and delete their memories.</p></div>
-          <div class="fi"><b>📊 Designed for retention</b><p>Built with a lifecycle mindset, with a weekly product scorecard (retention, active writers) and lifecycle messaging designed in.</p></div>
-        </div>
-        <div class="safety">
-          <div class="safety-h">🛡️ Safety-first product decisions</div>
-          <ul>
-            <li><b>16+ age floor</b>, the same across the app, the Terms and the App Store rating, with extra safeguards for 16–17-year-olds.</li>
-            <li><b>Crisis detection</b> tested on single messages and on crises that build gradually. It points people to their local emergency or hotline numbers, while ordinary venting doesn't set it off.</li>
-            <li><b>Shame and fear replies</b> reassure first, use the person's own words, offer at most one small next step, and never diagnose.</li>
-          </ul>
-          <p class="safety-note">A reflection space, not therapy. It can sit alongside therapy, and users can choose to share a summary with a practitioner.</p>
-        </div>
+        <p class="safe-line">🛡️ A reflection space, not therapy. It can sit alongside professional support, and is not for crisis situations.</p>
+        <dl class="prs">
+          <div><dt>Problem</dt><dd>Most AI companions offer one agreeable bot, so the inner conflict behind a reaction stays hidden.</dd></div>
+          <div><dt>Role</dt><dd>Solo: product strategy, design, build and lifecycle.</dd></div>
+          <div><dt>Highlights</dt><dd><ul class="hl">
+            <li>Inner parts that reply to each other, then one question from the Observer</li>
+            <li>Memory and patterns that users can see and delete</li>
+            <li>Live on the web and the App Store, freemium with a Premium subscription</li>
+          </ul></dd></div>
+        </dl>
         <div class="chips f-chips">
           <span class="chip">Web app + PWA</span><span class="chip">iPhone (App Store)</span><span class="chip">Capacitor</span><span class="chip">Sign in with Apple</span><span class="chip">IFS-inspired</span><span class="chip">EN · VI · 中文</span>
         </div>
@@ -452,18 +484,17 @@ footer a:hover{color:var(--text)}
       </div>
     </article>
 
-    <div class="sub-block rv">
-      <div class="loops-h sb-h">The Echolis loop &amp; how it earns</div>
-      <div class="loops four">
-      <div class="loop"><div class="ic" style="background:rgba(244,114,182,.14)">🔔</div><h4>Gentle nudges</h4><p>A daily reminder at a time users choose, a day-3 nudge for anyone who hasn't written yet, and a short email before the trial ends.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🧩</div><h4>Patterns that build up</h4><p>Reflections turn into pattern cards: trigger, protective response, hidden cost, and what's already moving.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(167,139,250,.16)">🌱</div><h4>Parts that emerge</h4><p>Over time a new part can surface from the user's own writing. They confirm it or say "not me", and it keeps its own memory.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">💳</div><h4>Freemium + subscription</h4><p>A 14-day Premium trial, then Premium monthly or yearly via Apple in-app purchase. Free keeps one reflection a week, plus read, export and delete.</p></div>
-      </div>
-    </div>
+    <div class="more-stack rv">
+      <details class="more">
+        <summary><span>See all features</span><small>12 features + what makes it different</small></summary>
+        <div class="more-body">
+        <div class="f-grid more-grid">
+          <div class="fi"><b>💬 Inner conflict, not a cheerleader</b><p>Most AI companions offer one agreeable bot. Echolis splits what users write across their inner parts, which reply to each other, so they see the conflict instead of just being soothed.</p></div>
+          <div class="fi"><b>❓ Asks, doesn't advise</b><p>The Observer ends each reflection with one question, not a fix or a verdict, so the insight work stays with the user instead of depending on the app.</p></div>
+          <div class="fi"><b>🧠 Memory users control</b><p>Parts remember earlier sessions and patterns surface over time. Users can see and delete their memories.</p></div>
+          <div class="fi"><b>📊 Designed for retention</b><p>Built with a lifecycle mindset, with a weekly product scorecard (retention, active writers) and lifecycle messaging designed in.</p></div>
+        </div>
 
-    <div class="ech-more rv" id="echolis-details">
-      <div class="ech-h"><h4>Everything in Echolis, <span>shipped and live</span></h4><p>Web app + iPhone · EN · VI · 中文</p></div>
       <div class="ef-grid">
         <div class="ef"><b>📝 Reflect</b><p>Write freely or follow a guided start. The parts that are present answer in their own voices, and the Observer closes with one question.</p></div>
         <div class="ef"><b>🧶 Untangle a reaction</b><p>A step-by-step trace for a reaction that felt too big: trigger, part, what it protects and what it needs.</p></div>
@@ -478,9 +509,25 @@ footer a:hover{color:var(--text)}
         <div class="ef"><b>👋 Try before signing up</b><p>One reflection on the web with no account, to meet the parts first.</p></div>
         <div class="ef"><b>🌏 Web, PWA &amp; iPhone</b><p>One product on the web and the App Store, in English, Vietnamese and 中文, with Sign in with Apple.</p></div>
       </div>
+        </div>
+      </details>
+      <details class="more">
+        <summary><span>Retention loop &amp; business model</span><small>4 loops</small></summary>
+        <div class="more-body">
+      <div class="loops four">
+      <div class="loop"><div class="ic" style="background:rgba(244,114,182,.14)">🔔</div><h4>Gentle nudges</h4><p>A daily reminder at a time users choose, a day-3 nudge for anyone who hasn't written yet, and a short email before the trial ends.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🧩</div><h4>Patterns that build up</h4><p>Reflections turn into pattern cards: trigger, protective response, hidden cost, and what's already moving.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(167,139,250,.16)">🌱</div><h4>Parts that emerge</h4><p>Over time a new part can surface from the user's own writing. They confirm it or say "not me", and it keeps its own memory.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">💳</div><h4>Freemium + subscription</h4><p>A 14-day Premium trial, then Premium monthly or yearly via Apple in-app purchase. Free keeps one reflection a week, plus read, export and delete.</p></div>
+      </div>
 
-      <div class="aud">
-        <div class="aud-c" style="--ac:#c4b5fd;--c1s:#a78bfa">
+        </div>
+      </details>
+      <div class="more-2">
+      <details class="more">
+        <summary><span>For individuals: details</span><small>features &amp; pricing</small></summary>
+        <div class="more-body">
+        <div class="aud-c flat" style="--ac:#c4b5fd;--c1s:#a78bfa">
           <div class="aud-k">For individuals</div>
           <h5>A personal reflection space</h5>
           <p>For people who want to understand why they react the way they do, see a repeating pattern clearly, or work through a decision.</p>
@@ -498,7 +545,13 @@ footer a:hover{color:var(--text)}
             <div class="plan-note">Subscriptions are sold through Apple in-app purchase. No ads.</div>
           </div>
         </div>
-        <div class="aud-c" style="--ac:#e8c478;--c1s:#e8c478">
+
+        </div>
+      </details>
+      <details class="more">
+        <summary><span>For practitioners: details</span><small>practice tools &amp; pricing</small></summary>
+        <div class="more-body">
+        <div class="aud-c flat" style="--ac:#e8c478;--c1s:#e8c478">
           <div class="aud-k">For practitioners</div>
           <h5>Alongside work with clients</h5>
           <p>Built for IFS-trained therapists and coaches. A separate practice workspace that gives clients somewhere to reflect between sessions, and gives the practitioner a summary before they meet.</p>
@@ -517,7 +570,20 @@ footer a:hover{color:var(--text)}
             <div class="plan-row"><b>Clients</b><span>Clients connected to a practitioner can get Premium free.</span></div>
           </div>
         </div>
+
+        </div>
+      </details>
       </div>
+      <details class="more">
+        <summary><span>Safety decisions</span><small>age floor, crisis handling, replies</small></summary>
+        <div class="more-body">
+          <div class="safety flat"><ul>
+            <li><b>16+ age floor</b>, the same across the app, the Terms and the App Store rating, with extra safeguards for 16–17-year-olds.</li>
+            <li><b>Crisis detection</b> tested on single messages and on crises that build gradually. It points people to their local emergency or hotline numbers, while ordinary venting doesn't set it off.</li>
+            <li><b>Shame and fear replies</b> reassure first, use the person's own words, offer at most one small next step, and never diagnose.</li>
+          </ul></div>
+        </div>
+      </details>
     </div>
 
   </div>
@@ -528,9 +594,8 @@ footer a:hover{color:var(--text)}
     <div class="rv">
       <div class="eyebrow">Learning apps · web</div>
       <h2>Four AI learning apps, <span class="serif">one shared engine.</span></h2>
-      <p class="sub">Self-study web apps for Mandarin Chinese, IELTS, GMAT and AI &amp; robotics. I own the product definition, the content and the build. All four are live and ready to try.</p>
+      <p class="sub">Self-study web apps for Mandarin Chinese, IELTS, GMAT and AI &amp; robotics. All four are live.</p>
     </div>
-    <!-- DEMO VIDEO PLACEHOLDER: a demo video will be added here later. Hidden while empty. -->
     <figure class="demo-fig rv">
       <div id="learning-demo" class="demo-slot">
         <video controls playsinline preload="metadata" poster="video/learning-apps.jpg" aria-label="Video walkthrough of the four learning apps: Stalong, Catalis, Calculis and Neuralis">
@@ -540,24 +605,30 @@ footer a:hover{color:var(--text)}
       <figcaption>Four study apps in under a minute</figcaption>
     </figure>
 
-    <div class="engine rv">
-      <div class="engine-h">
-        <div class="loops-h sb-h">Shared engine</div>
-        <p>One lightweight engine shared by all four learning apps: a framework-free single-page app, installable as a PWA, with serverless sync and AI endpoints, running on free tiers. Product-specific logic, like question types, labs and scoring models, lives in its own module.</p>
-      </div>
-      <div class="loops">
-        <div class="loops-h" style="grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;margin-bottom:2px">Built into all four learning apps</div>
-      <div class="loop"><div class="ic">🗓️</div><h4>Auto daily plan</h4><p>The app picks today's tasks from the learner's goal and available minutes.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🔁</div><h4>Spaced repetition</h4><p>An SM-2-style schedule for vocabulary, terms and formulas, plus a mistake log for every wrong answer.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">⚡</div><h4>XP, streaks &amp; 8 titles</h4><p>Each mascot changes outfit as the learner ranks up through the titles.</p></div>
-      <div class="loop"><div class="ic" style="background:rgba(52,211,153,.14)">👥</div><h4>Study together</h4><p>Personal name and PIN, phone-to-desktop sync, a weekly leaderboard and invite links.</p></div>
-      </div>
+    <dl class="prs prs-wide rv">
+      <div><dt>Problem</dt><dd>Self-learners end up stitching together a flashcard app, a question bank and a video course.</dd></div>
+      <div><dt>Solution</dt><dd>One place per subject that sets today's plan, explains every answer and keeps learners coming back, on one shared engine.</dd></div>
+      <div><dt>Role</dt><dd>Solo: product strategy, content, design, build and lifecycle.</dd></div>
+      <div><dt>Highlights</dt><dd><ul class="hl">
+        <li>A daily plan from the learner's goal and available minutes</li>
+        <li>Spaced repetition and a mistake log for every wrong answer</li>
+        <li>Streaks, titles and a weekly group leaderboard</li>
+      </ul></dd></div>
+    </dl>
+    <div class="app-row rv">
+      <a class="app-mini" style="--c1s:#34d399" href="https://hanyu-ecru.vercel.app/" target="_blank" rel="noopener"><span class="am-ic">🐉</span><span class="am-t"><b>Stalong</b><small>Mandarin Chinese, HSK 1 to 7–9</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="app-mini" style="--c1s:#7c9cff" href="https://catalis-alpha.vercel.app/" target="_blank" rel="noopener"><span class="am-ic">🐱</span><span class="am-t"><b>Catalis</b><small>IELTS Academic &amp; General, band 4.5 to 9</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="app-mini" style="--c1s:#f472b6" href="https://calculis.vercel.app/" target="_blank" rel="noopener"><span class="am-ic">🦊</span><span class="am-t"><b>Calculis</b><small>GMAT Focus Edition, basics to 705+</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="app-mini" style="--c1s:#2dd4bf" href="https://neuralis-rho.vercel.app/" target="_blank" rel="noopener"><span class="am-ic">🤖</span><span class="am-t"><b>Neuralis</b><small>AI &amp; robotics from zero, career paths</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
-
-    <div class="grid">
+    <div class="more-stack rv">
+      <details class="more">
+        <summary><span>How each app works</span><small>features, content &amp; screenshots</small></summary>
+        <div class="more-body">
+    <div class="grid more-cards">
 
       <!-- Stalong -->
-      <article class="card rv" style="--c1:rgba(16,185,129,.55);--c2:rgba(251,191,36,.35);--c1s:#34d399;--glow:rgba(16,185,129,.45)">
+      <article class="card" style="--c1:rgba(16,185,129,.55);--c2:rgba(251,191,36,.35);--c1s:#34d399;--glow:rgba(16,185,129,.45)">
         <div class="shot">
           <div class="fb">🐉</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i><em>hanyu-ecru.vercel.app</em></div><img src="img/stalong.png" alt="Stalong daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
@@ -580,7 +651,7 @@ footer a:hover{color:var(--text)}
         </div>
       </article>
       <!-- Catalis -->
-      <article class="card rv" style="--c1:rgba(59,91,219,.6);--c2:rgba(249,115,22,.38);--c1s:#7c9cff;--glow:rgba(59,91,219,.5)">
+      <article class="card" style="--c1:rgba(59,91,219,.6);--c2:rgba(249,115,22,.38);--c1s:#7c9cff;--glow:rgba(59,91,219,.5)">
         <div class="shot">
           <div class="fb">🐱</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i><em>catalis-alpha.vercel.app</em></div><img src="img/catalis.png" alt="Catalis daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
@@ -603,7 +674,7 @@ footer a:hover{color:var(--text)}
         </div>
       </article>
       <!-- Calculis -->
-      <article class="card rv" style="--c1:rgba(157,40,130,.6);--c2:rgba(249,115,22,.4);--c1s:#f472b6;--glow:rgba(157,40,130,.5)">
+      <article class="card" style="--c1:rgba(157,40,130,.6);--c2:rgba(249,115,22,.4);--c1s:#f472b6;--glow:rgba(157,40,130,.5)">
         <div class="shot">
           <div class="fb">🦊</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i><em>calculis.vercel.app</em></div><img src="img/calculis.png" alt="Calculis daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
@@ -626,7 +697,7 @@ footer a:hover{color:var(--text)}
         </div>
       </article>
       <!-- Neuralis -->
-      <article class="card rv" style="--c1:rgba(20,184,166,.5);--c2:rgba(96,165,250,.4);--c1s:#2dd4bf;--glow:rgba(20,184,166,.45)">
+      <article class="card" style="--c1:rgba(20,184,166,.5);--c2:rgba(96,165,250,.4);--c1s:#2dd4bf;--glow:rgba(20,184,166,.45)">
         <div class="shot">
           <div class="fb">🤖</div>
           <div class="frame"><div class="bar"><i></i><i></i><i></i><em>neuralis-rho.vercel.app</em></div><img src="img/neuralis.png" alt="Neuralis daily dashboard" loading="lazy" onerror="this.parentNode.remove()"></div>
@@ -651,6 +722,27 @@ footer a:hover{color:var(--text)}
       </article>
 
     </div>
+        </div>
+      </details>
+      <details class="more">
+        <summary><span>Shared engine &amp; learning loops</span><small>tech + 4 loops</small></summary>
+        <div class="more-body">
+    <div class="engine flat">
+      <div class="engine-h">
+        <div class="loops-h sb-h">Shared engine</div>
+        <p>One lightweight engine shared by all four learning apps: a framework-free single-page app, installable as a PWA, with serverless sync and AI endpoints, running on free tiers. Product-specific logic, like question types, labs and scoring models, lives in its own module.</p>
+      </div>
+      <div class="loops">
+        <div class="loops-h" style="grid-column:1/-1;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a78bfa;margin-bottom:2px">Built into all four learning apps</div>
+      <div class="loop"><div class="ic">🗓️</div><h4>Auto daily plan</h4><p>The app picks today's tasks from the learner's goal and available minutes.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(96,165,250,.14)">🔁</div><h4>Spaced repetition</h4><p>An SM-2-style schedule for vocabulary, terms and formulas, plus a mistake log for every wrong answer.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(251,191,36,.14)">⚡</div><h4>XP, streaks &amp; 8 titles</h4><p>Each mascot changes outfit as the learner ranks up through the titles.</p></div>
+      <div class="loop"><div class="ic" style="background:rgba(52,211,153,.14)">👥</div><h4>Study together</h4><p>Personal name and PIN, phone-to-desktop sync, a weekly leaderboard and invite links.</p></div>
+      </div>
+    </div>
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -659,13 +751,13 @@ footer a:hover{color:var(--text)}
     <div class="rv">
       <div class="eyebrow">Work with me</div>
       <h2>What I can <span class="serif">help with.</span></h2>
-      <p class="sub">I work across Lifecycle &amp; Platform Strategy, product and AI, from strategy through to execution, and I'm hands-on rather than slide-deep. I can work on a project, as a consultant, or as a builder alongside an in-house team.</p>
+      <p class="sub">Lifecycle &amp; Platform Strategy, product and AI, from strategy to execution. Hands-on, on a project, as a consultant or alongside an in-house team.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc rv" style="--sc:#a78bfa"><div class="svc-ic">🛠️</div><h3>Product Building</h3><p>From idea to a shipped MVP: defining the user and the success measure, writing the spec and content, and building it with an AI-assisted solo workflow.</p><ul><li>Product definition &amp; specs</li><li>Web apps &amp; PWAs</li><li>Built-in habit &amp; progress loops</li></ul></div>
-      <div class="svc rv" style="--sc:#34d399"><div class="svc-ic">🔁</div><h3>Lifecycle &amp; Platform Strategy</h3><p>Lifecycle, CRM and platform strategy that makes users stay: onboarding and activation, churn recall and win-back, and loyalty and gamification programmes.</p><ul><li>Journey &amp; segmentation design</li><li>Churn recall frameworks</li><li>Loyalty &amp; gamification</li></ul></div>
-      <div class="svc rv" style="--sc:#60a5fa"><div class="svc-ic">📈</div><h3>Growth &amp; Product Strategy</h3><p>Setting the strategy, then turning it into a repeatable system: growth and lifecycle roadmaps, experiment design with control groups, and the always-on programmes and team rhythm that deliver them.</p><ul><li>Growth &amp; lifecycle roadmaps</li><li>Experimentation &amp; measurement</li><li>Programme &amp; team set-up</li></ul></div>
-      <div class="svc rv" style="--sc:#fbbf24"><div class="svc-ic">⚙️</div><h3>AI Enablement</h3><p>Helping teams put AI to practical use: automating repetitive workflows, setting up AI-assisted content and QA pipelines, and coaching people to work with AI agents.</p><ul><li>Workflow automation (e.g. n8n)</li><li>AI-assisted content &amp; QA</li><li>Team enablement</li></ul></div>
+      <div class="svc rv" style="--sc:#a78bfa"><div class="svc-ic">🛠️</div><h3>Product Building</h3><p>From idea to a shipped MVP: user, success measure, spec, content and build.</p><ul><li>Product definition &amp; specs</li><li>Web apps &amp; PWAs</li><li>Built-in habit &amp; progress loops</li></ul></div>
+      <div class="svc rv" style="--sc:#34d399"><div class="svc-ic">🔁</div><h3>Lifecycle &amp; Platform Strategy</h3><p>Lifecycle, CRM and platform strategy that makes users stay.</p><ul><li>Journey &amp; segmentation design</li><li>Churn recall frameworks</li><li>Loyalty &amp; gamification</li></ul></div>
+      <div class="svc rv" style="--sc:#60a5fa"><div class="svc-ic">📈</div><h3>Growth &amp; Product Strategy</h3><p>Strategy turned into a repeatable system, with experiments that use control groups.</p><ul><li>Growth &amp; lifecycle roadmaps</li><li>Experimentation &amp; measurement</li><li>Programme &amp; team set-up</li></ul></div>
+      <div class="svc rv" style="--sc:#fbbf24"><div class="svc-ic">⚙️</div><h3>AI Enablement</h3><p>Practical AI for teams: automated workflows and coaching to work with AI agents.</p><ul><li>Workflow automation (e.g. n8n)</li><li>AI-assisted content &amp; QA</li><li>Team enablement</li></ul></div>
     </div>
   </div>
 </section>
@@ -675,7 +767,7 @@ footer a:hover{color:var(--text)}
     <img class="avatar" src="img/nguyen-avatar.jpg" alt="Nguyen Nguyen" width="96" height="96">
     <div class="eyebrow">Let's talk</div>
     <h2>Let's build <span class="serif">something.</span></h2>
-    <p class="sub">I'd love to hear about a product idea, a retention problem or a collaboration. Drop me a line, and let's see how I can help.</p>
+    <p class="sub">Product ideas, retention problems and collaborations are all welcome.</p>
     <div class="ctas">
       <a class="btn primary" href="mailto:minhnguyen94.reve@gmail.com">minhnguyen94.reve@gmail.com</a>
       <a class="btn" href="https://stalisnguyen.github.io/CV-2026/" target="_blank" rel="noopener">View CV</a>
