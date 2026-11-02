@@ -332,6 +332,12 @@ footer a:hover{color:var(--text)}
 .demo-fig figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
 @media (max-width:560px){.demo-fig .demo-slot{border-radius:16px}}
 .ech-demo .demo-slot{box-shadow:0 30px 90px -45px rgba(167,139,250,.5)}
+details.video-more{margin-top:36px}
+details.video-more .vplay{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:rgba(167,139,250,.16);color:#c4b5fd;flex:none}
+details.video-more .vplay svg{width:13px;height:13px;display:block;margin-left:1px}
+details.video-more .more-body{padding:0 16px 16px}
+details.video-more .demo-fig{margin-top:0}
+details.video-more .demo-slot{margin-top:0}
 
 /* layered / collapsible */
 .safe-line{margin:-6px 0 18px;padding:10px 14px;border:1px solid rgba(232,196,120,.28);background:rgba(232,196,120,.06);border-radius:12px;font-size:14px;color:#ead9b0;line-height:1.5}
@@ -369,6 +375,11 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
 .more-body .safety.flat{margin:0;border:0;background:none;padding:0}
 @media (max-width:980px){.app-row{grid-template-columns:1fr 1fr}.more-2{grid-template-columns:1fr}}
 @media (max-width:560px){.app-row{grid-template-columns:1fr}.prs>div{grid-template-columns:1fr;gap:2px}details.more>summary small{display:none}.more-body{padding:2px 14px 16px}}
+@media (max-width:560px){
+  details.more.video-more>summary{align-items:flex-start;flex-wrap:wrap;row-gap:2px}
+  details.more.video-more>summary:after{order:2;margin-left:auto}
+  details.more.video-more>summary small{display:block;order:3;flex:1 1 100%;margin:2px 0 0 40px;text-align:left;white-space:normal}
+}
 </style>
 </head>
 <body>
@@ -414,7 +425,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
     <div class="stats rv">
       <div class="stat"><div class="k">10+ yrs</div><div class="v">Lifecycle &amp; Platform Strategy</div></div>
       <div class="stat"><div class="k">Ex-Binance</div><div class="v">Global lifecycle, CRM &amp; loyalty</div></div>
-      <div class="stat"><div class="k">8 live</div><div class="v">Products built &amp; shipped</div></div>
+      <div class="stat"><div class="k">9 live</div><div class="v">Products built &amp; shipped</div></div>
       <div class="stat"><div class="k">Web + iOS</div><div class="v">Echolis on the App Store</div></div>
     </div>
   </div>
@@ -438,7 +449,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   </div>
   <div class="wrap">
     <div class="how rv">
-      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all eight products. I own every step and work with AI agents on content, code and tests.</p></div>
+      <div class="how-h"><div class="eyebrow">How I build</div><p>One process for all nine products. I own every step and work with AI agents on content, code and tests.</p></div>
       <ol class="steps">
         <li><b>Define the user</b><span>Who they are, what they need and how progress is measured.</span></li>
         <li><b>Spec with guardrails</b><span>Answer validators and safety rules. Nothing ships until it passes.</span></li>
@@ -497,14 +508,21 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
       </div>
     </article>
 
-    <figure class="demo-fig ech-demo rv">
-      <div id="echolis-demo" class="demo-slot">
-        <video controls playsinline preload="metadata" poster="video/echolis.jpg" aria-label="Video walkthrough of Echolis">
-          <source src="video/echolis.mp4" type="video/mp4">
-        </video>
+    <details class="more video-more rv">
+      <summary>
+        <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span>Watch intro video</span>
+        <small>Echolis in under a minute</small>
+      </summary>
+      <div class="more-body">
+        <figure class="demo-fig ech-demo">
+          <div id="echolis-demo" class="demo-slot">
+            <video controls playsinline preload="none" data-src="video/echolis.mp4" data-poster="video/echolis.jpg" aria-label="Video walkthrough of Echolis"></video>
+          </div>
+          <figcaption>Echolis in under a minute</figcaption>
+        </figure>
       </div>
-      <figcaption>Echolis in under a minute</figcaption>
-    </figure>
+    </details>
 
     <div class="more-stack rv">
       <details class="more">
@@ -618,14 +636,21 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
       <h2>Four AI learning apps, <span class="serif">one shared engine.</span></h2>
       <p class="sub">Self-study web apps for Mandarin Chinese, IELTS, GMAT and AI &amp; robotics. All four are live.</p>
     </div>
-    <figure class="demo-fig rv">
-      <div id="learning-demo" class="demo-slot">
-        <video controls playsinline preload="metadata" poster="video/learning-apps.jpg" aria-label="Video walkthrough of the four learning apps: Stalong, Catalis, Calculis and Neuralis">
-          <source src="video/learning-apps.mp4" type="video/mp4">
-        </video>
+    <details class="more video-more rv">
+      <summary>
+        <span class="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        <span>Watch intro video</span>
+        <small>Four study apps in under a minute</small>
+      </summary>
+      <div class="more-body">
+        <figure class="demo-fig">
+          <div id="learning-demo" class="demo-slot">
+            <video controls playsinline preload="none" data-src="video/learning-apps.mp4" data-poster="video/learning-apps.jpg" aria-label="Video walkthrough of the four learning apps: Stalong, Catalis, Calculis and Neuralis"></video>
+          </div>
+          <figcaption>Four study apps in under a minute</figcaption>
+        </figure>
       </div>
-      <figcaption>Four study apps in under a minute</figcaption>
-    </figure>
+    </details>
 
     <dl class="prs prs-wide rv">
       <div><dt>Problem</dt><dd>Self-learners end up stitching together a flashcard app, a question bank and a video course.</dd></div>
@@ -772,8 +797,8 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   <div class="wrap">
     <div class="rv">
       <div class="eyebrow">More products</div>
-      <h2>A game, a lighting hub and a tracker. <span class="serif">Three more builds.</span></h2>
-      <p class="sub">An educational history game, a bilingual news and knowledge site on architectural lighting for architects, and a tool for tracking literary-agent queries.</p>
+      <h2>A game, a lighting hub, a tracker and a cell guide. <span class="serif">Four more builds.</span></h2>
+      <p class="sub">An educational history game, a bilingual news and knowledge site on architectural lighting for architects, a tool for tracking literary-agent queries, and an interactive guide to cell architecture.</p>
     </div>
     <div class="grid">
 
@@ -847,6 +872,30 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
         </div>
       </article>
 
+      <!-- Cellis -->
+      <article class="card" style="--c1:rgba(192,132,252,.58);--c2:rgba(244,114,182,.38);--c1s:#d8b4fe;--glow:rgba(192,132,252,.45)">
+        <div class="shot">
+          <div class="fb">🧬</div>
+          <div class="frame"><div class="bar"><i></i><i></i><i></i><em>cellis-gamma.vercel.app</em></div><img src="img/cellis.jpg" alt="Cellis, a labeled 3D model of an animal cell" loading="lazy" onerror="this.parentNode.remove()"></div>
+        </div>
+        <div class="info">
+          <div class="head">
+            <div class="name"><div class="mascot">🧬</div><div><h3>Cellis</h3><small>Cell architecture · Vietnamese &amp; English</small></div></div>
+            <span class="status live">LIVE</span>
+          </div>
+          <p class="desc">An interactive guide to how a cell is built. Sixteen 3D specimens cover basic cells, bacteria, organelles, cells in the human body, viruses and DNA, in Vietnamese and English, under the line “Explore the architecture of life.”</p>
+          <ul class="feats">
+            <li><b>Sixteen specimens:</b> a plant cell and an animal cell, cyanobacteria and Salmonella, a mitochondrion and a chloroplast, red and white blood cells, a neuron, skeletal muscle, sperm and an egg, plus influenza, coronavirus, a bacteriophage and DNA.</li>
+            <li><b>Labels on the model:</b> the nucleus, the mitochondrion and the cell membrane are marked on the 3D view. A side panel covers the structures, what they do, a glossary and a longer note.</li>
+            <li><b>Tour, quiz and compare:</b> on the animal cell, a guided tour follows one protein out of the cell, in six steps. A quiz asks which part is blinking. A table sets the plant cell, the animal cell and a cyanobacterium side by side.</li>
+            <li><b>Search, and a video frame:</b> a search box for parts and terms. Video mode runs a vertical 9:16 frame, with replay and exit.</li>
+          </ul>
+          <div class="scope mono">16 specimens <i>·</i> Vietnamese &amp; English <i>·</i> labeled 3D models</div>
+          <div class="chips"><span class="chip">3D models</span><span class="chip">English · Vietnamese</span><span class="chip">Guided tour</span><span class="chip">Quiz</span><span class="chip">Three.js</span></div>
+          <a class="visit" href="https://cellis-gamma.vercel.app/" target="_blank" rel="noopener">Open Cellis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -890,6 +939,29 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
 </footer>
 
 <script>
+document.querySelectorAll('details.video-more').forEach(function(d){
+  var v=d.querySelector('video');
+  if(!v)return;
+  var src=v.getAttribute('data-src');
+  function mount(){
+    var poster=v.getAttribute('data-poster');
+    if(poster&&!v.getAttribute('poster'))v.setAttribute('poster',poster);
+    if(!src||v.querySelector('source'))return;
+    var s=document.createElement('source');
+    s.src=src;s.type='video/mp4';
+    v.appendChild(s);
+    v.load();
+  }
+  function unmount(){
+    v.pause();
+    var s=v.querySelector('source');
+    if(s)s.remove();
+    v.removeAttribute('src');
+    v.load();
+  }
+  d.addEventListener('toggle',function(){if(d.open)mount();else unmount();});
+  if(d.open)mount();
+});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
 if(!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));
