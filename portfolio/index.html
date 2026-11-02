@@ -100,6 +100,11 @@ h2 .serif{font-style:italic;color:#c4b5fd}
   .more-products .name{flex:1 0 100%}
   .more-products .status{margin-left:52px}
 }
+.status-row{display:inline-flex;align-items:center;gap:6px;flex:none}
+@media (max-width:560px){
+  .more-products .status-row{margin-left:52px}
+  .more-products .status-row .status{margin-left:0}
+}
 .shot:after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(17,19,27,.85));pointer-events:none}
 .frame{position:absolute;inset:18px 18px 0 18px;border-radius:12px 12px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-bottom:0;box-shadow:0 20px 50px -10px rgba(0,0,0,.6);background:#0f1118}
 .frame .bar{position:absolute;top:0;left:0;right:0;height:24px;background:rgba(20,22,32,.96);display:flex;align-items:center;gap:6px;padding:0 10px;z-index:2;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -811,7 +816,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
         <div class="info">
           <div class="head">
             <div class="name"><div class="mascot">🏮</div><div><h3>Canh Năm <span class="nom">更𠄼</span></h3><small>The Fifth Watch · Đại Việt, 1442 · English &amp; Vietnamese</small></div></div>
-            <span class="status live">LIVE</span>
+            <span class="status-row"><span class="status live">LIVE</span><span class="status dev">IN PROGRESS</span></span>
           </div>
           <p class="desc">An early playable history game in the browser. Emperor Lê Thái Tông dies suddenly at Lệ Chi Garden, and the court annals record one line: "Everyone says Nguyễn Thị Lộ killed the Emperor." The player takes three roles, each holding one piece of the rumor, to find who said it first.</p>
           <ul class="feats">
@@ -881,7 +886,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
         <div class="info">
           <div class="head">
             <div class="name"><div class="mascot">🧬</div><div><h3>Cellis</h3><small>Cell architecture · Vietnamese &amp; English</small></div></div>
-            <span class="status live">LIVE</span>
+            <span class="status-row"><span class="status live">LIVE</span><span class="status dev">IN PROGRESS</span></span>
           </div>
           <p class="desc">An interactive guide to how a cell is built. Sixteen 3D specimens cover basic cells, bacteria, organelles, cells in the human body, viruses and DNA, in Vietnamese and English, under the line “Explore the architecture of life.”</p>
           <ul class="feats">
