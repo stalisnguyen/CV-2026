@@ -10,8 +10,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&text=%E6%9B%B4%F0%A0%84%BC&display=swap" rel="stylesheet">
 <style>
+@font-face{
+  font-family:"Nom Na Tong";
+  src:url("fonts/NomNaTong-Regular.woff2") format("woff2");
+  font-weight:400 700;
+  font-style:normal;
+  font-display:block;
+  unicode-range:U+66F4,U+2013C;
+}
 :root{
   --bg:#07080c;--bg2:#0d0f16;--card:#11131b;--line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
   --text:#eceef3;--muted:#9097a6;--dim:#646b7a;--accent:#a78bfa;--accent2:#60a5fa;--ok:#34d399;
@@ -92,8 +99,8 @@ h2 .serif{font-style:italic;color:#c4b5fd}
 .card:hover .shot img{transform:scale(1.035)}
 .shot.logo{background:#0b0e13}
 .shot.logo img{object-fit:contain;object-position:center center;background:#0b0e13}
-.shot.logo .fb span{font-family:"Noto Serif SC",serif;font-style:normal}
-.nom{font-family:"Noto Serif SC",serif;font-weight:500;letter-spacing:.02em}
+.shot.logo .fb span{font-family:"Nom Na Tong",serif;font-style:normal}
+.nom{font-family:"Nom Na Tong",serif;font-weight:500;letter-spacing:.02em}
 .more-products{border-top:1px solid var(--line)}
 @media (max-width:560px){
   .more-products .head{flex-wrap:wrap;row-gap:8px}
