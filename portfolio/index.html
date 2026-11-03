@@ -103,7 +103,8 @@ h2 .serif{font-style:italic;color:#c4b5fd}
 .nom{font-family:"Nom Na Tong",serif;font-weight:500;letter-spacing:.02em}
 .more-products{border-top:1px solid var(--line)}
 .product-wrap{position:relative}
-.product-wrap>section{scroll-margin-top:132px}
+.product-wrap>section{padding-top:48px;scroll-margin-top:124px}
+@media (max-width:520px){.product-wrap>section{padding-top:36px}}
 .product-wrap>section[hidden]{display:none !important}
 .catbar{position:sticky;top:62px;z-index:40;background:rgba(7,8,12,.82);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
 .catbar .wrap{padding-top:12px;padding-bottom:12px}
@@ -117,9 +118,7 @@ h2 .serif{font-style:italic;color:#c4b5fd}
   .cat{padding:8px 11px;font-size:13px}
 }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.also-note{color:var(--muted);max-width:660px;font-size:17px;margin-top:40px}
-.grid.single{grid-template-columns:minmax(0,1fr);max-width:calc((100% - 22px)/2);margin-top:22px}
-@media (max-width:900px){.grid.single{max-width:none}}
+.learning-sec .more-products{border-top:0}
 @media (max-width:560px){
   .more-products .head{flex-wrap:wrap;row-gap:8px}
   .more-products .name{flex:1 0 100%}
@@ -837,8 +836,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
       </details>
     </div>
     <div class="more-products">
-      <p class="also-note rv">Cellis is separate from the four study apps above. It is an interactive guide to how a cell is built.</p>
-      <div class="grid single">
+      <div class="grid">
 
       <!-- Cellis -->
       <article class="card" style="--c1:rgba(192,132,252,.58);--c2:rgba(244,114,182,.38);--c1s:#d8b4fe;--glow:rgba(192,132,252,.45)">
@@ -873,8 +871,8 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   <div class="wrap">
     <div class="rv">
       <div class="eyebrow">Games</div>
-      <h2>Two browser games. <span class="serif">One still early.</span></h2>
-      <p class="sub">Canh Năm is live, and still being built. Office Time Together is a test build, in development.</p>
+      <h2>Two browser games, <span class="serif">one still early.</span></h2>
+      <p class="sub">Canh Năm is live and still being built. Office Time Together is in development.</p>
     </div>
     <div class="grid">
 
@@ -913,15 +911,14 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
             <div class="name"><div class="mascot">🦆</div><div><h3>Office Time Together</h3><small>Office Duck · Endless Paperwork Co. · English &amp; Vietnamese</small></div></div>
             <span class="status building">IN DEVELOPMENT</span>
           </div>
-          <p class="desc">A test build. In English the game is called Office Duck, at Endless Paperwork Co., Ltd. The line on the first screen is: "You work in an office. You sneak a duck into work. Everything goes downhill from there."</p>
+          <p class="desc">A test build of Office Duck. You work in an office. You sneak a duck into work. Everything goes downhill from there.</p>
           <ul class="feats">
-            <li><b>Who you are, and which duck:</b> a name, hair and office clothes, then a department: Marketing, Accounting, IT, HR or Sales. Eight ducks, each with a trait, from a Pekin that stays full longer to a rubber duck that never gets sad. The screen also asks why the duck is at work.</li>
-            <li><b>Day 1, in any order:</b> the Today list says to wander, keep stats balanced, and do anything with a button. On it: clock in, a Q4 strategy meeting, coffee, a printer jammed since 2019, lunch with the duck, and a visit to Diane the CEO.</li>
-            <li><b>The duck follows:</b> tap the ground or use WASD. Tap the duck to pet it, which lowers stress. A note on the first screen warns that the duck may poop at any moment.</li>
-            <li><b>Other places in this test:</b> a rice paddy, a cow farm, a café and garden, and Wake up, marked as the last level and hand-drawn. Every level is open. A button leads to other people's ducks.</li>
+            <li><b>You and your duck:</b> a name, office clothes, and a department, then one of eight ducks. It follows, and petting it lowers stress.</li>
+            <li><b>Today, in any order:</b> clock in, the Q4 strategy meeting, coffee, and lunch with the duck.</li>
+            <li><b>Other places in this test:</b> a rice paddy, a cow farm, a café and garden, and Wake up. Every level is open.</li>
           </ul>
-          <div class="scope mono">Test build <i>·</i> all levels open <i>·</i> decorations free until launch, then locked by EXP and coins</div>
-          <div class="chips"><span class="chip">English · Vietnamese</span><span class="chip">Today list</span><span class="chip">Choose a duck</span><span class="chip">Test build</span></div>
+          <div class="scope mono">Test build <i>·</i> all levels open</div>
+          <div class="chips"><span class="chip">English · Vietnamese</span><span class="chip">Choose a duck</span><span class="chip">Today list</span></div>
           <a class="visit" href="https://office-time-together.vercel.app/" target="_blank" rel="noopener">Play Office Time Together <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
       </article>
@@ -934,7 +931,7 @@ details.more>summary:focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
   <div class="wrap">
     <div class="rv">
       <div class="eyebrow">Tools</div>
-      <h2>A workspace and a tracker. <span class="serif">One job each.</span></h2>
+      <h2>A workspace <span class="serif">and a tracker.</span></h2>
       <p class="sub">Pastelux is a bilingual workspace for architectural lighting. Agent Radar tracks literary-agent queries.</p>
     </div>
     <div class="grid">
